@@ -221,6 +221,39 @@ img.gi{vertical-align:middle;pointer-events:none;filter:drop-shadow(0 2px 2px rg
 #attrList .row{display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:14px}
 #attrList .add{width:34px;height:34px;display:flex;align-items:center;justify-content:center;cursor:pointer;border-radius:50%;
   background:radial-gradient(circle at 40% 35%,#6a9a4a,#1e3a12);border:2px solid #0a1406;color:#e8ffd8;font:900 18px var(--f-ui);box-shadow:0 0 10px rgba(130,220,90,.45)}
+.goldChip{position:absolute;left:6px;top:-36px;z-index:4;display:flex;align-items:center;gap:7px;padding:6px 15px 6px 9px;border-radius:20px;
+  background:linear-gradient(180deg,rgba(90,62,20,.92),rgba(34,22,8,.95));border:1px solid var(--gold);box-shadow:0 0 14px rgba(214,168,90,.35),inset 0 0 10px rgba(0,0,0,.6);
+  font:900 17px var(--f-ui);color:var(--gold2);letter-spacing:.04em;text-shadow:0 1px 2px #000;pointer-events:none;font-variant-numeric:tabular-nums}
+.goldChip img.gi{width:24px;height:24px}
+.goldChip small{font:700 9px var(--f-ui);letter-spacing:.14em;color:#b99a5e;text-transform:uppercase;margin-left:2px}
+.wtag{position:absolute;right:2px;top:2px;z-index:2;min-width:20px;padding:1px 3px;border-radius:5px;font:900 8px var(--f-ui);letter-spacing:.05em;text-align:center;pointer-events:none;color:#fff;text-shadow:0 1px 1px #000;box-shadow:0 0 0 1px rgba(0,0,0,.7)}
+.wtag.s{background:#9a3a30}.wtag.i{background:#3a64b0}.wtag.d{background:#3d8a4a}
+#tooltip .tsc{margin-top:6px;font:700 11.5px var(--f-ui);letter-spacing:.04em}
+#tooltip .tsc.s{color:#e88a7a}#tooltip .tsc.i{color:#8ab4f0}#tooltip .tsc.d{color:#8ad89a}
+#tooltip .tuse,#tooltip .tori{margin-top:7px;font-size:13px;line-height:1.4;color:var(--ink2)}
+#tooltip .tuse b,#tooltip .tori b{display:block;font:700 9.5px var(--f-ui);letter-spacing:.16em;text-transform:uppercase;color:#c79d58;margin-bottom:1px}
+#tooltip .tori{color:#9a8f78;font-style:italic}
+.campHero{display:flex;gap:16px;align-items:center;margin:0 0 12px;padding:14px 16px;border-radius:4px;border:1px solid rgba(214,168,90,.5);
+  background:radial-gradient(ellipse at 12% 40%,rgba(255,140,50,.22),transparent 55%),linear-gradient(135deg,rgba(60,38,18,.75),rgba(14,10,8,.9));box-shadow:inset 0 0 30px rgba(0,0,0,.65),0 0 18px rgba(214,140,60,.15)}
+.campHero .em{width:64px;min-width:64px;height:64px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:radial-gradient(circle,rgba(255,170,70,.35),rgba(0,0,0,.4) 70%);border:2px solid var(--gold);box-shadow:0 0 18px rgba(255,150,60,.5)}
+.campHero .em img{width:44px;height:44px}
+.campHero .tx{flex:1;min-width:0}
+.campHero .nm{font:900 17px var(--f-disp);color:var(--gold2);letter-spacing:.05em;text-shadow:0 0 14px rgba(255,170,70,.4)}
+.campHero .ct{font:700 10.5px var(--f-ui);letter-spacing:.2em;text-transform:uppercase;color:#c79d58;margin-top:2px}
+.campHero .st{font-size:13px;color:var(--ink2);margin-top:5px;line-height:1.4}
+.tierBar{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap}
+.tierBar i{width:16px;height:7px;border-radius:2px;background:rgba(0,0,0,.55);border:1px solid rgba(150,120,80,.4)}
+.tierBar i.on{background:linear-gradient(180deg,#ffc860,#b8681c);border-color:#ffd890;box-shadow:0 0 8px rgba(255,170,70,.55)}
+.bldGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:9px}
+.bldGrid .bldRow{margin-bottom:0;align-items:flex-start;flex-wrap:wrap}
+.bldRow.built{border-color:rgba(214,168,90,.45);background:linear-gradient(90deg,rgba(70,46,20,.5),rgba(0,0,0,.35))}
+.pips{display:inline-flex;gap:3px;margin-left:8px;vertical-align:middle}
+.pips i{width:9px;height:9px;border-radius:50%;background:rgba(0,0,0,.6);border:1px solid #6a5a3a}
+.pips i.on{background:radial-gradient(circle at 35% 30%,#ffe0a0,#c8862a);border-color:#ffd890;box-shadow:0 0 6px rgba(255,170,70,.6)}
+#roadChip{position:absolute;left:50%;top:calc(52px + var(--safeT));transform:translateX(-50%);pointer-events:auto;z-index:20;padding:7px 16px;border-radius:16px;
+  background:linear-gradient(180deg,rgba(90,62,20,.92),rgba(34,22,8,.95));border:1px solid var(--gold);font:700 12px var(--f-ui);color:var(--gold2);letter-spacing:.05em;text-shadow:0 1px 2px #000;box-shadow:0 0 14px rgba(214,168,90,.35)}
+#roadChip small{display:block;font:500 9.5px var(--f-txt);color:#b99a5e;letter-spacing:.04em;text-align:center}
+#bagGrid .bagSlot.kit,#bagGrid .bagSlot.tool{outline:1px dashed rgba(255,190,90,.5)}
 #invFoot{padding:8px 4px 0;display:flex;justify-content:space-between;align-items:center;font:700 12px var(--f-ui);color:var(--ink2);border-top:1px solid rgba(150,120,80,.2)}
 #invTabs,#codexTabs{display:flex;gap:6px;flex-wrap:nowrap;overflow-x:auto;padding:12px 2px 6px;touch-action:pan-x;-webkit-overflow-scrolling:touch}
 .tab{flex:0 0 auto;pointer-events:auto;cursor:pointer;padding:7px 13px;border-radius:15px;font:700 11.5px var(--f-ui);letter-spacing:.06em;text-transform:uppercase;
@@ -409,7 +442,7 @@ img.gi{vertical-align:middle;pointer-events:none;filter:drop-shadow(0 2px 2px rg
 
   <div id="panels" class="layer">
     <div class="panel hidden" id="pInventory">
-      <div class="phead"><h2>Ausrüstung</h2><div class="close" data-close="pInventory"></div></div>
+      <div class="phead"><h2>Ausrüstung</h2><div class="goldChip" id="invGoldTop">0</div><div class="close" data-close="pInventory"></div></div>
       <div id="invWrap">
         <div id="equipCol">
           <div class="secTitle">Getragen</div>
@@ -468,7 +501,7 @@ img.gi{vertical-align:middle;pointer-events:none;filter:drop-shadow(0 2px 2px rg
       <div class="tbtn" id="btnCoop"><span>Koop im WLAN</span></div>
       <div class="tbtn" id="btnSettings"><span>Einstellungen</span></div>
     </div>
-    <div id="titleFoot">MOBILE · V18.1</div>
+    <div id="titleFoot">MOBILE · V19.0</div>
   </div>
 
   <div class="screen narrow hidden" id="slotScreen">
@@ -552,11 +585,11 @@ const CFG = {
   PLAYER_SPEED: 4.35,            // Tiles/Sekunde
   VIEW_BASE: 15.5,               // Sichtradius in Tiles (Tageslicht)
   DAY_LEN: 600,                  // Sekunden pro voller Tag/Nacht-Zyklus
-  MAX_ENEMIES: 74,
+  MAX_ENEMIES: 60,
   SPAWN_RADIUS: 24,              // Tiles
   DESPAWN_RADIUS: 54,
-  SPAWN_RATE: 0.7,               // Gegner-„Budget“ pro Sekunde — begrenzt, wie viele Spawns gleichzeitig auftauchen
-  SPAWN_BUDGET_MAX: 3,           // größte erlaubte Anfangswelle
+  SPAWN_RATE: 0.55,              // Gegner-„Budget“ pro Sekunde — begrenzt, wie viele Spawns gleichzeitig auftauchen
+  SPAWN_BUDGET_MAX: 2,           // größte erlaubte Anfangswelle
   AUTOSAVE_EVERY: 22,            // Sekunden
   SAVE_KEY: 'veil_of_ashes_save_v1',   // Fallback / Legacy-Key (Einzelspielstand)
   SAVE_SLOTS: 5,
@@ -1543,6 +1576,37 @@ function buildTextures() {
 }
 
 /* ---------- Sprite-Registrierung ---------------------------------------- */
+
+/** Zusätzliche Sprites: Kutschenwerkstatt und Kutsche. */
+function buildExtraSprites() {
+  { // Werkstatt: offener Unterstand mit Werkbank, Rad und Hammer
+    const aw = 28, ah = 26, P = painter(aw, ah, PX), cx = aw / 2, base = ah - 1;
+    P.r(cx - 11, base - 13, 2, 13, '#3a2c1e'); P.r(cx + 9, base - 13, 2, 13, '#3a2c1e');
+    P.r(cx - 10, base - 6, 20, 5, '#1a130d');
+    P.cone(cx, base - 24, 13, 9, '#5a3e26');
+    for (let i = 0; i < 9; i++) P.r(cx - 13 + i * 3, base - 16 + (i < 5 ? 0 : 0), 2, 1, '#2e2016');
+    P.r(cx - 13, base - 15, 26, 2, '#3a2a1a'); P.r(cx - 13, base - 16, 26, 1, '#7a5636');
+    P.e(cx + 6, base - 5, 4.4, 4.4, '#1c140e'); P.e(cx + 6, base - 5, 3, 3, '#8a6a3a'); P.e(cx + 6, base - 5, 1.1, 1.1, '#2a1e14');
+    P.r(cx - 9, base - 6, 10, 3, '#4e3c28'); P.r(cx - 9, base - 7, 10, 1, '#6a5238'); P.r(cx - 8, base - 3, 1, 3, '#3a2c1e'); P.r(cx - 1, base - 3, 1, 3, '#3a2c1e');
+    P.r(cx - 6, base - 10, 1, 4, '#8a6a3a'); P.r(cx - 7, base - 11, 3, 1, '#9aa0aa');
+    P.r(cx - 1, base - 10, 3, 1, '#c8862a'); P.r(cx + 3, base - 12, 1, 1, '#ffcf6a');
+    reg('s_wagonShop', P, cx, base, { light: { r: 4.6, c: 0xe0a24c, i: 0.6 } });
+  }
+  { // Kutsche (Seitenansicht, nach rechts blickend)
+    const aw = 40, ah = 28, P = painter(aw, ah, PX), cx = aw / 2, base = ah - 2;
+    P.r(cx - 13, base - 11, 26, 6, '#5a3e26'); P.r(cx - 13, base - 12, 26, 1, '#7a5636'); P.r(cx - 13, base - 6, 26, 1, '#2e2016');
+    for (let i = -11; i <= 11; i++) { const h = Math.round(Math.sqrt(121 - i * i) * .85); P.r(cx + i, base - 12 - h, 1, h, (i % 4 === 0) ? '#a89c7a' : '#cabf9c'); }
+    P.r(cx - 11, base - 12, 22, 1, '#8a7c5a');
+    P.r(cx + 3, base - 19, 6, 7, '#1e1710'); P.r(cx - 6, base - 19, 6, 7, '#241a12');
+    P.r(cx + 8, base - 22, 3, 2, '#c8862a');
+    P.e(cx - 8, base - 3, 5.4, 5.4, '#1c140e'); P.e(cx - 8, base - 3, 3.8, 3.8, '#8a6a3a'); P.e(cx - 8, base - 3, 1.3, 1.3, '#2a1e14');
+    P.e(cx + 9, base - 3, 5.4, 5.4, '#1c140e'); P.e(cx + 9, base - 3, 3.8, 3.8, '#8a6a3a'); P.e(cx + 9, base - 3, 1.3, 1.3, '#2a1e14');
+    P.line(cx + 13, base - 7, cx + 19, base - 5, 1, '#3a2c1e');
+    P.r(cx - 13, base - 15, 1, 1, '#ffcf6a');
+    reg('v_wagon', P, cx, base - 1);
+  }
+}
+
 function buildAllSprites() {
   buildTextures();
 
@@ -1632,6 +1696,7 @@ function buildAllSprites() {
   buildStruct('s_brazier', { seed: 730, type: 'brazier', aw: 12, ah: 14 });
   buildStruct('s_anvil', { seed: 740, type: 'anvil', aw: 16, ah: 12 });
   buildStruct('s_table', { seed: 750, type: 'table', aw: 18, ah: 10 });
+  buildExtraSprites();
   buildStruct('s_tableBroken', { seed: 751, type: 'table', aw: 18, ah: 12, broken: true });
   buildStruct('s_candle', { seed: 760, type: 'candle', aw: 6, ah: 7, light: { r: 2.4, c: 0xffc06a, i: 0.55 } });
   buildStruct('s_crystalBlue', { seed: 770, type: 'crystal', aw: 16, ah: 18, col: ['#3a5a8a', '#7fb0e0'], light: { r: 3.2, c: 0x5a8fd0, i: 0.5 } });
@@ -2139,14 +2204,18 @@ function genChunk(cx, cy) {
     }
   }
 
+  // --- Lager (vor den POIs, damit diese ausweichen)
+  ch.inters = ch.inters || [];
+  applyCampsToChunk(ch);
   // --- POIs
   genChunkPOI(ch, rng);
+  applyRoadsToChunk(ch);
   rebuildSolids(ch);
 
   // --- Streuspawns (Wildtiere / Wanderer)
   const spawnRoll = rng();
-  if (spawnRoll < 0.45 && !ch.safeZone) {
-    const n = 1 + ((rng() * 3) | 0);
+  if (spawnRoll < 0.36 && !ch.safeZone) {
+    const n = 1 + ((rng() * 2.6) | 0);
     const px = 2 + rng() * (CS - 4), py = 2 + rng() * (CS - 4);
     const i = ((py | 0) * CS + (px | 0));
     if (!(ch.flg[i] & (F_SOLID | F_WATER))) {
@@ -2172,6 +2241,9 @@ function mkProp(x, y, key, kind, rng, extra) {
       (kind === 'tree' ? 0.3 : (kind === 'rock' ? 0.42 : 0)),
     light: s && s.light ? s.light : null,
   };
+  // Kleine Steine und Büsche: man läuft einfach darüber (leichtes Anheben statt Stehenbleiben).
+  if (/^rock_s\d/.test(key) && !(extra && extra.solidR !== undefined)) { p.solidR = 0; p.liftH = 5; p.liftR = 0.6; }
+  else if (/^b_bush/.test(key)) { p.liftH = 1.6; p.liftR = 0.7; }
   if (extra) Object.assign(p, extra);
   return p;
 }
@@ -2234,6 +2306,29 @@ function findFreeSpot(wx, wy, maxR = 7) {
     }
   }
   return { x: wx, y: wy };
+}
+/** Stelle ist wirklich begehbar UND nicht eingeklemmt (genug freie Richtungen ringsum). */
+function spotOk(x, y) {
+  if (blockedAt(x, y, 0.4)) return false;
+  if (GAME.mode !== 'dungeon' && (tileFlags(x, y) & F_WATER) && !(tileFlags(x, y) & F_SHALLOW)) return false;
+  let free = 0;
+  for (let a = 0; a < 8; a++) { const ang = a * TAU / 8; if (!blockedAt(x + Math.cos(ang) * 0.95, y + Math.sin(ang) * 0.95, 0.34)) free++; }
+  return free >= 5;
+}
+/** Garantiert begehbarer Spawnpunkt in der Nähe von (x, y) — in Welt und Dungeon. */
+function safeSpawn(x, y, maxR) {
+  maxR = maxR || 30;
+  if (spotOk(x, y)) return { x, y };
+  for (let r = 0.8; r <= maxR; r += 0.8) {
+    for (let k = 0; k < 14; k++) {
+      const ang = k / 14 * TAU + r * 1.7;
+      const sx = x + Math.cos(ang) * r, sy = y + Math.sin(ang) * r;
+      if (spotOk(sx, sy)) return { x: sx, y: sy };
+    }
+  }
+  if (GAME.mode === 'dungeon' && DUN.entry) return { x: DUN.entry.x + .5, y: DUN.entry.y + 1.2 };
+  const h = homeSpot();
+  return findFreeSpot(h.x, h.y + 2, 12);
 }
 
 /* ---------- Chunk-Verwaltung -------------------------------------------- */
@@ -2400,6 +2495,23 @@ const SCENES = {
 
 /* ---------- POI-Definitionen -------------------------------------------- */
 const POIS = {
+  wildcamp: {
+    name: 'Verlassenes Lagerfeuer', icon: '🔥', w: b => (b.key === 'wald' || b.key === 'ebene' || b.key === 'berg' || b.key === 'frost') ? 3.2 : 1.8,
+    build(c) {
+      const id = 'wc:' + c.key;
+      const B = baseEnsure();
+      if (B.removedWild[id] || B.camps.find(q => q.id === id)) { c.skip = true; return; }
+      c.flatten(4, 0x3a3226);
+      c.prop(0, 0, 's_fire', 'struct', { scale: .9 });
+      c.light(0, 0, 0xff9a3c, 8, 1.1);
+      c.prop(-2.4, -1.2, 's_tent0', 'struct', { solidR: .7 });
+      c.prop(2.2, 1.4, 's_crate', 'struct', { solidR: .3 });
+      c.prop(-1.8, 2.2, 'rock_m0', 'rock', { solidR: .35 });
+      c.inter(0, 0, { type: 'camp', id, wild: true, label: 'Verlassenes Lagerfeuer entzünden' });
+      c.title = 'Verlassenes Lagerfeuer';
+      c.discover = true;
+    },
+  },
   /* --- friedlich / neutral --- */
   hut: {
     name: 'Einsame Hütte', icon: '🏚️', w: b => b.key === 'wald' || b.key === 'ebene' ? 3 : 1.2,
@@ -2881,8 +2993,6 @@ function genChunkPOI(ch, rng) {
   ch.inters = ch.inters || [];
   const CS = CFG.CS;
 
-  // Basislager immer im Ursprungs-Chunk
-  if (ch.cx === 0 && ch.cy === 0) { buildHomeCamp(ch, rng); return; }
 
   const d = ch.dangerAvg;
   let chance0 = 0.34;
@@ -2896,6 +3006,7 @@ function genChunkPOI(ch, rng) {
   for (let a = 0; a < 24; a++) {
     const tx = 4 + rng() * (CS - 8), ty = 4 + rng() * (CS - 8);
     const i = (ty | 0) * CS + (tx | 0);
+    if (nearCamp(ch.ox + tx, ch.oy + ty, CAMP_R + 7)) continue;
     if (!(ch.flg[i] & (F_WATER | F_SOLID))) { px = tx; py = ty; ok = true; break; }
   }
   if (!ok) return;
@@ -2907,6 +3018,7 @@ function genChunkPOI(ch, rng) {
   const ctx = poiCtx(ch, rng, px, py, type, key);
   ctx.inter = ctx.inter.bind(ctx);
   POIS[type].build(ctx);
+  if (ctx.skip) return;
 
   // Weltreaktivität: geräumte Orte kommen zurück, größer
   const st = ctx.st;
@@ -2923,6 +3035,7 @@ function scatterStory(ch, rng) {
   const tx = 4 + rng() * (CS - 8), ty = 4 + rng() * (CS - 8);
   const i = (ty | 0) * CS + (tx | 0);
   if (ch.flg[i] & (F_WATER | F_SOLID)) return;
+  if (nearCamp(ch.ox + tx, ch.oy + ty, CAMP_R + 4)) return;
   const key = ch.key + ':scatter';
   const c = poiCtx(ch, rng, tx, ty, 'scatter', key);
   const roll = rng();
@@ -2962,6 +3075,526 @@ function carvePath(ch, px, py, rng, len) {
     if (lx < 0 || ly < 0 || lx >= CS || ly >= CS) return true;
     return !(ch.flg[ly * CS + lx] & F_PATH);
   });
+}
+
+
+/* ============================================================================
+   MEHRERE LAGERFEUER — Hauptlager, Wildfeuer in der Welt, selbst aufgestellte Lager.
+   Jedes Lager hat Stufe, Bauten und Auftrag. Das Hauptlager ('home') liegt weiter
+   in GAME.base.buildings/campfireTier/campfireQuest (kompatibel mit alten Spielständen),
+   alle anderen in GAME.base.camps.
+   ========================================================================== */
+const CAMP_R = 11;
+let ACTIVE_CAMP = 'home';
+
+function baseEnsure() {
+  const B = GAME.base || (GAME.base = { buildings: {} });
+  B.buildings = B.buildings || {};
+  B.campfireTier = B.campfireTier || 1;
+  if (B.campfireQuest === undefined) B.campfireQuest = null;
+  B.camps = B.camps || [];
+  B.roads = B.roads || {};
+  B.wagons = B.wagons || [];
+  B.removedWild = B.removedWild || {};
+  return B;
+}
+function landOk(x, y, R) {
+  for (let r = 0; r <= R; r += 3) {
+    const n = r === 0 ? 1 : Math.round(r * 2);
+    for (let k = 0; k < n; k++) {
+      const a = k / n * TAU, sx = x + Math.cos(a) * r, sy = y + Math.sin(a) * r;
+      const e = wElev(sx, sy);
+      if (e < CFG.WATER_LVL + 0.045) return false;
+      if (zFromElev(e) >= CFG.MAX_Z - 2) return false;
+    }
+  }
+  return true;
+}
+/** Hauptlager-Platz: immer an Land (nie im Wasser, nie am Berg). */
+function pickLandSpot(store) {
+  const B = baseEnsure();
+  let best = null;
+  if (landOk(8, 8, 8)) best = { x: 8, y: 8 };
+  for (let r = 6; !best && r <= 260; r += 6) {
+    for (let k = 0; k < 18 && !best; k++) {
+      const a = k / 18 * TAU + r * .37, x = Math.round(8 + Math.cos(a) * r), y = Math.round(8 + Math.sin(a) * r);
+      if (landOk(x, y, 11)) best = { x, y };
+    }
+  }
+  if (!best) best = { x: 8, y: 8 };
+  if (store) { B.homeX = best.x; B.homeY = best.y; }
+  return best;
+}
+function homeSpot() {
+  const B = baseEnsure();
+  if (B.homeX != null && !B.homePacked) return { x: B.homeX, y: B.homeY };
+  if (B.homePacked) return B._spawnLand || (B._spawnLand = pickLandSpot(false));
+  return pickLandSpot(true);
+}
+function campRef(id) {
+  const B = baseEnsure();
+  if (!id || id === 'home') {
+    if (B.homePacked) return null;
+    const h = homeSpot();
+    return {
+      id: 'home', home: true, x: h.x, y: h.y, name: 'Das letzte Lagerfeuer',
+      get tier() { return B.campfireTier || 1; }, set tier(v) { B.campfireTier = v; },
+      get buildings() { return B.buildings; },
+      get quest() { return B.campfireQuest; }, set quest(v) { B.campfireQuest = v; },
+    };
+  }
+  return B.camps.find(c => c.id === id) || null;
+}
+function allCamps() {
+  const B = baseEnsure();
+  const out = [];
+  const h = campRef('home'); if (h) out.push(h);
+  for (const c of B.camps) out.push(c);
+  return out;
+}
+function curCamp() { return campRef(ACTIVE_CAMP) || campRef('home') || baseEnsure().camps[0] || { id: 'none', x: 0, y: 0, tier: 1, buildings: {}, quest: null }; }
+function curBld() { return curCamp().buildings; }
+function bestBld(id) { let m = 0; for (const c of allCamps()) m = Math.max(m, (c.buildings && c.buildings[id]) || 0); return m; }
+function respawnPoint(x, y) {
+  let best = null, bd = Infinity;
+  for (const c of allCamps()) { const d = dist2(c.x, c.y, x, y); if (d < bd) { bd = d; best = c; } }
+  return best ? { x: best.x, y: best.y } : homeSpot();
+}
+function nearCamp(x, y, r) { for (const c of allCamps()) if (dist2(c.x, c.y, x, y) < r * r) return true; return false; }
+
+/** Gelände um ein Lager neu aufbauen lassen (Chunks im Umkreis verwerfen). */
+function refreshCamp(c) {
+  const CS = CFG.CS, R = CAMP_R + 5;
+  const c0 = Math.floor((c.x - R) / CS), c1 = Math.floor((c.x + R) / CS), r0 = Math.floor((c.y - R) / CS), r1 = Math.floor((c.y + R) / CS);
+  for (let cy = r0; cy <= r1; cy++) for (let cx = c0; cx <= c1; cx++) WORLD.chunks.delete(cx + ',' + cy);
+}
+function campSig() { return JSON.stringify([GAME.base.homePacked, GAME.base.homeX, GAME.base.homeY, GAME.base.campfireTier, GAME.base.buildings, (GAME.base.camps || []).map(c => [c.id, c.x, c.y, c.tier, c.buildings])]); }
+/** Nach Basisänderungen (z. B. vom Gastgeber): betroffene Chunks neu aufbauen. */
+function syncCampChunks() {
+  const sig = campSig();
+  if (GAME._campSig === sig) return;
+  const old = GAME._campOld || [];
+  GAME._campSig = sig;
+  if (GAME.mode === 'world') { for (const c of old) refreshCamp(c); for (const c of allCamps()) refreshCamp(c); }
+  GAME._campOld = allCamps().map(c => ({ x: c.x, y: c.y }));
+}
+
+/* ---------- Layout: das Lager wächst mit seiner Stufe zur kleinen Stadt ---------- */
+const CAMP_SPOTS = {
+  schmiede: [-7.5, 0.5], alchemie: [-5.5, 5.5], bibliothek: [6.5, 4.5], haendler: [6.8, -0.5],
+  lager: [-1.5, 6.8], kartograf: [2.5, -6.5], portal: [-6.5, -6.5], training: [5.5, 6.5], kutsche: [-8.8, -3.2],
+};
+function campLayout(camp) {
+  const T = camp.tier || 1, Bd = camp.buildings || {};
+  const L = { props: [], lights: [], decals: [], inters: [] };
+  const P = (dx, dy, spr, o) => L.props.push({ dx, dy, spr, o: o || {} });
+  const Lt = (dx, dy, c, r, i) => L.lights.push({ dx, dy, c, r, i });
+  const sc = 1 + Math.min(T - 1, 8) * .09;
+  P(0, 0, 's_fire', { scale: sc });
+  Lt(0, 0, 0xff9a3c, 11 + Math.min(T - 1, 8) * .6, 1.35);
+  L.inters.push({ dx: 0, dy: 0, type: 'camp', id: camp.id, label: 'Am Lagerfeuer rasten' });
+  // Steinring (ab Stufe 6 Säulen und Feuerschalen im Wechsel)
+  if (T < 6) for (let i = 0; i < 8; i++) { const a = i / 8 * TAU; P(Math.cos(a) * 8.2, Math.sin(a) * 8.2, 'rock_m0', { solidR: .35, kind: 'rock' }); }
+  else for (let i = 0; i < 14; i++) {
+    const a = i / 14 * TAU + .2, x = Math.cos(a) * 9.4, y = Math.sin(a) * 9.4;
+    if (i % 2) { P(x, y, 's_brazier', { solidR: .3 }); Lt(x, y - .2, 0xff9a3c, 4.2, .75); } else P(x, y, 's_pillar1', { solidR: .45 });
+  }
+  P(-4.4, -3.4, 's_tent0', { solidR: .8 });
+  P(4.6, -2.4, 's_cart', { solidR: .55 });
+  P(-6.2, 2.6, 's_sign');
+  if (T >= 2) { P(3.4, 3.8, 's_brazier', { solidR: .4 }); Lt(3.4, 3.6, 0xff9a3c, 4.6, .8); }
+  if (T >= 3) { P(-3.4, 3.8, 's_brazier', { solidR: .4 }); Lt(-3.4, 3.6, 0xff9a3c, 4.6, .8); P(-2.4, -5.6, 's_bannerHome'); }
+  if (T >= 4) { P(2.4, -5.6, 's_bannerHome'); L.decals.push({ dx: 0, dy: 0, kind: 'rune', r: 3 }); P(0, -3.4, 's_shrine', { solidR: .4 }); Lt(0, -3.6, 0x7fa2bd, 5, .6); }
+  if (T >= 5) {
+    for (const [sx, sy] of [[-1, -1], [1, -1], [-1, 1], [1, 1]]) { P(sx * 9.2, sy * 9.2, 's_tower', { solidR: .9 }); Lt(sx * 9.2, sy * 9.2 - 1.4, 0xffb050, 6, .8); }
+    P(0, 10.4, 's_gate', { solidR: 0 });
+  }
+  if (T >= 7) for (let i = 0; i < 4; i++) { const a = i / 4 * TAU + TAU / 8; P(Math.cos(a) * 10.6, Math.sin(a) * 10.6, 'rock_m0', { solidR: .35, kind: 'rock' }); }
+  if (T >= 8) { P(-1, -10.6, 's_church', { solidR: 1.8 }); Lt(-1, -10.2, 0xc8862c, 7, .8); P(8, -8.6, 's_obelisk', { solidR: .5 }); Lt(8, -8.8, 0x9a5ad0, 5, .7); }
+  if (T >= 9) { P(-5.8, -5.4, 's_brazier'); Lt(-5.8, -5.6, 0xff9a3c, 4.6, .8); P(5.8, -5.4, 's_brazier'); Lt(5.8, -5.6, 0xff9a3c, 4.6, .8); }
+  if (T >= 10) { P(-8.6, 6.6, 's_hut0', { solidR: 1.3 }); Lt(-8.6, 6.4, 0xe0a24c, 5.5, .8); P(8.6, -4.8, 's_hut1', { solidR: 1.3 }); }
+  // Trophäen
+  const bossN = Math.min(Object.keys((WORLD.state && WORLD.state.bosses) || {}).length, 8);
+  for (let i = 0; i < bossN; i++) { const a = i / 8 * TAU + .35; P(Math.cos(a) * 2.3, Math.sin(a) * 2.3, 'b_skull', { kind: 'small' }); }
+  // Bauten (Stufe 1-3 wachsen sichtbar mit)
+  const bs = (id, spr, extra) => {
+    const lv = Bd[id] || 0; if (lv <= 0) return;
+    const [dx, dy] = CAMP_SPOTS[id];
+    P(dx, dy, spr, { solidR: .7 });
+    L.inters.push({ dx, dy: dy + .8, type: 'building', id, camp: camp.id, label: BASE_BUILDINGS[id].name + ' nutzen' });
+    extra(lv, dx, dy);
+  };
+  bs('schmiede', 's_anvil', (lv, dx, dy) => {
+    P(dx - 1.2, dy + .8, 's_brazier'); Lt(dx - 1.2, dy + .6, 0xff8a3c, 5, .9);
+    if (lv >= 2) { P(dx - 1.8, dy - 2.2, 's_hut0', { solidR: 1.3 }); Lt(dx - 1.8, dy - 2, 0xff8a3c, 5, .8); }
+    if (lv >= 3) { P(dx + .2, dy - 2.4, 's_bannerHome'); P(dx + 1.4, dy + 1.4, 's_barrel', { solidR: .3 }); }
+  });
+  bs('alchemie', 's_hut1', (lv, dx, dy) => {
+    Lt(dx, dy + .4, 0x6ad0a0, 4, .6);
+    if (lv >= 2) { P(dx - 1.8, dy + 1, 's_barrel', { solidR: .3 }); P(dx + 1.6, dy + 1.5, 's_crate', { solidR: .3 }); }
+    if (lv >= 3) { P(dx + 1.3, dy - 1.6, 's_crystalBlue', { solidR: .3 }); Lt(dx + 1.3, dy - 1.8, 0x5a8fd0, 4.4, .8); }
+  });
+  bs('bibliothek', 's_hut1', (lv, dx, dy) => {
+    if (lv >= 2) { P(dx + 1.8, dy - .6, 's_candle'); Lt(dx + 1.8, dy - .8, 0xffb050, 4, .8); }
+    if (lv >= 3) { P(dx + 2.2, dy + 1.8, 's_obelisk', { solidR: .4 }); Lt(dx + 2.2, dy + 1.6, 0x9a5ad0, 4.5, .7); }
+  });
+  bs('haendler', 's_tent1', (lv, dx, dy) => {
+    Lt(dx, dy + .4, 0xe0a24c, 4.5, .7);
+    if (lv >= 2) { P(dx + 1.6, dy + 1.1, 's_crate', { solidR: .3 }); P(dx + 1.4, dy - 1.4, 's_barrel', { solidR: .3 }); }
+    if (lv >= 3) { P(dx + 2.4, dy - .2, 's_cart', { solidR: .5 }); P(dx - .4, dy - 1.8, 's_bannerHome'); }
+  });
+  bs('lager', 's_crate', (lv, dx, dy) => {
+    if (lv >= 2) { P(dx - 1.5, dy + .8, 's_barrel', { solidR: .3 }); P(dx + 1.4, dy + 1.1, 's_crate', { solidR: .3 }); }
+    if (lv >= 3) { P(dx + 3.2, dy + 1.6, 's_hut0', { solidR: 1.3 }); Lt(dx + 3.2, dy + 1.4, 0xe0a24c, 5, .8); }
+  });
+  bs('kartograf', 's_tent0', (lv, dx, dy) => {
+    if (lv >= 2) { P(dx + 1.8, dy - .6, 's_sign'); P(dx - 1.6, dy - 1, 's_table', { solidR: .4 }); }
+  });
+  bs('portal', 's_portal', (lv, dx, dy) => { Lt(dx, dy - 1, 0x9a5ad0, 6, .9); });
+  bs('training', 's_table', () => { });
+  bs('kutsche', 's_wagonShop', (lv, dx, dy) => {
+    Lt(dx, dy + .2, 0xe0a24c, 4.6, .75);
+    P(dx - 1.6, dy + 1.4, 's_crate', { solidR: .3 }); P(dx + 1.8, dy + 1.2, 's_barrel', { solidR: .3 });
+    if (lv >= 2) { P(dx + .2, dy - 1.8, 's_bannerHome'); P(dx - 2.4, dy - .8, 's_cartBroken', { solidR: .4 }); }
+  });
+  return L;
+}
+
+/** Wendet alle Lager auf einen frisch erzeugten Chunk an (vor den POIs, damit diese ausweichen). */
+function applyCampsToChunk(ch) {
+  const CS = CFG.CS;
+  const camps = allCamps();
+  // Wildfeuer (noch nicht beansprucht) unabhängig davon
+  for (const camp of camps) {
+    const R = CAMP_R + 3;
+    const nx = clamp(camp.x, ch.ox, ch.ox + CS), ny = clamp(camp.y, ch.oy, ch.oy + CS);
+    if (dist2(nx, ny, camp.x, camp.y) > R * R) continue;
+    const rng = mulberry32(hashStr('camptile:' + camp.id));
+    const T = camp.tier || 1;
+    const z0 = zFromElev(wElev(camp.x, camp.y));
+    // Boden: planieren, begehbar machen (Wasser bleibt Wasser), Wege und Plätze färben
+    for (let ty = 0; ty < CS; ty++) for (let tx = 0; tx < CS; tx++) {
+      const wx = ch.ox + tx + .5, wy = ch.oy + ty + .5;
+      const dx = wx - camp.x, dy = wy - camp.y, d = Math.hypot(dx, dy);
+      if (d > CAMP_R) continue;
+      const i = ty * CS + tx;
+      if (ch.flg[i] & F_WATER) continue;
+      ch.z[i] = z0; ch.flg[i] = (ch.flg[i] & ~F_SOLID) | F_SAFE;
+      let col = mixC(ch.col[i], 0x3c3428, .42 + rng() * .12);
+      const ax = Math.abs(dx), ay = Math.abs(dy);
+      if (T >= 3 && d < 9.8 && (ax < 1.1 || ay < 1.1)) { col = mixC(col, 0x75695a, .6); ch.flg[i] |= F_PATH; }
+      if (T >= 5 && d > 6.2 && d < 7.4) { col = mixC(col, 0x6a6052, .55); ch.flg[i] |= F_PATH; }
+      if (d < (T >= 4 ? 3.2 : 2.2)) col = mixC(col, 0x58504a, .55);
+      ch.col[i] = col;
+    }
+    const inR = (x, y, r) => dist2(x, y, camp.x, camp.y) < r * r;
+    ch.props = ch.props.filter(q => !inR(q.x, q.y, CAMP_R - .4));
+    ch.spawns = (ch.spawns || []).filter(s => !inR(s.x, s.y, CAMP_R));
+    ch.safeZone = true;
+    const L = campLayout(camp);
+    const inCh = (x, y) => x >= ch.ox && y >= ch.oy && x < ch.ox + CS && y < ch.oy + CS;
+    const r2 = mulberry32(hashStr('campprop:' + camp.id));
+    for (const e of L.props) {
+      const x = camp.x + e.dx, y = camp.y + e.dy;
+      if (!inCh(x, y)) continue;
+      if (!SPR[e.spr]) continue;
+      const o = Object.assign({}, e.o); const kind = o.kind || 'struct'; delete o.kind;
+      ch.props.push(mkProp(x, y, e.spr, kind, r2, o));
+    }
+    for (const l of L.lights) { const x = camp.x + l.dx, y = camp.y + l.dy; if (inCh(x, y)) ch.lights.push({ x, y, c: l.c, r: l.r, i: l.i, flick: true, phase: r2() * TAU }); }
+    for (const d of L.decals) { const x = camp.x + d.dx, y = camp.y + d.dy; if (inCh(x, y)) ch.decals.push({ x, y, kind: d.kind, r: d.r, rot: 0, seed: 1 }); }
+    for (const it of L.inters) { const x = camp.x + it.dx, y = camp.y + it.dy; if (inCh(x, y)) { const o = Object.assign({}, it); delete o.dx; delete o.dy; ch.inters.push(Object.assign({ x, y }, o)); } }
+    if (inCh(camp.x, camp.y)) {
+      ch.pois.push({ key: 'camp:' + camp.id, type: 'home', x: camp.x, y: camp.y, name: camp.name || 'Lagerfeuer', icon: '🔥', safe: true, home: true });
+    }
+  }
+}
+
+/** Wildes Lagerfeuer als Fundort: lässt sich beanspruchen und danach wie jedes Lager nutzen. */
+function claimCamp(it) {
+  const B = baseEnsure();
+  if (!it || it.id === 'home') return campRef('home');
+  let c = B.camps.find(q => q.id === it.id);
+  if (c) return c;
+  if (!it.wild || NET.role === 'guest') return null;
+  c = { id: it.id, x: Math.round(it.x), y: Math.round(it.y), tier: 1, buildings: {}, quest: null, wild: true, name: 'Wildes Lagerfeuer' };
+  B.camps.push(c);
+  refreshCamp(c);
+  logMsg('Du entzündest das Lagerfeuer neu. Es gehört jetzt dir.', 'lg-gold');
+  toast('LAGERFEUER ENTZÜNDET', true); sfx.build();
+  codexDiscover('place', 'Wildes Lagerfeuer', 'Jemand hat es angezündet. Jetzt ist es deins.');
+  saveGame();
+  return c;
+}
+function campById(id) { return campRef(id); }
+
+/** Lager abbauen: wird zu einem Bündel im Beutel (inkl. Stufe, Bauten, Auftrag). */
+function packCamp() {
+  const p = GAME.player, c = curCamp();
+  if (NET.role === 'guest') { logMsg('Nur der Gastgeber kann das Lager abbauen.', 'lg-dim'); sfx.deny(); return; }
+  if (GAME.mode !== 'world') return;
+  if (p.bag.length >= p.bagMax) { logMsg('Beutel voll. Mach Platz für das Lager-Bündel.', 'lg-bad'); sfx.deny(); return; }
+  const kit = { tier: c.tier || 1, buildings: JSON.parse(JSON.stringify(c.buildings || {})), quest: c.quest || null, name: c.home ? 'Hauptlager' : (c.name || 'Lager') };
+  const nb = Object.values(kit.buildings).filter(v => v > 0).length;
+  const it = {
+    uid: itemUID++, campKit: true, kit, name: 'Lagerfeuer-Bündel', rarity: 3, ilvl: 1, stats: {}, value: 0, power: 0, ico: 'campkit',
+    desc: `Stufe ${kit.tier} · ${nb} Bau${nb === 1 ? '' : 'ten'}. Antippen und aufstellen, um das Lager an einem freien Ort neu zu errichten.`,
+  };
+  const B = baseEnsure();
+  const pos = { x: c.x, y: c.y };
+  if (c.home) {
+    B.homePacked = true; B.homeX = null; B.homeY = null; B._spawnLand = null;
+    B.buildings = {}; B.campfireTier = 1; B.campfireQuest = null;
+  } else {
+    if (c.wild) B.removedWild[c.id] = true;
+    B.camps = B.camps.filter(q => q !== c);
+  }
+  p.bag.push(it);
+  refreshCamp(pos);
+  applyBaseEffects();
+  logMsg('Du packst das Lager zusammen. Es passt in einen Beutel.', 'lg-gold'); sfx.build();
+  saveGame(); closePanels(); updateHUD();
+}
+/** Bündel irgendwo aufstellen. Bedingungen: Oberwelt, Land, Abstand zu anderen Lagern, nichts Wichtiges im Weg. */
+function placeCampKit(i, p) {
+  p = p || GAME.player;
+  const it = p.bag[i];
+  if (!it || !it.campKit) return;
+  if (NET.role === 'guest') { logMsg('Nur der Gastgeber kann Lager aufstellen.', 'lg-dim'); sfx.deny(); return; }
+  if (GAME.mode !== 'world') { logMsg('Hier unten lässt sich kein Lager aufstellen.', 'lg-bad'); sfx.deny(); return; }
+  const x = Math.round(p.x + Math.cos(p.aimAng) * 2.4), y = Math.round(p.y + Math.sin(p.aimAng) * 2.4);
+  if (!spotOk(x, y)) { logMsg('Hier ist kein Platz. Such eine freie Stelle.', 'lg-bad'); sfx.deny(); return; }
+  if (!landOk(x, y, 6)) { logMsg('Zu nah am Wasser oder am Fels.', 'lg-bad'); sfx.deny(); return; }
+  if (nearCamp(x, y, 24)) { logMsg('Zu nah an einem anderen Lager (mindestens 24 Felder Abstand).', 'lg-bad'); sfx.deny(); return; }
+  const CS = CFG.CS;
+  for (let cy = Math.floor((y - 14) / CS); cy <= Math.floor((y + 14) / CS); cy++) for (let cx = Math.floor((x - 14) / CS); cx <= Math.floor((x + 14) / CS); cx++) {
+    const ch = getChunk(cx, cy);
+    for (const q of (ch.inters || [])) if (q.type !== 'camp' && q.type !== 'building' && dist2(q.x, q.y, x, y) < 13 * 13) { logMsg('Hier steht schon etwas Wichtiges im Weg.', 'lg-bad'); sfx.deny(); return; }
+    for (const n of ch.npcs) if (dist2(n.x, n.y, x, y) < 13 * 13) { logMsg('Hier sind Leute. Such einen ruhigeren Platz.', 'lg-bad'); sfx.deny(); return; }
+  }
+  const B = baseEnsure();
+  const c = { id: 'c' + Date.now().toString(36) + ((Math.random() * 1000) | 0), x, y, tier: it.kit.tier || 1, buildings: it.kit.buildings || {}, quest: it.kit.quest || null, name: 'Außenposten' };
+  B.camps.push(c);
+  p.bag.splice(i, 1);
+  refreshCamp(c);
+  applyBaseEffects();
+  logMsg('Das Lager steht. Das Feuer brennt wieder.', 'lg-gold'); toast('LAGER ERRICHTET', true); sfx.build();
+  closePanels(); saveGame(); updateHUD();
+}
+
+
+/* ============================================================================
+   KUTSCHEN & WEGE — bis zu 3 Kutschen mit 2 Sitzen, Wegebau mit dem Hammer.
+   ========================================================================== */
+const WAGON_MAX = 3;
+function wagonById(id) { return baseEnsure().wagons.find(w => w.id === id); }
+function wagonSpeedMul() { return 1 + (bestBld('kutsche') >= 2 ? .15 : 0); }
+function roadCost() { return bestBld('kutsche') >= 2 ? 4 : 6; }
+function isRoadTile(tx, ty) {
+  const CS = CFG.CS, cx = Math.floor(tx / CS), cy = Math.floor(ty / CS);
+  const a = baseEnsure().roads[cx + ',' + cy];
+  return !!a && a.indexOf((ty - cy * CS) * CS + (tx - cx * CS)) >= 0;
+}
+function applyRoadsToChunk(ch) {
+  const a = baseEnsure().roads[ch.cx + ',' + ch.cy];
+  if (!a) return;
+  for (const i of a) { ch.col[i] = mixC(ch.col[i], 0x8e826c, .82); ch.flg[i] |= F_PATH; }
+}
+function paveTile(tx, ty) {
+  if (GAME.mode !== 'world' || isRoadTile(tx, ty)) return 0;
+  const CS = CFG.CS, cx = Math.floor(tx / CS), cy = Math.floor(ty / CS), i = (ty - cy * CS) * CS + (tx - cx * CS);
+  const ch = getChunk(cx, cy);
+  if (ch.flg[i] & (F_WATER | F_SOLID)) return 0;
+  const cost = roadCost();
+  if ((GAME.player.mats.gold || 0) < cost) return -1;
+  GAME.player.mats.gold -= cost;
+  const B = baseEnsure(), k = cx + ',' + cy;
+  (B.roads[k] = B.roads[k] || []).push(i);
+  ch.col[i] = mixC(ch.col[i], 0x8e826c, .82); ch.flg[i] |= F_PATH;
+  return cost;
+}
+function roadChipUpdate() {
+  let c = document.getElementById('roadChip');
+  const p = GAME.player;
+  if (!p || !p.roadMode) { if (c) c.remove(); return; }
+  if (!c) {
+    c = document.createElement('div'); c.id = 'roadChip';
+    c.onclick = () => toggleRoadMode(GAME.player);
+    document.getElementById('hud').appendChild(c);
+  }
+  c.innerHTML = `Wegebau an · ${roadCost()} Gold pro Feld <small>Tippen zum Beenden</small>`;
+}
+function toggleRoadMode(p) {
+  p = p || GAME.player;
+  if (NET.role === 'guest') { logMsg('Nur der Gastgeber kann Wege bauen.', 'lg-dim'); sfx.deny(); return; }
+  if (GAME.mode !== 'world') { logMsg('Wege lassen sich nur draußen bauen.', 'lg-dim'); return; }
+  if (!p.roadMode && !p.bag.some(it => it.tool === 'roadHammer')) { logMsg('Dafür brauchst du den Wegebauhammer.', 'lg-bad'); sfx.deny(); return; }
+  p.roadMode = !p.roadMode;
+  logMsg(p.roadMode ? `Wegebau: jedes Feld, über das du gehst, wird gepflastert (${roadCost()} Gold).` : 'Wegebau beendet.', 'lg-gold');
+  sfx.build(); roadChipUpdate();
+}
+function roadStep(p, mx, my) {
+  const tx = Math.floor(p.x), ty = Math.floor(p.y);
+  if (p._rdx === tx && p._rdy === ty) return;
+  p._rdx = tx; p._rdy = ty;
+  let spent = 0;
+  const r1 = paveTile(tx, ty);
+  if (r1 < 0) { p.roadMode = false; roadChipUpdate(); logMsg('Nicht genug Gold für weitere Wege.', 'lg-bad'); sfx.deny(); return; }
+  spent += r1;
+  const px = Math.floor(p.x - my * .95), py = Math.floor(p.y + mx * .95);
+  const r2n = paveTile(px, py);
+  if (r2n > 0) spent += r2n;
+  if (spent > 0) { floatText(p.x, p.y - .6, '-' + spent + ' Gold', '#c8a24a'); if (Math.random() < .35) sfx.build(); }
+}
+function dismount(p) {
+  p = p || GAME.player;
+  if (!p.riding) return;
+  const w = wagonById(p.riding.id);
+  const ang = (w ? w.face : p.aimAng) + Math.PI / 2;
+  const bx = p.x, by = p.y;
+  p.riding = null; p.rv = 0;
+  const s = safeSpawn(bx + Math.cos(ang) * 1.6, by + Math.sin(ang) * 1.6, 8);
+  p.x = s.x; p.y = s.y;
+  logMsg('Du steigst von der Kutsche ab.', 'lg-dim'); sfx.click();
+}
+function boardWagon(p, id) {
+  const w = wagonById(id);
+  if (!w || p.dead || GAME.mode !== 'world') return;
+  const g = GAME.player2;
+  const driverBusy = g && g.riding && g.riding.id === id && g.riding.seat === 0;
+  const passBusy = g && g.riding && g.riding.id === id && g.riding.seat === 1;
+  let seat;
+  if (!driverBusy && NET.role !== 'guest') seat = 0;
+  else if (driverBusy && !passBusy) seat = 1;
+  else { logMsg(NET.role === 'guest' && !driverBusy ? 'Nur der Gastgeber kann die Kutsche fahren. Setz dich dazu, wenn er sitzt.' : 'Die Kutsche ist besetzt.', 'lg-dim'); sfx.deny(); return; }
+  p.riding = { id, seat }; p.dashing = null; p.leaping = null; p.rv = 0;
+  if (seat === 0) { p.x = w.x; p.y = w.y; p.rAng = w.face || 0; }
+  logMsg(seat === 0 ? 'Du nimmst die Zügel. Linker Stick lenkt, die Kutsche fährt von selbst.' : 'Du setzt dich neben deinen Gefährten.', 'lg-gold'); sfx.build();
+}
+/** Fahrphysik: Beschleunigung, weiches Lenken, schneller auf Wegen, Rammen. */
+function rideStep(p, dt, mx, my, moveMag) {
+  const w = wagonById(p.riding.id);
+  p.moving = false;
+  if (!w) { p.riding = null; return; }
+  if (p.riding.seat === 1) {
+    const g = GAME.player2;
+    if (!(g && g.riding && g.riding.id === p.riding.id && g.riding.seat === 0)) { dismount(p); return; }
+    p.x = g.x; p.y = g.y; p.aimAng = g.aimAng; p.face = g.aimAng;
+    return;
+  }
+  const stun = (p.st.stun > 0 || p.st.freeze > 0);
+  const onRoad = isRoadTile(Math.floor(p.x), Math.floor(p.y));
+  let top = (onRoad ? 9.8 : 6.2) * wagonSpeedMul();
+  if (tileFlags(p.x, p.y) & F_SHALLOW) top *= .55;
+  const want = (!stun && (mx || my)) ? top * Math.min(1, Math.max(.35, moveMag * 1.15)) : 0;
+  p.rv = p.rv || 0;
+  p.rv += (want - p.rv) * Math.min(1, dt * (want > p.rv ? 2.2 : 3.6));
+  if (!stun && (mx || my)) {
+    const ta = Math.atan2(my, mx);
+    p.rAng = p.rAng === undefined ? ta : p.rAng + angDiff(p.rAng, ta) * Math.min(1, dt * (3 + Math.max(0, 6 - p.rv) * .6));
+  } else if (p.rAng === undefined) p.rAng = p.face || 0;
+  const bx = p.x, by = p.y;
+  moveEntity(p, Math.cos(p.rAng) * p.rv * dt, Math.sin(p.rAng) * p.rv * dt, .62);
+  const moved = Math.hypot(p.x - bx, p.y - by);
+  if (p.rv > 1 && moved < p.rv * dt * .3) p.rv *= .55;
+  p.distance += moved;
+  w.x = p.x; w.y = p.y; w.face = p.rAng;
+  p.face = p.rAng; p.aimAng = p.rAng;
+  p.stepT = (p.stepT || 0) - dt;
+  if (p.rv > 1.5 && p.stepT <= 0) { p.stepT = Math.max(.12, .34 - p.rv * .025); sfx.footstep(.8); noiseHit(.08, 500, 160, .05, .9, 'lowpass'); }
+  if (p.rv > 3 && Math.random() < dt * 22) addParticle(p.x - Math.cos(p.rAng) * .8, p.y - Math.sin(p.rAng) * .8, rnd(-.3, .3), rnd(-.3, .3), .5, onRoad ? '#b8ae98' : '#7a6a50', 3, 0);
+  // Rammen
+  if (p.rv > 5.5 && NET.role !== 'guest') {
+    for (const e of GAME.enemies) {
+      if (e.dead || e.mirror || (e._ramT || 0) > gameTime) continue;
+      if (dist2(e.x, e.y, p.x, p.y) < 1.5 * 1.5) {
+        e._ramT = gameTime + .7;
+        damageEnemy(e, dmgOf(p, 1.3 + p.rv * .12, 'phys'), { school: 'phys', knock: 6 }, p);
+        shake(3); sfx.impact(.8);
+      }
+    }
+  }
+}
+function wagonRenderProxy(w) {
+  const g = GAME.player2;
+  if (g && g.riding && g.riding.id === w.id && g.riding.seat === 0) return { id: w.id, x: g.x, y: g.y, face: g.aimAng };
+  return w;
+}
+function drawWagon(w) {
+  const s = SPR.v_wagon; if (!s) return;
+  const z = cam.zoom;
+  shadowAt(w.x, w.y, 24, .42);
+  const pos = w2s(w.x, w.y, heightPx(w.x, w.y));
+  const flip = (Math.cos(w.face || 0) - Math.sin(w.face || 0)) < 0;
+  ctx.save();
+  ctx.translate(pos.x, pos.y);
+  if (flip) ctx.scale(-1, 1);
+  ctx.globalAlpha = .5;
+  for (const [ox, oy] of [[-1.6, 0], [1.6, 0], [0, -1.6]]) ctx.drawImage(s.c, -s.ax * z + ox * z, -s.ay * z + oy * z, s.w * z, s.h * z);
+  ctx.globalAlpha = 1;
+  ctx.drawImage(s.c, -s.ax * z, -s.ay * z, s.w * z, s.h * z);
+  ctx.restore();
+}
+
+/* ---------- Werkstatt-Oberfläche ---------- */
+function costStrHtml(cost, p) { return Object.keys(cost).map(k => `<span class="${(p.mats[k] || 0) >= cost[k] ? '' : 'no'}">${cost[k]} ${MATS[k].name}</span>`).join(' · '); }
+function openWorkshop() {
+  const p = GAME.player, B = baseEnsure(), c = curCamp();
+  if (NET.role === 'guest') {
+    $('baseTitle').textContent = 'Kutschenwerkstatt';
+    setHTML($('baseBody'), '<div class="bldRow"><div class="bldMain"><div class="d">Die Werkstatt gehört dem Gastgeber. Kutschen kannst du trotzdem mitnutzen, sobald er am Zügel sitzt.</div></div></div><div style="margin-top:12px"><span class="btn" data-back="1">Zurück</span></div>');
+    bindBack(); return;
+  }
+  const lv = c.buildings.kutsche || 0;
+  const n = B.wagons.length;
+  const costW = { gold: 140, eisen: 10, fell: 4 }, costH = { gold: 60, eisen: 4 };
+  const hasH = p.bag.some(it => it.tool === 'roadHammer');
+  let h = `<div class="secTitle">Kutschenwerkstatt · Stufe ${lv}</div>`;
+  h += `<div class="bldRow"><div class="bldIco">📦</div><div class="bldMain"><div class="n">Neue Kutsche <small>${n} / ${WAGON_MAX} gebaut</small></div>
+    <div class="d">Zwei Sitze, wie ein Auto zu fahren. Auf gepflasterten Wegen deutlich schneller, überfährt kleine Gegner. Du kannst höchstens ${WAGON_MAX} besitzen.</div></div>
+    <div class="bldCost">${costStrHtml(costW, p)}<br>${n < WAGON_MAX ? `<span class="btn ${canAfford(costW) ? 'primary' : ''}" data-wk="build">Bauen</span>` : '<span style="color:#8a7f6c">Maximal erreicht</span>'}</div></div>`;
+  h += `<div class="bldRow"><div class="bldIco">⚒️</div><div class="bldMain"><div class="n">Wegebauhammer ${hasH ? '<small>im Beutel</small>' : ''}</div>
+    <div class="d">Mit dem Hammer pflasterst du Wege für die Kutschen. Im Beutel antippen startet den Wegebau; jedes Feld kostet ${roadCost()} Gold.</div></div>
+    <div class="bldCost">${hasH ? '' : costStrHtml(costH, p) + '<br>'}${hasH ? '<span style="color:#8a7f6c">Schon dabei</span>' : `<span class="btn ${canAfford(costH) ? 'primary' : ''}" data-wk="hammer">Schmieden</span>`}</div></div>`;
+  if (n) {
+    h += `<div class="secTitle" style="margin-top:12px">Deine Kutschen</div>`;
+    B.wagons.forEach((w, i) => {
+      h += `<div class="bldRow"><div class="bldIco">📦</div><div class="bldMain"><div class="n">Kutsche ${i + 1}</div><div class="d">${Math.round(w.x)}, ${Math.round(w.y)} · ${Math.round(dist(w.x, w.y, p.x, p.y))} Felder entfernt</div></div>
+        <div class="bldCost"><span class="btn primary" data-wk="fetch" data-i="${i}">Herholen</span><span class="btn danger" data-wk="scrap" data-i="${i}">Abwracken</span></div></div>`;
+    });
+  }
+  $('baseTitle').textContent = 'Kutschenwerkstatt';
+  setHTML($('baseBody'), h + `<div style="margin-top:14px"><span class="btn" data-back="1">Zurück</span></div>`);
+  const spot = () => { const sx = c.x + CAMP_SPOTS.kutsche[0] + 3.4, sy = c.y + CAMP_SPOTS.kutsche[1] + 3.4; return safeSpawn(sx, sy, 8); };
+  $('baseBody').querySelectorAll('[data-wk]').forEach(b => b.onclick = () => {
+    const a = b.dataset.wk, i = +b.dataset.i;
+    if (a === 'build') {
+      if (B.wagons.length >= WAGON_MAX) return;
+      if (!canAfford(costW)) { logMsg('Nicht genug Material.', 'lg-bad'); sfx.deny(); return; }
+      payCost(costW); const s = spot();
+      B.wagons.push({ id: 'w' + Date.now().toString(36) + ((Math.random() * 99) | 0), x: s.x, y: s.y, face: 0 });
+      logMsg('Die Kutsche steht bereit.', 'lg-good'); toast('KUTSCHE GEBAUT', true); sfx.build(); saveGame();
+    } else if (a === 'hammer') {
+      if (hasH) return;
+      if (!canAfford(costH)) { logMsg('Nicht genug Material.', 'lg-bad'); sfx.deny(); return; }
+      if (p.bag.length >= p.bagMax) { logMsg('Beutel voll.', 'lg-bad'); sfx.deny(); return; }
+      payCost(costH);
+      p.bag.push({ uid: itemUID++, tool: 'roadHammer', name: 'Wegebauhammer', rarity: 2, ilvl: 1, stats: {}, value: 0, power: 0, ico: 'hammer',
+        desc: 'Im Beutel antippen startet den Wegebau: jedes Feld, über das du läufst, wird gepflastert und kostet Gold. Kutschen fahren auf Wegen viel schneller.' });
+      logMsg('Wegebauhammer geschmiedet.', 'lg-good'); toast('HAMMER GESCHMIEDET', true); sfx.build(); saveGame();
+    } else if (a === 'fetch') {
+      const w = B.wagons[i]; if (!w) return;
+      if (p.riding && p.riding.id === w.id) { logMsg('Du sitzt schon darin.', 'lg-dim'); return; }
+      const s = spot(); w.x = s.x; w.y = s.y; sfx.build(); logMsg('Die Kutsche ist zurück an der Werkstatt.', 'lg-good');
+    } else if (a === 'scrap') {
+      const w = B.wagons[i]; if (!w) return;
+      if (p.riding && p.riding.id === w.id) dismount(p);
+      B.wagons.splice(i, 1); p.mats.gold += 60; p.mats.eisen += 5; sfx.coin();
+      logMsg('Kutsche abgewrackt: +60 Gold, +5 Eisen.', 'lg-dim');
+    }
+    updateHUD(); openWorkshop();
+  });
+  bindBack();
 }
 
 /* ---------- Basislager -------------------------------------------------- */
@@ -3175,22 +3808,22 @@ const AFFIX_SUF = [
 /* ---------- Unikate: verändern das Spiel wirklich ----------------------- */
 const UNIQUES = {
   ringTeilung: {
-    name: 'Ring der Teilung', slot: 'ring', ico: 'ring', minR: 4,
+    name: 'Teilungsring', slot: 'ring', ico: 'ring', minR: 4,
     desc: 'Feuerzauber treffen ein zusätzliches Ziel.',
     flavor: 'Was einmal brennt, brennt gern zweimal.', stats: { int: 6, fire: 12 }
   },
   kroneGlut: {
-    name: 'Krone der Glut', slot: 'helm', ico: 'helm', minR: 4,
+    name: 'Glutkrone', slot: 'helm', ico: 'helm', minR: 4,
     desc: 'Feuerschaden entzündet Gegner (Brand über 4 s).',
     flavor: 'Sie wurde einem König aufgesetzt, der schon brannte.', stats: { int: 8, fire: 18, arm: 12 }
   },
   herzMaertyrerin: {
-    name: 'Herz der Märtyrerin', slot: 'relic', ico: 'relic', minR: 5,
+    name: 'Märtyrerherz', slot: 'relic', ico: 'relic', minR: 5,
     desc: 'Je weniger Leben du hast, desto mehr Schaden verursachst du (bis +70 %).',
     flavor: 'Sie gab alles. Man nahm noch mehr.', stats: { vit: 6, critDmg: 25 }
   },
   klingeHunger: {
-    name: 'Klinge des Hungers', slot: 'weapon', wclass: 'cursed', ico: 'cursed', minR: 4,
+    name: 'Hungerklinge', slot: 'weapon', wclass: 'cursed', ico: 'cursed', minR: 4,
     desc: 'Gegner unter 25 % Leben werden markiert: +35 % Schaden gegen sie.',
     flavor: 'Sie frisst zuerst den Träger.', stats: { atk: 14, ls: 6, as: 8 }
   },
@@ -3205,22 +3838,22 @@ const UNIQUES = {
     flavor: 'Er summt, bevor der Himmel es tut.', stats: { shock: 16, crit: 7, dex: 5 }
   },
   aschemantel: {
-    name: 'Mantel der Asche', slot: 'chest', ico: 'robe', minR: 4,
+    name: 'Aschemantel', slot: 'chest', ico: 'robe', minR: 4,
     desc: 'Dein Ausweichen hinterlässt eine Aschewolke, die Schaden verursacht.',
     flavor: 'Der Träger verschwindet. Die Asche bleibt.', stats: { arm: 22, ms: 8, dodge: 6 }
   },
   dornenpanzer: {
-    name: 'Panzer der tausend Dornen', slot: 'chest', ico: 'chest', minR: 4,
+    name: 'Dornenpanzer', slot: 'chest', ico: 'chest', minR: 4,
     desc: 'Reflektiert 30 % des erlittenen Schadens an den Angreifer.',
     flavor: 'Rühr mich an.', stats: { arm: 40, vit: 8, thorns: 18 }
   },
   laterneWaechter: {
-    name: 'Laterne des ersten Wächters', slot: 'offhand', ico: 'orb', minR: 5,
+    name: 'Wächterlaterne', slot: 'offhand', ico: 'orb', minR: 5,
     desc: 'Weitet dein Sichtfeld stark aus. Untote fürchten das Licht.',
     flavor: 'Er ging voraus, damit andere folgen konnten.', stats: { wil: 8, find: 14 }
   },
   gefrorenesAuge: {
-    name: 'Das gefrorene Auge', slot: 'ring', ico: 'ring', minR: 5,
+    name: 'Frostauge', slot: 'ring', ico: 'ring', minR: 5,
     desc: 'Frostschaden verlangsamt stärker. Tötungen lösen eine Frostnova aus.',
     flavor: 'Es blinzelt nie.', stats: { frost: 22, int: 6 }
   },
@@ -3230,12 +3863,12 @@ const UNIQUES = {
     flavor: 'Der Behälter ist nie voll.', stats: { dark: 18, wil: 6 }
   },
   windstiefel: {
-    name: 'Stiefel des Windes', slot: 'boots', ico: 'boots', minR: 4,
+    name: 'Windstiefel', slot: 'boots', ico: 'boots', minR: 4,
     desc: 'Zweite Ausweich-Ladung. Ausweichen stellt etwas Fokus her.',
     flavor: 'Er lief bis ans Ende. Dann lief er weiter.', stats: { ms: 14, dex: 6, dodge: 5 }
   },
   augeNamenlosen: {
-    name: 'Das Auge des Namenlosen', slot: 'relic', ico: 'relic', minR: 5, superRare: true,
+    name: 'Namenlosenauge', slot: 'relic', ico: 'relic', minR: 5, superRare: true,
     desc: 'Du siehst, was verborgen ist: seltene Beute wird deutlich wahrscheinlicher.',
     flavor: '„Wenn der Mond rot wird, suche den Baum ohne Schatten.“', stats: { luk: 14, find: 45, xpb: 12 }
   },
@@ -3246,32 +3879,32 @@ const UNIQUES = {
   },
   /* --- Bossgebundene Unikate (Erweiterung) --- */
   grabschild: {
-    name: 'Schild des Grabwächters', slot: 'offhand', ico: 'shield', minR: 4,
+    name: 'Grabschild', slot: 'offhand', ico: 'shield', minR: 4,
     desc: 'Massive Rüstung und hohe Blockchance, dazu ein wenig zusätzliches Leben.',
     flavor: 'Er hielt das Tor, auch als niemand mehr kam.', stats: { arm: 30, block: 18, hp: 20 }
   },
   spinnenschleier: {
-    name: 'Schleier der Netzkönigin', slot: 'chest', ico: 'robe', minR: 4,
+    name: 'Netzschleier', slot: 'chest', ico: 'robe', minR: 4,
     desc: 'Leichter, mit Spinnenseide durchwebter Stoff. Erhöht Ausweichen und Geschick.',
     flavor: 'Sie webt nicht, um zu fangen. Sie webt, um zu warnen.', stats: { arm: 16, dex: 8, dodge: 8 }
   },
   steinherz: {
-    name: 'Das Steinherz', slot: 'relic', ico: 'relic', minR: 5,
+    name: 'Steinherz', slot: 'relic', ico: 'relic', minR: 5,
     desc: 'Ein versteinertes Herz. Verleiht Vitalität, Rüstung und Lebensregeneration.',
     flavor: 'Es schlägt einmal pro Jahrhundert. Das reicht.', stats: { vit: 12, arm: 20, hpreg: 3 }
   },
   erzhandschuh: {
-    name: 'Handschuh des Erzvogts', slot: 'gloves', ico: 'gloves', minR: 4,
+    name: 'Erzhandschuh', slot: 'gloves', ico: 'gloves', minR: 4,
     desc: 'Aus Grubenerz geschmiedet. Stärkt Kraft, Angriff und Schlagtempo.',
     flavor: 'Er grub nach Erz, bis er selbst daraus bestand.', stats: { str: 8, atk: 10, as: 6 }
   },
   fluesterschleier: {
-    name: 'Der Flüsterschleier', slot: 'amulet', ico: 'amulet', minR: 5,
+    name: 'Flüsterschleier', slot: 'amulet', ico: 'amulet', minR: 5,
     desc: 'Verstärkt Schattenmagie, Intelligenz und kritische Trefferchance.',
     flavor: 'Sie spricht in Stimmen, die nicht ihre eigenen sind.', stats: { int: 7, dark: 20, crit: 5 }
   },
   moorkrone: {
-    name: 'Die Moorkrone', slot: 'helm', ico: 'helm', minR: 4,
+    name: 'Moorkrone', slot: 'helm', ico: 'helm', minR: 4,
     desc: 'Erhöht Willenskraft, Lebensregeneration und Beutefund.',
     flavor: 'Wer sie trägt, hört das Moor atmen.', stats: { wil: 8, hpreg: 4, find: 10 }
   },
@@ -3325,20 +3958,112 @@ const UNIQUES = {
 const UNIQUE_KEYS = Object.keys(UNIQUES);
 
 /* ---------- Namensgenerator --------------------------------------------- */
-const NAME_PRE = ['Rostiges', 'Altes', 'Geschmiedetes', 'Verwittertes', 'Geweihtes', 'Blutiges', 'Stilles', 'Kaltes', 'Schwarzes', 'Gezeichnetes'];
-const NAME_SUF = ['der Wölfe', 'des Nebels', 'der letzten Wacht', 'des Aschefalls', 'der Krähen', 'des langen Winters',
-  'der stummen Glocke', 'des vergessenen Eids', 'der roten Stunde', 'des hohlen Königs'];
+const NAME_ELEM = { fire: 'der Glut', frost: 'des Frosts', shock: 'des Sturms', dark: 'der Nacht' };
+const NAME_MAGIC = ['der Wölfe', 'der Krähen', 'des Nebels', 'der Asche', 'der Wacht', 'der Seelen', 'des Winters', 'des Blutes', 'der Dämmerung', 'der Ahnen'];
 
+/** Namen bleiben bewusst schlicht: Gewöhnlich = Basisname, Ungewöhnlich/Selten = ein Zusatzwort,
+    Episch und höher = Basisname + ein kurzer magischer Zusatz ("Kurzschwert der Glut"). */
 function itemName(rng, base, rar, affixes) {
-  if (rar >= 3) {
-    const p = NAME_PRE[(rng() * NAME_PRE.length) | 0], s = NAME_SUF[(rng() * NAME_SUF.length) | 0];
-    return `${p} ${base.name} ${s}`;
+  if (rar === 0) return base.name;
+  if (rar <= 2) {
+    const pre = affixes.find(a => a.pre), suf = affixes.find(a => !a.pre);
+    if (pre) return pre.n + ' ' + base.name;
+    if (suf) return base.name + ' ' + suf.n;
+    return base.name;
   }
-  let n = base.name;
-  const pre = affixes.find(a => a.pre), suf = affixes.find(a => !a.pre);
-  if (pre) n = pre.n + ' ' + n;
-  if (suf) n = n + ' ' + suf.n;
-  return n;
+  const el = affixes.find(a => NAME_ELEM[a.k]);
+  const add = el ? NAME_ELEM[el.k] : NAME_MAGIC[(rng() * NAME_MAGIC.length) | 0];
+  return base.name + ' ' + add;
+}
+
+/* ---------- Beschreibungen: Nutzen & Herkunft je Basisgegenstand ---------------- */
+const BASE_INFO = {
+  kurzschwert: ['Schnelle Nahkampfwaffe, ideal für flinke Schlagfolgen.', 'Standardwaffe der Grenzwachen, tausendfach geschmiedet.'],
+  langschwert: ['Ausgewogene Klinge mit solider Reichweite.', 'Von Rittern der Krone getragen, bevor die Krone fiel.'],
+  grossschwert: ['Langsam, aber mit gewaltiger Schlagkraft.', 'Geschmiedet für Männer, die Tore einschlagen statt öffnen.'],
+  axt: ['Schwere Hiebwaffe mit hohem Schaden pro Treffer.', 'Holzfäller der Waldhüter führten sie zuerst gegen Bäume.'],
+  kolben: ['Wuchtiger Hammer, der auch Rüstung nicht respektiert.', 'Aus den Werkstätten der Knochenkirche, gesegnet und trotzdem grob.'],
+  stab: ['Einfacher Zauberstab, verstärkt Zauberschaden durch Intelligenz.', 'Aus Eichenholz alter Haine geschnitten.'],
+  runenstab: ['Gravierte Runen bündeln Magie zu härteren Treffern.', 'Von Schreibern des Ordens beschriftet, die nie ein Wort zu viel sagen.'],
+  zepter: ['Zierliches Zepter mit schnellem Zauberrhythmus.', 'Ein Herrschaftszeichen kleiner Fürsten, längst ohne Land.'],
+  kurzbogen: ['Schneller Bogen für Jäger, die in Bewegung bleiben.', 'Wilderer fertigten ihn leise und billig.'],
+  langbogen: ['Große Reichweite und kräftiger Schuss.', 'Aus Eibenholz der Waldhüter-Hänge gebogen.'],
+  armbrust: ['Langsam, aber mit durchschlagendem Bolzen.', 'Eine Erfindung der Krone gegen gepanzerte Feinde.'],
+  fluchklinge: ['Verfluchte Klinge, die Leben vom Gegner zurückholt.', 'Im Kult geweiht, mit Blut statt Wasser abgeschreckt.'],
+  sense: ['Weite Hiebe, die mit jedem Treffer Leben rauben.', 'Ein Erntewerkzeug, das nach anderer Ernte hungert.'],
+  kriegsaxt: ['Brutale Axt für Gegner mit dickem Fell.', 'In den Gruben der Steinkämme geschmiedet.'],
+  richtschwert: ['Schwerer als alles, aber jeder Treffer sitzt.', 'Wurde einst nur für ein einziges Urteil geschliffen.'],
+  kristallstab: ['Kristallkern verstärkt Magie deutlich.', 'Der Kristall stammt aus den Frostklüften.'],
+  archonstab: ['Mächtigster Stab für reine Zauberer.', 'Ein Relikt der Erzmagier, älter als die Krone.'],
+  kriegsbogen: ['Kräftiger Bogen für lange, harte Gefechte.', 'Von Söldnern der alten Feldzüge mitgeführt.'],
+  meisterbogen: ['Präziser Bogen mit hohem Geschick-Bonus.', 'Nur Meister dürfen ihn spannen, sagt man. Man irrt sich oft.'],
+  seelenklinge: ['Saugt Leben und wird mit jedem Kampf durstiger.', 'Aus Seelenfeuer gehärtet, das nie ganz erlosch.'],
+  seelenfresser: ['Mächtige Sense mit starkem Lebensraub.', 'Ihr Träger kehrt selten ganz zurück.'],
+  schild: ['Schützt vor Treffern und blockt gelegentlich Schläge.', 'Aus Dorf-Eiche, mit Eisenband verstärkt.'],
+  eisenschild: ['Stabile Deckung mit guter Blockchance.', 'Von Wachen der Krone getragen.'],
+  fokus: ['Steigert Intelligenz und Fokus.', 'Geschliffene Kugel aus den Werkstätten der Schreiber.'],
+  koecher: ['Mehr Geschick und schnelleres Schießen.', 'Aus Wolfsleder genäht.'],
+  totem: ['Stärkt Willenskraft und Fokus.', 'Von Moorvolk geschnitzt, mit Knochen verziert.'],
+  wappenschild: ['Schwerer Schild mit sehr guter Deckung.', 'Trägt das Wappen eines längst erloschenen Hauses.'],
+  kristallkugel: ['Große Fokus- und Intelligenzquelle.', 'Eine Kugel, in der manchmal etwas zurückschaut.'],
+  jagdkoecher: ['Viel Geschick und deutlich schnelleres Schießen.', 'Wurde für Jäger gebaut, die nie nach Hause kamen.'],
+  kriegstotem: ['Starker Willenskraft-Bonus mit etwas Fokus.', 'Ein Kriegstotem, das für seine Besitzer sprach.'],
+  kappe: ['Leichter Kopfschutz für Anfänger.', 'Aus gegerbtem Hirschleder genäht.'],
+  helm: ['Solider Schutz gegen Hiebe.', 'Gehämmert in den Schmieden der Krone.'],
+  kapuze: ['Leichte Kopfbedeckung mit Magie-Bonus.', 'Schreiber tragen sie, um beim Lesen nicht gestört zu werden.'],
+  drachenhelm: ['Hohe Rüstung für den Kopf.', 'Das Visier zeigt einen Drachen, den niemand je gesehen hat.'],
+  schattenkapuze: ['Magiebonus bei geringer Rüstung.', 'Aus Stoff, der Licht ein wenig verschluckt.'],
+  wams: ['Leichter Brustschutz mit guter Beweglichkeit.', 'Aus Leder, wie es jeder Wanderer trägt.'],
+  kettenhemd: ['Guter Schutz gegen Hieb und Stich.', 'Tausende Ringe, jeder von Hand geschlossen.'],
+  robe: ['Magiebonus und mehr Fokus.', 'Gewebt von Mönchen, die nur Stille tragen.'],
+  plattenpanzer: ['Höchste Rüstung, schwer aber unnachgiebig.', 'Ein Panzer für Männer, die nicht fallen wollten.'],
+  arkanrobe: ['Viel Intelligenz und Fokus für Zauberer.', 'Mit Silberfäden durchwoben, die leise summen.'],
+  handschuhe: ['Einfacher Handschutz.', 'Aus Lederresten der Wachstuben.'],
+  panzerhand: ['Mehr Rüstung und Stärke.', 'Gepanzerte Faust der Grenzwächter.'],
+  klauenhandschuhe: ['Viel Stärke und feste Rüstung.', 'Mit Krallen besetzt, deren Herkunft niemand klärt.'],
+  stiefel: ['Etwas Lauftempo und Schutz.', 'Wanderstiefel, die schon viele Wege kennen.'],
+  laufstiefel: ['Mehr Lauftempo und Geschick.', 'Für Boten gebaut, die Wege abkürzen.'],
+  sturmstiefel: ['Sehr schnelles Laufen, dazu Geschick.', 'Sie sollen im Sturm schneller sein als der Wind.'],
+  ring: ['Ein einfacher Ring, trägt zusätzliche Eigenschaften.', 'Handelsware, die nach jedem Besitzer anders glänzt.'],
+  siegelring: ['Ring mit besonderen Eigenschaften.', 'Ein Siegel, das niemand mehr erkennt.'],
+  kettenring: ['Stärke und Geschick in einem Ring.', 'Aus geflochtenen Kettengliedern gefertigt.'],
+  amulett: ['Trägt zusätzliche Eigenschaften um den Hals.', 'Hängt an einem Band, das nicht reißt.'],
+  talisman: ['Ein stärkerer Talisman mit besonderen Boni.', 'Von Dorfschamanen für Reisende gesegnet.'],
+  seelenamulett: ['Intelligenz, Willenskraft und Fokus.', 'Ein Splitter Seele, in Silber gefasst.'],
+};
+const ORIGIN_RAR = ['', ' Gewöhnliche Handarbeit.', ' Solide Arbeit, leicht verzaubert.', ' Von einem Meister gefertigt und von Magie berührt.', ' Alte Magie hat dieses Stück geformt.', ' Ein Erbstück gefallener Königreiche.', ' Aus der Zeit vor dem Aschefall, noch nicht zerbrochen.'];
+const SLOT_USE = { weapon: 'Waffe', offhand: 'Nebenhand', helm: 'Kopf', chest: 'Brust', gloves: 'Hände', boots: 'Füße', ring: 'Finger', amulet: 'Hals', relic: 'Relikt' };
+function itemInfo(it) {
+  if (!it) return null;
+  if (it.tool) return { use: it.desc, origin: 'Vom Wagenbauer der Werkstatt geschmiedet, mit Stielholz aus dem Schwarzwald.' };
+  if (it.campKit) return { use: it.desc || 'Wird an einem freien Ort als Lagerfeuer samt Bauten aufgestellt.', origin: 'Ein abgebautes Lager, das darauf wartet, wieder zu brennen.' };
+  if (it.bossSkull) return null;
+  if (it.unique) return { use: `Einzigartige Ausrüstung für den Platz ${SLOT_USE[it.slot] || it.slot}. Besitzt einen eigenen Spezialeffekt.`, origin: (it.flavor ? it.flavor + ' ' : '') + (ORIGIN_RAR[Math.min(6, it.rarity + 1)] || '').trim() };
+  const inf = BASE_INFO[it.base];
+  if (!inf) return null;
+  return { use: inf[0], origin: inf[1] + (ORIGIN_RAR[Math.min(6, it.rarity + 1)] || '') };
+}
+/** Welcher Wert gibt einer Waffe mehr Schaden? */
+function weaponScaleInfo(it) {
+  if (!it || it.slot !== 'weapon') return null;
+  const wc = it.wclass || 'sword';
+  if (wc === 'staff') return { cls: 'i', tag: 'INT', txt: 'Zauberschaden · skaliert mit Intelligenz' };
+  if (wc === 'bow') return { cls: 'd', tag: 'GES', txt: 'Fernkampfschaden · skaliert mit Geschick' };
+  if (wc === 'cursed') return { cls: 's', tag: 'STR', txt: 'Nahkampfschaden (Dunkel) · skaliert mit Stärke' };
+  return { cls: 's', tag: 'STR', txt: 'Nahkampfschaden · skaliert mit Stärke' };
+}
+/** Alte Spielstände: lange Itemnamen auf die neue, schlichte Namensform bringen. */
+function migrateItemName(it) {
+  if (!it || it.bossSkull || it.campKit) return;
+  if (it.unique && UNIQUES[it.unique]) { it.name = UNIQUES[it.unique].name; return; }
+  if (!it.base || !BASES[it.base] || it._nm2) return;
+  it._nm2 = 1;
+  it.name = itemName(mulberry32(it.uid || 7), BASES[it.base], it.rarity, it.affixes || []);
+}
+function migrateItemNames(p) {
+  if (!p) return;
+  for (const k in p.equip) migrateItemName(p.equip[k]);
+  (p.bag || []).forEach(migrateItemName); (p.stash || []).forEach(migrateItemName);
 }
 
 /* ---------- Generierung -------------------------------------------------- */
@@ -3463,6 +4188,7 @@ const POTION_CAP = { heiltrank: 5, fokustrank: 5 };
 const MATS = {
   gold: { name: 'Gold', ico: '◈' }, eisen: { name: 'Eisen', ico: '▰' },
   aschestaub: { name: 'Aschestaub', ico: '◌' }, seele: { name: 'Seelensplitter', ico: '✦' },
+  fell: { name: 'Tierfell', ico: '▱' }, knochen: { name: 'Knochen', ico: '▯' },
 };
 
 /* ---------- Item-Symbole (prozedural gezeichnet) -------------------------- */
@@ -3503,6 +4229,8 @@ function buildItemIcons() {
   draw('potionR', P => { P.r(6, 3, 4, 2, '#8a7a5a'); P.e(8, 10, 4, 4.4, '#7a2028'); P.e(8, 11, 3, 3, '#c4404a'); P.r(6, 5, 4, 2, '#5a5248'); });
   draw('potionB', P => { P.r(6, 3, 4, 2, '#8a7a5a'); P.e(8, 10, 4, 4.4, '#1e3a6a'); P.e(8, 11, 3, 3, '#4a7ac4'); P.r(6, 5, 4, 2, '#5a5248'); });
   draw('bread', P => { P.e(8, 9, 5, 3.6, '#8a6a3a'); P.e(8, 8, 4, 2.6, '#a88450'); P.r(5, 8, 1, 1, '#6a4a24'); P.r(9, 9, 1, 1, '#6a4a24'); });
+  draw('campkit', P => { P.r(3, 9, 10, 5, '#6a4a2a'); P.r(3, 9, 10, 1, '#8a6a3a'); P.cone(8, 3, 5, 6, '#c9bd9a'); P.r(7, 10, 2, 4, '#241a12'); P.r(12, 12, 1, 2, '#3a2c1e'); P.e(8, 5, 1, 1.4, '#ffb050'); });
+  draw('hammer', P => { P.line(4, 14, 10, 6, 2, wood); P.r(8, 3, 6, 4, steel); P.r(8, 3, 6, 1, steel2); P.r(13, 4, 1, 2, dark); });
   draw('skull', P => { P.e(8, 7, 5, 4.6, '#e8e2d0'); P.r(5, 9, 6, 4, '#e8e2d0'); P.e(6, 7, 1.3, 1.7, '#221d18'); P.e(10, 7, 1.3, 1.7, '#221d18'); P.r(7, 9, 2, 1, '#221d18'); P.line(6, 12, 6, 13, 1, '#b8ae94'); P.line(8, 12, 8, 13, 1, '#b8ae94'); P.line(10, 12, 10, 13, 1, '#b8ae94'); });
 }
 function iconOf(it) {
@@ -3750,6 +4478,7 @@ function abilityReady(p, i) {
 }
 
 function useAbility(p, i) {
+  if (p.riding) return;
   const a = abilitiesFor(p)[i];
   if (!a || !abilityReady(p, i)) { if (a && p.level < a.lvl) logMsg(`${a.name} ist erst ab Stufe ${a.lvl} verfügbar.`, 'lg-dim'); else sfx.deny(); return; }
   const ang = p.aimAng;
@@ -3807,8 +4536,12 @@ function dmgOf(o, mult, school) {
   const a = o.attrEff || o.attr || {};
   let base = s.atk || 0;
   // Attribute liegen in attrEff, nicht im Wertespeicher.
-  if (school === 'fire' || school === 'frost' || school === 'shock' || school === 'magic' || school === 'dark') {
+  if (o.wclass === 'cursed' && school === 'dark') {
+    base *= 1 + (a.str || 0) * 0.007;
+  } else if (school === 'fire' || school === 'frost' || school === 'shock' || school === 'magic' || school === 'dark') {
     base *= 1 + (a.int || 0) * 0.007;
+  } else if (o.wclass === 'bow' && school === 'phys') {
+    base *= 1 + (a.dex || 0) * 0.007;
   } else {
     base *= 1 + (a.str || 0) * 0.007;
   }
@@ -4210,10 +4943,67 @@ function spawnBoss(bossKey, x, y, level) {
 }
 
 /* ---------- Bewegung mit Kollision ---------------------------------------- */
+/** Liefert das erste blockierende Requisit an dieser Stelle (oder null), um daran entlangzugleiten. */
+function blockingPropAt(wx, wy, radius) {
+  const CS = CFG.CS;
+  const cx0 = Math.floor((wx - 2) / CS), cx1 = Math.floor((wx + 2) / CS);
+  const cy0 = Math.floor((wy - 2) / CS), cy1 = Math.floor((wy + 2) / CS);
+  for (let cy = cy0; cy <= cy1; cy++) for (let cx = cx0; cx <= cx1; cx++) {
+    const ch = getChunk(cx, cy);
+    const sp = ch.solidProps || (ch.solidProps = ch.props.filter(q => q.solidR > 0));
+    for (let i = 0; i < sp.length; i++) {
+      const q = sp[i];
+      if (q.dead) continue;
+      const rr = q.solidR * (q.scale || 1) + radius;
+      const dx = q.x - wx, dy = q.y - wy;
+      if (dx * dx + dy * dy < rr * rr) return q;
+    }
+  }
+  return null;
+}
 function moveEntity(e, dx, dy, radius) {
   const r = radius || 0.34;
-  if (dx) { const nx = e.x + dx; if (!blockedAt(nx, e.y, r)) e.x = nx; else { e.vx = 0; } }
-  if (dy) { const ny = e.y + dy; if (!blockedAt(e.x, ny, r)) e.y = ny; else { e.vy = 0; } }
+  const len = Math.hypot(dx, dy);
+  if (len < 1e-6) return;
+  const n = Math.max(1, Math.ceil(len / 0.22));
+  const sx = dx / n, sy = dy / n;
+  for (let i = 0; i < n; i++) {
+    const nx = e.x + sx, ny = e.y + sy;
+    if (!blockedAt(nx, ny, r)) { e.x = nx; e.y = ny; continue; }
+    let moved = false;
+    // 1) Achsen einzeln versuchen (Wände, Klippen, Wasser)
+    if (sx && !blockedAt(nx, e.y, r)) { e.x = nx; moved = true; }
+    else if (sy && !blockedAt(e.x, ny, r)) { e.y = ny; moved = true; }
+    // 2) an einem runden Hindernis (Baum/Fels) seitlich entlanggleiten
+    if (!moved) {
+      const b = blockingPropAt(nx, ny, r);
+      if (b) {
+        const ax = nx - b.x, ay = ny - b.y, L = Math.hypot(ax, ay) || 1;
+        const tx = -ay / L, ty = ax / L;
+        const dot = sx * tx + sy * ty;
+        const mx = tx * dot * 1.05, my = ty * dot * 1.05;
+        // zusätzlich minimal herausschieben, damit man nicht festklebt
+        const px = ax / L * 0.02, py = ay / L * 0.02;
+        if (!blockedAt(e.x + mx + px, e.y + my + py, r)) { e.x += mx + px; e.y += my + py; moved = true; }
+        else if (!blockedAt(e.x + mx, e.y + my, r)) { e.x += mx; e.y += my; moved = true; }
+      }
+    }
+    if (!moved) { e.vx = 0; e.vy = 0; break; }
+  }
+}
+/** Anheben beim Überlaufen kleiner Steine/Büsche (weich, rein optisch). */
+function walkLiftAt(wx, wy) {
+  const CS = CFG.CS;
+  const ch = getChunk(Math.floor(wx / CS), Math.floor(wy / CS));
+  const lp = ch.liftProps || (ch.liftProps = ch.props.filter(q => q.liftH > 0));
+  let best = 0;
+  for (let i = 0; i < lp.length; i++) {
+    const q = lp[i];
+    const rr = (q.liftR || .6) * (q.scale || 1);
+    const dx = q.x - wx, dy = q.y - wy, d2 = dx * dx + dy * dy;
+    if (d2 < rr * rr) { const k = 1 - Math.sqrt(d2) / rr; const h = q.liftH * Math.sqrt(k); if (h > best) best = h; }
+  }
+  return best;
 }
 
 /* ---------- Mehrspieler-Hilfen --------------------------------------------- */
@@ -5063,7 +5853,7 @@ function healPlayer(v, p) {
 function playerDie(p) {
   p = p || GAME.player;
   if (p.dead) return;
-  p.dead = true; p.deaths++;
+  p.dead = true; p.deaths++; p.riding = null; p.rv = 0;
   const lostGold = Math.round(p.mats.gold * .3);
   p.mats.gold -= lostGold;
   const info = { gold: lostGold, at: { x: p.x, y: p.y }, day: WORLD.day, killer: p.lastAttacker ? p.lastAttacker.name : 'der Dunkelheit' };
@@ -5083,23 +5873,52 @@ function playerDie(p) {
 }
 
 /** Lässt einen im Koop niedergestreckten Spieler wieder aufstehen. */
-function revivePlayer(p) {
+function revivePlayer(p, frac, nearX, nearY) {
   const other = otherMpPlayer(p) || p;
-  const s = findFreeSpot(other.x, other.y, 3);
+  const s = safeSpawn(nearX !== undefined ? nearX : other.x, nearY !== undefined ? nearY : other.y, 20);
   p.x = s.x; p.y = s.y;
-  p.dead = false; p.hp = p.maxHp * .5; p.fp = p.maxFp * .5;
+  p.dead = false; p.hp = p.maxHp * (frac || .5); p.fp = p.maxFp * (frac || .5);
   p.stList = []; recomputeStatus(p); p.downT = null;
   logMsg('Du stehst wieder auf.', 'lg-good');
+  if (p === GAME.player) { cam.x = p.x; cam.y = p.y; ringFx(p.x, p.y, 3, '#8fe0a0'); burstParticles(p.x, p.y, 22, '#a8f0b8', 3); sfx.buff(); }
   updateHUD();
 }
 
 /* ---------- Beute ------------------------------------------------------------ */
+/** Was ein Gegner sinnvoll hinterlässt: Menschen tragen Münzen, Tiere Fell und Knochen,
+    Geister Asche und Seelensplitter, Konstrukte Eisen. */
+const DROP_HUMAN = new Set(['goblin', 'goblinArcher', 'goblinChief', 'bandit', 'banditArcher', 'banditBrute', 'banditshauptmann', 'cultist', 'cultistMage', 'kultorakel', 'necromancer', 'corruptKnight', 'skelKnight', 'gefallenerWaechter', 'ashWarrior', 'frostschamane', 'sumpfschamane', 'skeleton', 'drowned']);
+const DROP_BEAST = new Set(['wolf', 'shadowWolf', 'frostWolf', 'alphawolf', 'bear', 'frostBear', 'boar', 'spider', 'bigSpider', 'netzmutter', 'aschehund', 'scarab', 'leech', 'sporenwandler', 'hoehlentroll']);
+const DROP_SPIRIT = new Set(['ghost', 'shade', 'wisp', 'frostgeist', 'emberDemon', 'tiefenschrecken']);
+const DROP_CONSTRUCT = new Set(['eisengolem']);
+function dropProfile(e) {
+  if (!e || e.boss || e.miniboss) return 'human';
+  if (DROP_HUMAN.has(e.type)) return 'human';
+  if (DROP_BEAST.has(e.type)) return 'beast';
+  if (DROP_SPIRIT.has(e.type)) return 'spirit';
+  if (DROP_CONSTRUCT.has(e.type)) return 'construct';
+  return 'human';
+}
 function dropLoot(x, y, level, quality, e) {
   const p = GAME.player;
+  const prof = dropProfile(e);
   const gold = Math.round((3 + level * 2.6) * (1 + quality * 1.3) * rnd(.7, 1.4) * (1 + p.stat.find / 220));
-  if (gold > 0) dropPickup(x + rnd(-.4, .4), y + rnd(-.4, .4), { mat: 'gold', qty: gold });
-  if (Math.random() < .28 + quality * .16) dropPickup(x + rnd(-.6, .6), y + rnd(-.6, .6), { mat: Math.random() < .6 ? 'eisen' : 'aschestaub', qty: 1 + ((Math.random() * quality * 2) | 0) });
+  const sp = () => ({ x: x + rnd(-.5, .5), y: y + rnd(-.5, .5) });
+  if (prof === 'human') {
+    if (gold > 0) dropPickup(x + rnd(-.4, .4), y + rnd(-.4, .4), { mat: 'gold', qty: gold });
+  } else if (prof === 'beast') {
+    const q = 1 + ((Math.random() * (1 + quality)) | 0);
+    let s = sp(); dropPickup(s.x, s.y, { mat: 'fell', qty: q });
+    if (Math.random() < .55) { s = sp(); dropPickup(s.x, s.y, { mat: 'knochen', qty: 1 + ((Math.random() * quality) | 0) }); }
+  } else if (prof === 'spirit') {
+    const s = sp(); dropPickup(s.x, s.y, { mat: 'aschestaub', qty: 1 + ((Math.random() * (quality + 1)) | 0) });
+    if (Math.random() < .3 + quality * .12) { const s2 = sp(); dropPickup(s2.x, s2.y, { mat: 'seele', qty: 1 }); }
+  } else if (prof === 'construct') {
+    const s = sp(); dropPickup(s.x, s.y, { mat: 'eisen', qty: 2 + ((Math.random() * (quality + 2)) | 0) });
+  }
+  if (prof === 'human' && Math.random() < .28 + quality * .16) dropPickup(x + rnd(-.6, .6), y + rnd(-.6, .6), { mat: Math.random() < .6 ? 'eisen' : 'aschestaub', qty: 1 + ((Math.random() * quality * 2) | 0) });
   if (e && (e.elite || e.boss || e.miniboss) && Math.random() < .6) dropPickup(x + rnd(-.6, .6), y + rnd(-.6, .6), { mat: 'seele', qty: 1 + (e.boss ? 3 : 0) });
+  if (e && (e.elite || e.boss || e.miniboss) && prof !== 'human') dropPickup(x + rnd(-.6, .6), y + rnd(-.6, .6), { mat: 'gold', qty: Math.round(gold * .5) });
 
   let chance = .12 + quality * .22 + p.stat.find / 420;
   if (e && e.boss) chance = 3;
@@ -5153,7 +5972,7 @@ function collectPickup(u, p) {
   if (u.mat) {
     p.mats[u.mat] = (p.mats[u.mat] || 0) + u.qty;
     if (u.mat === 'gold') { floatText(p.x, p.y - .5, '+' + u.qty + ' Gold', '#c8a24a'); GAME.stats.gold = (GAME.stats.gold || 0) + u.qty; }
-    else floatText(p.x, p.y - .5, '+' + u.qty + ' ' + MATS[u.mat].name, '#a8a196');
+    else floatText(p.x, p.y - .5, '+' + u.qty + ' ' + (MATS[u.mat] ? MATS[u.mat].name : u.mat), '#a8a196');
     sfx.coin();
   } else if (u.consum) {
     const cap = POTION_CAP[u.consum];
@@ -5313,13 +6132,14 @@ function genDungeonFloor(def, floor) {
   }
   if (!rooms.length) rooms.push({ x: 10, y: 10, w: 8, h: 8, cx: 14, cy: 14, kind: 'entry' });
 
+  const corrPts = [];
   const carveRect = (x, y, w, h) => { for (let j = y; j < y + h; j++) for (let i = x; i < x + w; i++) if (i > 0 && j > 0 && i < W - 1 && j < H - 1) grid[j * W + i] = 1; };
   const carveCorr = (x1, y1, x2, y2) => {
     let x = Math.round(x1), y = Math.round(y1);
     const tx = Math.round(x2), ty = Math.round(y2);
     const wdt = rng() < .3 ? 3 : 2;
-    while (x !== tx) { x += sign(tx - x); carveRect(x - (wdt >> 1), y - (wdt >> 1), wdt, wdt); }
-    while (y !== ty) { y += sign(ty - y); carveRect(x - (wdt >> 1), y - (wdt >> 1), wdt, wdt); }
+    while (x !== tx) { x += sign(tx - x); carveRect(x - (wdt >> 1), y - (wdt >> 1), wdt, wdt); if ((x * 3 + y) % 11 === 0) corrPts.push({ x: x + .5, y: y + .5 }); }
+    while (y !== ty) { y += sign(ty - y); carveRect(x - (wdt >> 1), y - (wdt >> 1), wdt, wdt); if ((x + y * 3) % 11 === 0) corrPts.push({ x: x + .5, y: y + .5 }); }
   };
   for (const r of rooms) carveRect(r.x, r.y, r.w, r.h);
   rooms.sort((a, b) => (a.cx + a.cy) - (b.cx + b.cy));
@@ -5361,15 +6181,23 @@ function genDungeonFloor(def, floor) {
   for (const r of rooms) {
     const put = (ox, oy, o) => DUN.contents.push(Object.assign({ x: r.cx + ox, y: r.cy + oy }, o));
     // Deko
-    const dn = 2 + ((rng() * 4) | 0);
+    const dn = 3 + ((rng() * 5) | 0);
     for (let i = 0; i < dn; i++) {
       const px = r.x + 1 + rng() * (r.w - 2), py = r.y + 1 + rng() * (r.h - 2);
       const key = theme.props[(rng() * theme.props.length) | 0];
-      DUN.contents.push({ x: px, y: py, prop: key, solidR: key.startsWith('s_pillar') || key.startsWith('rock') ? .4 : 0 });
+      DUN.contents.push({ x: px, y: py, prop: key, solidR: key.startsWith('s_pillar') || (key.startsWith('rock') && !/^rock_s\d/.test(key)) ? .4 : 0 });
       if (key === 's_candle' || key === 's_brazier') DUN.contents.push({ x: px, y: py, light: { c: 0xffb050, r: 4.5, i: .85 } });
       if (key === 's_crystalBlue') DUN.contents.push({ x: px, y: py, light: { c: 0x5a8fd0, r: 4, i: .6 } });
       if (key === 's_crystalRed' || key === 'b_crack') DUN.contents.push({ x: px, y: py, light: { c: 0xff6a2c, r: 4, i: .7 } });
     }
+    // Epische Ausstattung: Lichtpfütze, Eckpfeiler mit Licht, Runenkreise
+    DUN.contents.push({ x: r.cx, y: r.cy, light: { c: theme.light, r: 8, i: .5 } });
+    if (r.w >= 8 && r.h >= 8) for (const [sx, sy] of [[-1, -1], [1, -1], [-1, 1], [1, 1]]) {
+      const px = r.cx + sx * (r.w / 2 - 1.3), py = r.cy + sy * (r.h / 2 - 1.3);
+      DUN.contents.push({ x: px, y: py, prop: 's_pillar1', solidR: .4 });
+      DUN.contents.push({ x: px, y: py - .2, light: { c: theme.light, r: 4.4, i: .6 } });
+    }
+    if (r.kind !== 'entry' && rng() < .5) DUN.contents.push({ x: r.cx, y: r.cy, decal: 'rune', r: 2.4 });
     if (r.kind === 'entry') {
       put(0, 0, { prop: 's_stairs', solidR: 0 });
       put(0, .8, { inter: { type: 'dunExit', label: 'Nach oben verlassen' } });
@@ -5404,11 +6232,20 @@ function genDungeonFloor(def, floor) {
       for (let i = 0; i < 6; i++) { const a = i / 6 * TAU; put(Math.cos(a) * (r.w / 2 - 1.5), Math.sin(a) * (r.h / 2 - 1.5), { prop: 's_brazier' }); put(Math.cos(a) * (r.w / 2 - 1.5), Math.sin(a) * (r.h / 2 - 1.5) - .3, { light: { c: 0xff7a3c, r: 6, i: .9 } }); }
       put(0, 3, { decal: 'rune', r: 4 });
     } else {
-      const n = 2 + ((rng() * 3) | 0) + Math.min(3, floor >> 1);
+      const n = 1 + ((rng() * 3) | 0) + Math.min(2, floor >> 1);
       for (let i = 0; i < n; i++) put(rnd(-r.w / 2 + 1.5, r.w / 2 - 1.5), rnd(-r.h / 2 + 1.5, r.h / 2 - 1.5), { enemy: theme.enemies[(rng() * theme.enemies.length) | 0], lvl });
       if (rng() < .35) put(rnd(-2, 2), rnd(-2, 2), { chest: 0, id: 'f' + floor + 'r' + rooms.indexOf(r) });
       if (rng() < .25) put(rnd(-2, 2), rnd(-2, 2), { decal: 'blood', r: 1.6 });
     }
+  }
+  // Fackeln entlang der Gänge
+  let nTorch = 0;
+  for (const pt of corrPts) {
+    if (nTorch > 46) break;
+    if (rooms.some(r => pt.x > r.x - 1 && pt.x < r.x + r.w + 1 && pt.y > r.y - 1 && pt.y < r.y + r.h + 1)) continue;
+    DUN.contents.push({ x: pt.x, y: pt.y, prop: 's_brazier', solidR: 0 });
+    DUN.contents.push({ x: pt.x, y: pt.y - .3, light: { c: 0xffa850, r: 5.2, i: .8 } });
+    nTorch++;
   }
   DUN.level = lvl;
 }
@@ -5430,15 +6267,23 @@ function genDungeonChunk(cx, cy) {
     if (gx >= 0 && gy >= 0 && gx < DUN.W && gy < DUN.H) g = DUN.grid[gy * DUN.W + gx];
     if (g === 0) { ch.flg[i] = F_SOLID | F_VOID; ch.z[i] = 1; ch.col[i] = 0x000000; }
     else if (g === 2) {
-      ch.flg[i] = F_SOLID | F_INDOOR; ch.z[i] = 6;
+      ch.flg[i] = F_SOLID | F_INDOOR; ch.z[i] = 7;
       const v = rand2(gx, gy, DUN.seed) * .2 - .1;
       // Wandoberseiten bewusst dunkler als der Boden, damit der begehbare
       // Bereich sofort lesbar ist.
-      ch.col[i] = shadeC(((gx + gy) & 1) ? th.wall : th.wall2, (1 + v) * .62);
+      ch.col[i] = mixC(shadeC(((gx + gy) & 1) ? th.wall : th.wall2, (1 + v) * .62), th.light, .07);
     } else {
       ch.flg[i] = F_INDOOR; ch.z[i] = 1;
       const v = fbm01(gx * .3, gy * .3, DUN.seed, 2) * .3 - .15;
-      ch.col[i] = shadeC(rand2(gx, gy, DUN.seed + 3) < .5 ? th.floor : th.floor2, 1 + v);
+      const wallAt = (x, y) => (x >= 0 && y >= 0 && x < DUN.W && y < DUN.H) ? DUN.grid[y * DUN.W + x] === 2 : true;
+      let col = shadeC((((gx >> 1) + (gy >> 1)) & 1) ? th.floor : th.floor2, 1 + v * .8);
+      if (rand2(gx, gy, DUN.seed + 3) < .12) col = shadeC(col, .9);
+      const vein = ridge(gx * .09, gy * .09, DUN.seed + 5, 2);
+      if (vein > .92) col = mixC(col, th.light, .3);
+      const nW = (wallAt(gx - 1, gy) ? 1 : 0) + (wallAt(gx + 1, gy) ? 1 : 0) + (wallAt(gx, gy - 1) ? 1 : 0) + (wallAt(gx, gy + 1) ? 1 : 0);
+      if (nW) col = shadeC(col, 1 - nW * .09);
+      else if (((gx + gy) & 7) === 0) col = shadeC(col, 1.06);
+      ch.col[i] = col;
     }
   }
   // Inhalte einsetzen
@@ -5464,6 +6309,8 @@ function genDungeonChunk(cx, cy) {
 /* ---------- Betreten / Verlassen -------------------------------------------- */
 function enterDungeon(def) {
   const p = GAME.player;
+  if (p.riding) { p.riding = null; p.rv = 0; }
+  p.roadMode = false; roadChipUpdate();
   DUN.ret = { x: p.x, y: p.y };
   DUN.active = def;
   GAME.mode = 'dungeon';
@@ -5483,7 +6330,7 @@ function loadDungeonFloor(def, floor) {
   GAME.cam.x = p.x; GAME.cam.y = p.y;
   GAME.bossActive = null;
   GAME.floorBanner = 2.4;
-  if (GAME.player2 && NET.role === 'host') { const s = findFreeSpot(p.x + 1.2, p.y + .6, 3); GAME.player2.x = GAME.player2.netTX = s.x; GAME.player2.y = GAME.player2.netTY = s.y; }
+  if (GAME.player2 && NET.role === 'host') { const s = safeSpawn(p.x + 1.2, p.y + .6, 8); GAME.player2.x = GAME.player2.netTX = s.x; GAME.player2.y = GAME.player2.netTY = s.y; }
   netModeOut();
 }
 function descendDungeon() {
@@ -5538,69 +6385,147 @@ function addRep(f, v) {
 }
 
 /* ---------- Quests ----------------------------------------------------------- */
-const Q_WHO = ['Schmied Halvar', 'die alte Mereth', 'Hauptmann Doran', 'Bruder Kestel', 'Händlerin Sova', 'der Jäger Anselm', 'Wächterin Ylva'];
-const Q_WHOM = ['sein Bruder', 'ihre Tochter', 'ein Bote', 'eine Karawane', 'der halbe Trupp', 'ein Lehrling'];
-const Q_PLACE = ['im Sumpf', 'hinter den Hügeln', 'im Schwarzwald', 'bei den alten Steinen', 'nahe der Ruine', 'jenseits des Flusses'];
 
-const QUEST_TEMPLATES = [
-  {
-    id: 'missing', build(q, rng) {
-      q.who = pick(Q_WHO); q.whom = pick(Q_WHOM);
-      q.title = 'Vermisst';
-      q.desc = `${q.who} sagt, ${q.whom} sei ${pick(Q_PLACE)} verschwunden. Die Spur führt zu einem Lager.`;
-      q.obj = { type: 'clearAny', need: 1, have: 0, label: 'Räume ein feindliches Lager' };
-    }
-  },
-  {
-    id: 'hunt', build(q, rng) {
-      const t = pick(['wolf', 'bandit', 'goblin', 'skeleton', 'spider', 'cultist']);
-      q.who = pick(Q_WHO);
-      q.enemyType = t;
-      q.title = 'Kopfgeld';
-      q.desc = `${q.who} zahlt für jeden erlegten ${ENEMY_T[t].name}. Niemand fragt, warum.`;
-      q.obj = { type: 'kill', target: t, need: 5 + ((rng() * 6) | 0), have: 0, label: `Erlege ${ENEMY_T[t].name}` };
-    }
-  },
-  {
-    id: 'delve', build(q, rng) {
-      q.who = pick(Q_WHO);
-      q.title = 'Unter der Erde';
-      q.desc = `Etwas kommt nachts aus einem Loch im Boden. ${q.who} will wissen, was unten liegt.`;
-      q.obj = { type: 'depth', need: 2 + ((rng() * 3) | 0), have: 0, label: 'Erreiche Dungeon-Etage' };
-    }
-  },
-  {
-    id: 'relic', build(q, rng) {
-      q.title = 'Etwas Seltenes';
-      q.who = pick(Q_WHO);
-      q.desc = `${q.who} beschreibt einen Gegenstand, den er einmal gesehen hat. Die Beschreibung ergibt keinen Sinn, bis man ihn findet.`;
-      q.obj = { type: 'loot', rarity: 2, need: 1, have: 0, label: 'Finde einen seltenen Gegenstand' };
-    }
-  },
-  {
-    id: 'slay', build(q, rng) {
-      q.title = 'Etwas Altes';
-      q.desc = 'Die Leute reden von etwas, das nicht mehr wandert, sondern wartet.';
-      q.obj = { type: 'boss', need: 1, have: 0, label: 'Besiege einen Boss' };
-    }
-  },
+/* ============================================================================
+   QUESTS MIT GESCHICHTE — jede Geschichte hat 3 Abschnitte beim selben Auftraggeber.
+   Ein Auftrag lässt sich nur bei dem NPC abgeben, der ihn gegeben hat (auf der Karte markiert).
+   ========================================================================== */
+const ENEMY_PL = { wolf: 'Wölfe', alphawolf: 'Alphawölfe', frostWolf: 'Frostwölfe', bandit: 'Banditen', goblin: 'Goblins', skeleton: 'Skelette', spider: 'Waldspinnen',
+  cultist: 'Kultisten', eisengolem: 'Eisengolems', ghost: 'Geister', drowned: 'Ertrunkene', boar: 'Keiler', frostBear: 'Eisbären', bear: 'Waldbären' };
+const KIN = [
+  { K: 'mein Bruder', p: 'er', P: 'Er', d: 'ihm' }, { K: 'meine Schwester', p: 'sie', P: 'Sie', d: 'ihr' },
+  { K: 'mein Sohn', p: 'er', P: 'Er', d: 'ihm' }, { K: 'meine Tochter', p: 'sie', P: 'Sie', d: 'ihr' },
 ];
-
-function newQuest(level) {
-  const rng = Math.random;
-  const t = pick(QUEST_TEMPLATES);
-  const q = { qid: 'q' + (GAME.questSeq++), tpl: t.id, done: false, level };
-  t.build(q, rng);
-  q.reward = {
-    gold: Math.round((40 + level * 22) * rnd(.8, 1.3)),
-    xp: Math.round((35 + level * 20) * rnd(.85, 1.25)),
-    item: Math.random() < .55 ? genItem(level + 2, { minRarity: 1 }) : null,
+const STORY_PLACES = ['im Sumpf', 'hinter den Hügeln', 'im Schwarzwald', 'bei den alten Steinen', 'jenseits des Flusses', 'nahe der Ruine'];
+const STORIES = [
+  { id: 'vater', stages: [
+    { t: 'Spuren im Eisen', d: '„Ich kannte deinen Vater. Er wollte im alten Gewölbe etwas finden, das die Eisengolems bewachen. Besiege {n} {enemy}, vielleicht hat er dort eine Spur hinterlassen.“', o: { type: 'kill', target: 'eisengolem', need: [3, 4] }, out: '„Dein Vater hat Kratzer in ihrem Eisen hinterlassen. Er war also wirklich dort. Mach weiter.“' },
+    { t: 'Der tiefe Weg', d: '„Er schrieb von einer Treppe, die tiefer führt. Steige in einem Dungeon bis zur Etage {n} hinab und sieh nach, was er meinte.“', o: { type: 'depth', need: [2, 3] }, out: '„Du warst unten. Und? Er hat dort etwas versteckt, ich weiß es. Such danach.“' },
+    { t: 'Was er hinterließ', d: '„Irgendwo dort draußen liegt, was er für dich zurückließ. Finde einen seltenen Gegenstand, dann wissen wir, ob er es war.“', o: { type: 'loot', rarity: 2, need: 1 }, out: '„Das muss es sein. Sein Name war nie in Stein gemeißelt, aber so bleibt er bei dir. Trag es mit Stolz.“' } ] },
+  { id: 'bruder', stages: [
+    { t: 'Die Banditen {place}', d: '„{K} ist vor drei Tagen {place} verschwunden. Banditen haben die Wege dort besetzt. Erlege {n} {enemy}, damit ich in Ruhe suchen kann.“', o: { type: 'kill', target: 'bandit', need: [5, 7] }, out: '„Die Wege sind freier. Aber {p} ist nicht zurückgekehrt.“' },
+    { t: 'Das Lager', d: '„Ihr Lager muss {place} sein. Räume ein feindliches Lager aus und sieh nach, ob {p} dort festgehalten wird.“', o: { type: 'clearAny', need: 1 }, out: '„{P} war nicht dort, aber jemand hat ein Zeichen an die Wand geritzt. Es geht weiter.“' },
+    { t: 'Der letzte Hinweis', d: '„Das Zeichen deutet auf einen Fund, den {p} bei sich tragen wollte. Bring mir einen ungewöhnlichen Gegenstand aus den Verstecken dieser Leute.“', o: { type: 'loot', rarity: 1, need: 1 }, out: '„Ich erkenne dieses Stück wieder. Jetzt weiß ich, dass {p} lebt. Das verdanke ich dir.“' } ] },
+  { id: 'karawane', stages: [
+    { t: 'Wolfsspuren', d: '„Unsere Karawane wurde {place} überfallen. Die Wölfe dort sind frech geworden. Erlege {n} {enemy}.“', o: { type: 'kill', target: 'wolf', need: [5, 8] }, out: '„Gut. Jetzt kann ich zur Unglücksstelle, ohne dass mir jemand ins Genick springt.“' },
+    { t: 'Die Ladung', d: '„Ein Teil der Ladung war wertvoll. Finde einen ungewöhnlichen Gegenstand, dann weiß ich, ob noch etwas davon dort liegt.“', o: { type: 'loot', rarity: 1, need: 1 }, out: '„Das ist ein Stück davon. Der Rest ist verloren, aber das hier reicht.“' },
+    { t: 'Der Verräter', d: '„Jemand hat die Wölfe auf uns gehetzt. Meine Spur führt zu einem Lager. Räume es aus, und ich habe meine Antwort.“', o: { type: 'clearAny', need: 1 }, out: '„Es war der Wachführer. Jetzt ist er Geschichte. Danke, dass du das erledigt hast.“' } ] },
+  { id: 'seuche', stages: [
+    { t: 'Das Fieber', d: '„Ein Fieber geht um, es kommt aus den Nestern der Spinnen. Erlege {n} {enemy}, damit die Brut sich nicht weiter ausbreitet.“', o: { type: 'kill', target: 'spider', need: [6, 9] }, out: '„Das Fieber lässt nach, aber die Quelle ist noch da.“' },
+    { t: 'Die Quelle', d: '„Die Ertrunkenen im Sumpf tragen das Gift mit sich. Erlege {n} {enemy}.“', o: { type: 'kill', target: 'drowned', need: [4, 6] }, out: '„Sie sind es nicht allein. Etwas liegt unter der Erde.“' },
+    { t: 'Unter der Erde', d: '„Das Gift stammt aus der Tiefe. Steige in einem Dungeon bis zur Etage {n} hinab und brich die Quelle.“', o: { type: 'depth', need: [2, 3] }, out: '„Du hast die Quelle versiegelt. Die Leute hier werden wieder gesund. Nimm das hier als Dank.“' } ] },
+  { id: 'kult', stages: [
+    { t: 'Flüstern im Dunkeln', d: '„Nachts hören wir Stimmen aus dem Wald. Kultisten ziehen Leute fort. Erlege {n} {enemy}.“', o: { type: 'kill', target: 'cultist', need: [5, 7] }, out: '„Die Stimmen sind leiser. Aber sie kommen von weiter unten.“' },
+    { t: 'Das Heiligtum', d: '„Ihr Ritual wird in einem Heiligtum unter der Erde vorbereitet. Steige in einem Dungeon bis zur Etage {n} hinab.“', o: { type: 'depth', need: [2, 3] }, out: '„Du hast es gesehen. Dann weißt du, was auf dem Spiel steht.“' },
+    { t: 'Das Ende des Rituals', d: '„Zerstöre, was dort wartet. Besiege einen Boss, dann ist es vorbei.“', o: { type: 'boss', need: 1 }, out: '„Die Stimmen sind verstummt. Zum ersten Mal seit Wochen schlafe ich wieder.“' } ] },
+  { id: 'hammer', stages: [
+    { t: 'Der gestohlene Hammer', d: '„Goblins haben meinen besten Hammer gestohlen. Erlege {n} {enemy}, vielleicht trägt noch einer ihn bei sich.“', o: { type: 'kill', target: 'goblin', need: [6, 9] }, out: '„Keiner hatte ihn. Sie müssen ihn weitergegeben haben.“' },
+    { t: 'Das Goblinlager', d: '„Die Goblins hausen in Lagern. Räume ein feindliches Lager aus, dort muss er liegen.“', o: { type: 'clearAny', need: 1 }, out: '„Nicht der Hammer, aber seine Spur. Beinahe.“' },
+    { t: 'Ein neuer Hammer', d: '„Der Hammer ist verloren. Bring mir etwas Seltenes, ich schmiede daraus einen neuen, und du bekommst den ersten Schlag.“', o: { type: 'loot', rarity: 2, need: 1 }, out: '„Das ist feines Material. Der neue Hammer wird besser als der alte. Nimm diese Münzen für die Mühe.“' } ] },
+  { id: 'gespenst', stages: [
+    { t: 'Die Gestalt am Weg', d: '„Nachts steht eine Gestalt am Wegrand und weint. Geister folgen ihr. Erlege {n} {enemy}.“', o: { type: 'kill', target: 'ghost', need: [4, 6] }, out: '„Sie weint noch, aber die Geister halten Abstand.“' },
+    { t: 'Die stillen Wächter', d: '„Sie war einst eine von uns. Ihre Wächter sind Skelette. Erlege {n} {enemy}.“', o: { type: 'kill', target: 'skeleton', need: [6, 9] }, out: '„Jetzt hört sie dir zu, glaube ich.“' },
+    { t: 'Der Ring', d: '„Sie trägt einen Ring, der sie hier hält. Finde einen seltenen Gegenstand, dann kann sie ruhen.“', o: { type: 'loot', rarity: 2, need: 1 }, out: '„Ich sehe sie nicht mehr. Du hast sie befreit, und ich weiß nicht, wie ich dir danken soll.“' } ] },
+  { id: 'winter', stages: [
+    { t: 'Frostwölfe', d: '„Der Frost ist früher gekommen, und die Frostwölfe mit ihm. Erlege {n} {enemy}.“', o: { type: 'kill', target: 'frostWolf', need: [5, 7] }, out: '„Es wird ruhiger. Aber die Kälte kommt von woanders.“' },
+    { t: 'Die Eisbären', d: '„Eisbären haben unsere Vorräte zerstört. Erlege {n} {enemy}.“', o: { type: 'kill', target: 'frostBear', need: [2, 3] }, out: '„Wir werden diesen Winter überleben. Vielleicht.“' },
+    { t: 'Die Quelle der Kälte', d: '„Die Kälte kommt aus der Tiefe. Steige in einem Dungeon bis zur Etage {n} hinab.“', o: { type: 'depth', need: [2, 3] }, out: '„Es taut. Wirklich. Nimm das hier, und danke.“' } ] },
+  { id: 'schatz', stages: [
+    { t: 'Die halbe Karte', d: '„Ich besitze die Hälfte einer Schatzkarte. Die andere trägt ein Bandit. Erlege {n} {enemy}, bis du sie findest.“', o: { type: 'kill', target: 'bandit', need: [5, 8] }, out: '„Du hast die zweite Hälfte! Sie passt. Die Karte zeigt nach unten.“' },
+    { t: 'In die Tiefe', d: '„Die Karte weist unter die Erde. Steige in einem Dungeon bis zur Etage {n} hinab.“', o: { type: 'depth', need: [2, 3] }, out: '„Dann stimmt es. Jetzt fehlt nur noch der Schatz selbst.“' },
+    { t: 'Der Schatz', d: '„Der Schatz ist ein seltener Gegenstand. Finde ihn, und wir teilen.“', o: { type: 'loot', rarity: 2, need: 1 }, out: '„Er ist echt! Ich teile gern. Hier ist dein Anteil.“' } ] },
+  { id: 'patrouille', stages: [
+    { t: 'Die Wege sichern', d: '„Meine Patrouille ist nicht zurückgekehrt. Keiler haben die Wege verseucht. Erlege {n} {enemy}.“', o: { type: 'kill', target: 'boar', need: [4, 6] }, out: '„Die Wege sind wieder sicher. Aber meine Leute fehlen noch.“' },
+    { t: 'Das Lager der Räuber', d: '„Ich vermute ein Lager hinter dem Überfall. Räume ein feindliches Lager aus.“', o: { type: 'clearAny', need: 1 }, out: '„Sie lebten noch, zum Glück. Nur der Anführer ist entkommen.“' },
+    { t: 'Der Anführer', d: '„Der Anführer des Überfalls lebt noch. Besiege einen Boss.“', o: { type: 'boss', need: 1 }, out: '„Die Wache ist dir etwas schuldig. Nimm das hier.“' } ] },
+];
+function storyText(s, v) {
+  const k = v.kin || KIN[0];
+  return s.replace(/\{n\}/g, v.n).replace(/\{enemy\}/g, v.enemy || '').replace(/\{K\}/g, k.K).replace(/\{p\}/g, k.p).replace(/\{P\}/g, k.P).replace(/\{d\}/g, k.d).replace(/\{place\}/g, v.place);
+}
+/** Baut den Auftrag für Abschnitt `stage` einer Geschichte. */
+function buildStoryQuest(story, stage, vars, level, giver) {
+  const S = STORIES.find(x => x.id === story);
+  const st = S.stages[stage];
+  const o = st.o;
+  const need = Array.isArray(o.need) ? rndInt(o.need[0], o.need[1]) : o.need;
+  const v = { n: need, enemy: o.target ? (ENEMY_PL[o.target] || ENEMY_T[o.target].name) : '', kin: KIN[vars.kin % KIN.length], place: vars.place };
+  const obj = { type: o.type, need, have: 0 };
+  if (o.target) obj.target = o.target;
+  if (o.rarity !== undefined) obj.rarity = o.rarity;
+  obj.label = o.type === 'kill' ? `Erlege ${need} ${v.enemy}` : o.type === 'clearAny' ? 'Räume ein feindliches Lager' : o.type === 'depth' ? `Erreiche Dungeon-Etage ${need}` :
+    o.type === 'loot' ? (o.rarity >= 2 ? 'Finde einen seltenen Gegenstand' : 'Finde einen ungewöhnlichen Gegenstand') : 'Besiege einen Boss';
+  const last = stage === S.stages.length - 1;
+  const lm = 1 + stage * .25 + (last ? .5 : 0);
+  const q = {
+    qid: 'q' + (GAME.questSeq++), tpl: 'story', done: false, level,
+    story: { id: story, stage, of: S.stages.length }, title: storyText(st.t, v), desc: storyText(st.d, v), outro: storyText(st.out, v), obj, giver,
+    reward: {
+      gold: Math.round((40 + level * 22) * rnd(.8, 1.3) * lm), xp: Math.round((35 + level * 20) * rnd(.85, 1.25) * lm),
+      item: (last || Math.random() < .45) ? genItem(level + 2 + (last ? 2 : 0), { minRarity: last ? 2 : 1 }) : null,
+    },
   };
   return q;
 }
+/** Gespeicherter Geschichtenstand eines NPCs (bleibt über Spielstände erhalten). */
+function npcQuestOffer(n, p) {
+  WORLD.state.npc = WORLD.state.npc || {};
+  const ns = WORLD.state.npc[n.key] || (WORLD.state.npc[n.key] = {});
+  if (ns.active && !GAME.quests.some(q => q.qid === ns.active)) ns.active = null;
+  if (ns.active) return { kind: 'active', q: GAME.quests.find(q => q.qid === ns.active), ns };
+  if (!ns.story) {
+    if (ns.cdDay != null && WORLD.day - ns.cdDay < 2) return { kind: 'rest', ns };
+    let pool = STORIES.filter(s => s.id !== ns.last);
+    ns.story = pick(pool).id; ns.last = ns.story; ns.stage = 0;
+    ns.vars = { kin: (Math.random() * KIN.length) | 0, place: pick(STORY_PLACES) };
+    ns.pending = null;
+  }
+  if (!ns.pending || ns.pending.story.stage !== ns.stage) {
+    ns.pending = buildStoryQuest(ns.story, ns.stage, ns.vars, Math.max(1, p.level), { key: n.key, x: n.x, y: n.y, role: n.role, name: npcName(n) });
+  }
+  return { kind: 'offer', q: ns.pending, ns };
+}
+function advanceStory(q) {
+  if (!q.story || !q.giver || !q.giver.key) return;
+  const ns = (WORLD.state.npc || {})[q.giver.key];
+  if (!ns || ns.active !== q.qid) return;
+  ns.active = null; ns.pending = null; ns.stage++;
+  if (ns.stage >= q.story.of) { ns.story = null; ns.cdDay = WORLD.day; ns.done = (ns.done || 0) + 1; logMsg('Die Geschichte ist zu Ende erzählt.', 'lg-gold'); }
+}
+function questGivenBy(q, n) { return !q.giver ? true : (q.giver.key ? q.giver.key === n.key : false); }
+function turnInQuest(q, n) {
+  const fin = () => completeQuest(q);
+  if (q.outro) showDialog(n ? npcName(n) : 'Am Lagerfeuer', q.outro, [{ label: 'Belohnung entgegennehmen', hint: `+${q.reward.gold} Gold`, fn: fin }]);
+  else fin();
+}
+/** Positionen für Karte, Minikarte und Auftragsanzeige. */
+function questGiverPos(q) {
+  const g = q.giver; if (!g) return null;
+  if (g.camp) {
+    const p = GAME.player; let best = null, bd = Infinity;
+    for (const c of allCamps()) { const d = dist2(c.x, c.y, p.x, p.y); if (d < bd) { bd = d; best = c; } }
+    return best ? { x: best.x, y: best.y, name: 'Lagerfeuer' } : null;
+  }
+  return { x: g.x, y: g.y, name: g.name || 'Auftraggeber' };
+}
+function dirArrow(dx, dy) {
+  const sx = dx - dy, sy = (dx + dy) * .5;
+  const a = Math.atan2(sy, sx), i = ((Math.round(a / (Math.PI / 4)) % 8) + 8) % 8;
+  return ['→', '↘', '↓', '↙', '←', '↖', '↑', '↗'][i];
+}
+function newQuest(level) {
+  // Aushang am Lagerfeuer: erster Abschnitt einer zufälligen Geschichte, abzugeben am Feuer.
+  const S = pick(STORIES);
+  const q = buildStoryQuest(S.id, 0, { kin: (Math.random() * KIN.length) | 0, place: pick(STORY_PLACES) }, level, { camp: true });
+  q.story = null;
+  q.desc = 'Ein Reisender hat am Feuer eine Nachricht hinterlassen: ' + q.desc;
+  return q;
+}
+
 function giveQuest(q) {
   if (GAME.quests.length >= 5) { logMsg('Du hast genug offene Aufträge.', 'lg-dim'); return false; }
   GAME.quests.push(q);
+  if (q.giver && q.giver.key) { const ns = (WORLD.state.npc || {})[q.giver.key]; if (ns) { ns.active = q.qid; ns.pending = null; } }
   logMsg(`Auftrag angenommen: ${q.title}`, 'lg-gold');
   toast('AUFTRAG', true);
   updateQuestTrack();
@@ -5618,7 +6543,7 @@ function questEvent(type, data) {
     if (type === 'depth' && o.type === 'depth' && data.floor >= o.need) { o.have = o.need; changed = true; }
     if (o.have >= o.need && !q.done) {
       q.done = true;
-      logMsg(`Auftrag erfüllt: ${q.title}. Kehre zu einem Auftraggeber zurück.`, 'lg-good');
+      logMsg(`Auftrag erfüllt: ${q.title}. Kehre zu ${q.giver ? (q.giver.camp ? 'einem Lagerfeuer' : q.giver.name) : 'einem Auftraggeber'} zurück (auf der Karte markiert).`, 'lg-good');
       toast('AUFTRAG ERFÜLLT', true); sfx.quest();
     }
   }
@@ -5632,9 +6557,11 @@ function completeQuest(q) {
   if (q.reward.item) { if (p.bag.length < p.bagMax) { p.bag.push(q.reward.item); logMsg('Belohnung: ' + q.reward.item.name, 'lg-' + ['dim', 'good', 'rare', 'epic', 'legend', 'myth'][q.reward.item.rarity]); } else dropItemAt(p.x, p.y, q.reward.item); }
   logMsg(`+${q.reward.gold} Gold, +${q.reward.xp} EP`, 'lg-gold');
   GAME.quests = GAME.quests.filter(x => x !== q);
+  advanceStory(q);
   GAME.stats.quests = (GAME.stats.quests || 0) + 1;
   addRep('haendler', 4);
   if (q.giverRole && ROLE_FACTION[q.giverRole]) addRep(ROLE_FACTION[q.giverRole], 8);
+  if (q.giver && ROLE_FACTION[q.giver.role]) addRep(ROLE_FACTION[q.giver.role], 8);
   updateQuestTrack(); updateHUD(); sfx.quest();
 }
 
@@ -5697,6 +6624,11 @@ const BASE_BUILDINGS = {
     desc: 'Sichere Truhe. Was hier liegt, geht beim Tod nie verloren. +10 Beutelplätze je Stufe.',
     cost: lv => ({ gold: 190 * lv * lv, eisen: 14 * lv }),
   },
+  kutsche: {
+    name: 'Kutschenwerkstatt', ico: '📦', max: 2,
+    desc: 'Das günstigste Bauwerk. Baut Kutschen (max. 3, je 2 Sitze) und den Wegebauhammer. Stufe 2: schnellere Kutschen, billigere Wege.',
+    cost: lv => lv === 1 ? ({ gold: 90, fell: 3 }) : ({ gold: 340, eisen: 14, fell: 8 }),
+  },
   kartograf: {
     name: 'Kartograf', ico: '🗺️', max: 2,
     desc: 'Deckt beim Ausbau einen großen Teil der Umgebung auf der Karte auf.',
@@ -5725,32 +6657,32 @@ function payCost(cost) {
 }
 function upgradeBuilding(id) {
   const B = BASE_BUILDINGS[id];
-  const cur = GAME.base.buildings[id] || 0;
+  const cur = curBld()[id] || 0;
   if (cur >= B.max) return;
   const cost = B.cost(cur + 1);
   if (!canAfford(cost)) { logMsg('Nicht genug Material.', 'lg-bad'); sfx.deny(); return; }
   payCost(cost);
-  GAME.base.buildings[id] = cur + 1;
+  curBld()[id] = cur + 1;
   logMsg(`${B.name} ${cur === 0 ? 'errichtet' : 'auf Stufe ' + (cur + 1) + ' ausgebaut'}.`, 'lg-good');
   toast(B.name.toUpperCase(), true); sfx.build();
   applyBaseEffects();
-  WORLD.chunks.delete('0,0');   // Lager neu aufbauen
+  refreshCamp(curCamp());   // Lager neu aufbauen
   if (id === 'kartograf') revealMapAround(GAME.player.x, GAME.player.y, 26 * (cur + 1));
   openBasePanel();
   updateHUD();
 }
 function applyBaseEffects() {
   const p = GAME.player;
-  const lager = GAME.base.buildings.lager || 0;
+  const lager = bestBld('lager');
   p.bagMax = 30 + lager * 10;
-  const bib = GAME.base.buildings.bibliothek || 0;
+  const bib = bestBld('bibliothek');
   p.libCdr = bib * 3;
   // Lagerfeuer-Stufe: kleiner, stufenweise wachsender Bonus auf Beutefund (find) —
   // eine echte, aber bewusst zurückhaltende Belohnung, siehe campfireTierInfo unten.
   // Wie bei lager/bibliothek gilt der Bonus nur für Spieler 1 (applyBaseEffects betrifft
   // im Koop schon bisher nur GAME.player, siehe Aufrufer) — bestehendes Verhalten, nicht
   // Teil dieser Änderung.
-  p.campfireFind = campfireTierInfo(GAME.base.campfireTier || 1).findBonus;
+  p.campfireFind = Math.max(0, ...allCamps().map(c => campfireTierInfo(c.tier || 1).findBonus));
   recalcPlayer(p);
 }
 
@@ -5797,16 +6729,17 @@ function campfireUpgradeCost(tier) {
     von selbst sicher: ein zweiter, zu schneller Klick sieht bereits zu wenige Schädel. */
 function upgradeCampfire() {
   const p = GAME.player;
-  const tier = GAME.base.campfireTier || 1;
+  const cc = curCamp();
+  const tier = cc.tier || 1;
   const cost = campfireUpgradeCost(tier);
   const skullIdx = [];
   for (let i = 0; i < p.bag.length; i++) if (p.bag[i].bossSkull) skullIdx.push(i);
   if (skullIdx.length < cost) { logMsg(`Benötigt ${cost} Boss-Schädel.`, 'lg-bad'); sfx.deny(); return; }
   // von hinten nach vorn entfernen, damit sich die übrigen Indizes beim Splicen nicht verschieben
   for (let k = 0; k < cost; k++) p.bag.splice(skullIdx[skullIdx.length - 1 - k], 1);
-  GAME.base.campfireTier = tier + 1;
+  cc.tier = tier + 1;
   applyBaseEffects();
-  WORLD.chunks.delete('0,0'); // Lagerfeuer-Requisit (Größe + Dekoration) am Ursprung neu aufbauen, siehe buildHomeCamp
+  refreshCamp(cc); // Lagerfeuer-Requisit (Größe + Dekoration) neu aufbauen
   logMsg(`🔥 Lagerfeuer auf Stufe ${tier + 1} verbessert!`, 'lg-legend');
   toast('LAGERFEUER STUFE ' + (tier + 1), true);
   sfx.build();
@@ -5836,16 +6769,16 @@ function offerCampfireQuest(tier) {
   const bump = Math.floor((tier - 1) / 3); // alle 3 Lagerfeuer-Stufen ein Stück umfangreicher
   if (bump > 0 && q.obj && typeof q.obj.need === 'number') q.obj.need += bump;
   q.campfire = true; // Markierung: kommt vom Lagerfeuer, nicht von einem NPC (siehe acceptCampfireQuest)
-  GAME.base.campfireQuest = q;
+  curCamp().quest = q;
   logMsg('Ein neuer Lagerfeuer-Auftrag liegt bereit.', 'lg-gold');
 }
 /** Nimmt den am Lagerfeuer wartenden Auftrag an — über exakt denselben giveQuest()-Pfad
     wie ein NPC-Auftrag, inklusive dessen bestehender 5-Aufträge-Obergrenze (dann bleibt
     der Lagerfeuer-Auftrag einfach weiter hier liegen, bis Platz ist). */
 function acceptCampfireQuest() {
-  const q = GAME.base.campfireQuest;
+  const q = curCamp().quest;
   if (!q) return;
-  if (giveQuest(q)) GAME.base.campfireQuest = null;
+  if (giveQuest(q)) curCamp().quest = null;
   openBasePanel();
 }
 function revealMapAround(x, y, r) {
@@ -6165,6 +7098,101 @@ const sfx = {
   },
 };
 
+
+/* ============================================================================
+   SOUNDTRACKS — für jedes Biom und jede Höhlenart eine eigene Melodie.
+   Jede Melodie hat feste Tonleiter, Akkordfolge, Instrumente und einen festen, einmal
+   erzeugten Melodiebogen (A A'). Im Kampf kommen Schlagwerk und Arpeggio dazu, Bosse
+   haben ein eigenes Stück. Nur in Minen (Stollen) läuft weiter der alte Klangteppich.
+   ========================================================================== */
+const SC = { maj: [0, 2, 4, 5, 7, 9, 11], min: [0, 2, 3, 5, 7, 8, 10], dor: [0, 2, 3, 5, 7, 9, 10], phr: [0, 1, 3, 5, 7, 8, 10], lyd: [0, 2, 4, 6, 7, 9, 11], mix: [0, 2, 4, 5, 7, 9, 10], hmin: [0, 2, 3, 5, 7, 8, 11], dim: [0, 2, 3, 5, 6, 8, 10], phrd: [0, 1, 4, 5, 7, 8, 10] };
+const RH = {
+  calm: ['N---N-N-', 'N-N-N---', 'N---N---', 'N-N-N-N-'],
+  flow: ['N-NNN-N-', 'NNN-N-N-', 'N-N-NNN-', 'N-NN-NN-'],
+  pulse: ['NNNNNNNN', 'N.NNN.NN', 'NN.NNN.N'],
+  sparse: ['N-------', 'N---N---', '--N---N-', 'N-----N-'],
+};
+const SONG_DEFS = {
+  bio_ebene: { bpm: 92, root: 196, scale: SC.maj, prog: [0, 3, 4, 0, 5, 3, 4, 0], rh: 'flow', seed: 11, range: [4, 11], lead: { type: 'triangle', gain: .075, filter: 2600, oct: 1 }, pad: { type: 'sine', gain: .05 }, bass: { type: 'triangle', gain: .09, pat: 'half' }, arp: { type: 'sine', gain: .028, every: 2, oct: 2 }, perc: 'soft' },
+  bio_wald: { bpm: 66, root: 146.8, scale: SC.dor, prog: [0, 6, 5, 4, 0, 3, 6, 0], rh: 'sparse', seed: 23, range: [3, 9], lead: { type: 'sine', gain: .085, filter: 1500, oct: 1 }, pad: { type: 'triangle', gain: .05 }, bass: { type: 'sine', gain: .1, pat: 'whole' } },
+  bio_sumpf: { bpm: 60, root: 130.8, scale: SC.dim, prog: [0, 0, 5, 5, 3, 3, 4, 0], rh: 'sparse', seed: 37, range: [2, 9], lead: { type: 'triangle', gain: .07, filter: 1100, oct: 1 }, pad: { type: 'sine', gain: .06, det: 7 }, bass: { type: 'sine', gain: .09, pat: 'whole' }, arp: { type: 'sine', gain: .028, every: 4, oct: 2 } },
+  bio_asche: { bpm: 78, root: 164.8, scale: SC.phrd, prog: [0, 0, 1, 0, 3, 3, 1, 0], rh: 'flow', seed: 41, range: [3, 10], lead: { type: 'sawtooth', gain: .034, filter: 1800, oct: 1 }, pad: { type: 'triangle', gain: .05 }, bass: { type: 'triangle', gain: .085, pat: 'pulse' }, perc: 'soft' },
+  bio_frost: { bpm: 70, root: 220, scale: SC.lyd, prog: [0, 4, 1, 4, 0, 5, 1, 0], rh: 'calm', seed: 53, range: [0, 7], lead: { type: 'sine', gain: .07, filter: 3500, oct: 2 }, pad: { type: 'triangle', gain: .045 }, bass: { type: 'sine', gain: .08, pat: 'whole' }, arp: { type: 'sine', gain: .03, every: 2, oct: 3 } },
+  bio_glut: { bpm: 100, root: 123.5, scale: SC.hmin, prog: [0, 5, 4, 0, 0, 3, 4, 0], rh: 'pulse', seed: 67, range: [3, 10], lead: { type: 'sawtooth', gain: .038, filter: 1500, oct: 1 }, pad: { type: 'sawtooth', gain: .028, filter: 700 }, bass: { type: 'sawtooth', gain: .06, pat: 'pulse', filter: 500 }, perc: 'drum' },
+  bio_toten: { bpm: 58, root: 130.8, scale: SC.min, prog: [0, 5, 3, 4, 0, 5, 6, 0], rh: 'sparse', seed: 71, range: [3, 9], lead: { type: 'triangle', gain: .08, filter: 1300, oct: 1 }, pad: { type: 'sine', gain: .06 }, bass: { type: 'sine', gain: .1, pat: 'whole' } },
+  bio_berg: { bpm: 84, root: 174.6, scale: SC.maj, prog: [0, 4, 5, 3, 0, 4, 3, 0], rh: 'calm', seed: 83, range: [4, 12], lead: { type: 'triangle', gain: .08, filter: 2200, oct: 1 }, pad: { type: 'triangle', gain: .06 }, bass: { type: 'triangle', gain: .09, pat: 'half' }, perc: 'soft' },
+  dun_crypt: { bpm: 56, root: 116.5, scale: SC.phr, prog: [0, 0, 1, 0, 5, 5, 1, 0], rh: 'sparse', seed: 91, range: [2, 8], lead: { type: 'sine', gain: .085, filter: 900, oct: 1 }, pad: { type: 'triangle', gain: .055, filter: 900 }, bass: { type: 'sine', gain: .1, pat: 'whole' } },
+  dun_cave: { bpm: 62, root: 110, scale: SC.min, prog: [0, 3, 5, 3, 0, 4, 5, 0], rh: 'calm', seed: 97, range: [2, 9], lead: { type: 'sine', gain: .08, filter: 1200, oct: 1 }, pad: { type: 'sine', gain: .055 }, bass: { type: 'sine', gain: .09, pat: 'whole' }, arp: { type: 'sine', gain: .03, every: 2, oct: 2 } },
+  dun_ruin: { bpm: 72, root: 146.8, scale: SC.dor, prog: [0, 3, 4, 0, 5, 3, 6, 0], rh: 'flow', seed: 103, range: [3, 10], lead: { type: 'triangle', gain: .07, filter: 1800, oct: 1 }, pad: { type: 'triangle', gain: .05 }, bass: { type: 'triangle', gain: .09, pat: 'half' }, perc: 'soft' },
+  dun_cult: { bpm: 66, root: 123.5, scale: SC.hmin, prog: [0, 0, 5, 4, 0, 3, 4, 0], rh: 'calm', seed: 109, range: [3, 9], lead: { type: 'sawtooth', gain: .03, filter: 900, oct: 1 }, pad: { type: 'sawtooth', gain: .024, filter: 600, det: 9 }, bass: { type: 'sine', gain: .09, pat: 'whole' } },
+  dun_ember: { bpm: 92, root: 110, scale: SC.phr, prog: [0, 1, 0, 5, 0, 1, 4, 0], rh: 'pulse', seed: 113, range: [3, 10], lead: { type: 'square', gain: .03, filter: 1200, oct: 1 }, pad: { type: 'sawtooth', gain: .024, filter: 600 }, bass: { type: 'sawtooth', gain: .06, pat: 'pulse', filter: 500 }, perc: 'drum' },
+  dun_sumpf: { bpm: 58, root: 130.8, scale: SC.dim, prog: [0, 5, 0, 3, 0, 5, 4, 0], rh: 'sparse', seed: 127, range: [2, 9], lead: { type: 'triangle', gain: .07, filter: 1000, oct: 1 }, pad: { type: 'sine', gain: .055 }, bass: { type: 'sine', gain: .09, pat: 'whole' }, arp: { type: 'sine', gain: .028, every: 4, oct: 2 } },
+  dun_frost: { bpm: 64, root: 196, scale: SC.dor, prog: [0, 3, 6, 4, 0, 5, 3, 0], rh: 'calm', seed: 131, range: [0, 7], lead: { type: 'sine', gain: .065, filter: 3000, oct: 2 }, pad: { type: 'triangle', gain: .045 }, bass: { type: 'sine', gain: .08, pat: 'whole' }, arp: { type: 'sine', gain: .03, every: 2, oct: 3 } },
+  boss: { bpm: 120, root: 98, scale: SC.hmin, prog: [0, 5, 4, 0, 5, 3, 4, 0], rh: 'pulse', seed: 149, range: [3, 10], lead: { type: 'sawtooth', gain: .05, filter: 2000, oct: 1 }, pad: { type: 'sawtooth', gain: .03, filter: 800 }, bass: { type: 'sawtooth', gain: .09, pat: 'pulse', filter: 600 }, arp: { type: 'square', gain: .024, every: 1, oct: 1 }, perc: 'drum' },
+};
+function songFreq(S, deg, oct) {
+  const n = S.scale.length, o = Math.floor(deg / n), d = ((deg % n) + n) % n;
+  return S.root * Math.pow(2, (S.scale[d] + 12 * (o + (oct || 0))) / 12);
+}
+/** Erzeugt (einmal, deterministisch) den 8-taktigen Melodiebogen eines Stücks. */
+function prepSong(S) {
+  if (S.mel) return;
+  const rng = mulberry32(S.seed), pats = RH[S.rh];
+  const tones = r => [r, r + 2, r + 4];
+  const snap = (deg, r) => { let best = deg, bd = 99; for (let k = -2; k <= 2; k++) for (const t of tones(r)) { const c = t + 7 * k; const d = Math.abs(c - deg); if (d < bd) { bd = d; best = c; } } return best; };
+  let cur = snap(S.range[0] + 4, S.prog[0]);
+  const phrase = [];
+  for (let b = 0; b < 4; b++) {
+    const pat = pats[(rng() * pats.length) | 0], toks = [];
+    for (let s = 0; s < 8; s++) {
+      const c = pat[s];
+      if (c === 'N') {
+        const r = rng();
+        const mv = r < .16 ? 0 : r < .62 ? (rng() < .5 ? 1 : -1) : r < .9 ? (rng() < .5 ? 2 : -2) : (rng() < .5 ? 3 : -3);
+        let t = cur + mv;
+        if (s % 4 === 0) t = snap(t, S.prog[b]);
+        if (t > S.range[1]) t -= 3; if (t < S.range[0]) t += 3;
+        cur = t; toks.push(t);
+      } else toks.push(c === '-' ? '-' : '.');
+    }
+    phrase.push(toks);
+  }
+  const second = phrase.map((toks, i) => toks.map((t, s) => {
+    if (typeof t !== 'number') return t;
+    let v = t + (i === 1 ? 2 : 0);
+    if (s % 4 === 0) v = snap(v, S.prog[i + 4]);
+    return v;
+  }));
+  second[3] = [0 + 7 * Math.floor(S.range[0] / 7 + 1), '-', '-', '-', '-', '-', '-', '-'];
+  S.mel = phrase.concat(second);
+}
+function mtone(freq, t, dur, type, gain, o) {
+  if (!AU.ready || !music.bus) return;
+  o = o || {};
+  const c = AU.ctx, osc = c.createOscillator(); osc.type = type;
+  osc.frequency.setValueAtTime(freq, t);
+  if (o.slide) osc.frequency.exponentialRampToValueAtTime(Math.max(20, o.slide), t + dur);
+  if (o.det) osc.detune.value = o.det;
+  const atk = Math.min(o.atk || .02, dur * .45), rel = Math.min(o.rel || Math.min(.6, dur * .4), dur * .55);
+  const g = c.createGain();
+  g.gain.setValueAtTime(0.0001, t);
+  g.gain.linearRampToValueAtTime(gain, t + atk);
+  g.gain.setValueAtTime(gain, Math.max(t + atk, t + dur - rel));
+  g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+  let node = osc;
+  if (o.filter) { const f = c.createBiquadFilter(); f.type = 'lowpass'; f.frequency.value = o.filter; f.Q.value = o.q || .7; osc.connect(f); node = f; }
+  node.connect(g); g.connect(music.bus);
+  osc.start(t); osc.stop(t + dur + .06);
+}
+function mnoise(t, dur, f0, f1, gain, type, q) {
+  if (!AU.ready || !music.bus) return;
+  const c = AU.ctx, s = c.createBufferSource(); s.buffer = AU.noise; s.loop = true;
+  const f = c.createBiquadFilter(); f.type = type || 'bandpass';
+  f.frequency.setValueAtTime(f0, t); f.frequency.exponentialRampToValueAtTime(Math.max(40, f1), t + dur); f.Q.value = q || 1;
+  const g = c.createGain(); g.gain.setValueAtTime(Math.max(.0001, gain), t); g.gain.exponentialRampToValueAtTime(.0001, t + dur);
+  s.connect(f); f.connect(g); g.connect(music.bus); s.start(t); s.stop(t + dur + .03);
+}
+
 /* ---------- Reaktive Musik ------------------------------------------------------ */
 const SCALES = {
   explore: [0, 2, 3, 5, 7, 8, 10],     // äolisch
@@ -6200,6 +7228,89 @@ const music = {
   mode: 'explore', target: 'explore', vol: 0, drone: null, droneG: null, filt: null,
   t: 0, noteT: 0, beat: 0, combatHold: 0, started: false,
   variant: null, variantMode: null, variantT: 0,
+  /* ----- Sequencer (neue Soundtracks) ----- */
+  bus: null, songId: null, song: null, step: 0, next: 0, fading: false, fadeAt: 0, ci: 0, bioKey: 'ebene', bioT: 0,
+  initBus() {
+    const c = AU.ctx;
+    this.bus = c.createGain(); this.bus.gain.value = 0;
+    this.bus.connect(AU.musG);
+    const dl = c.createDelay(1.2); dl.delayTime.value = .34;
+    const fb = c.createGain(); fb.gain.value = .36;
+    const lp = c.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 2200;
+    const wet = c.createGain(); wet.gain.value = .32;
+    this.bus.connect(dl); dl.connect(lp); lp.connect(fb); fb.connect(dl); lp.connect(wet); wet.connect(AU.musG);
+  },
+  wantedSong() {
+    if (this.target === 'dead') return null;
+    if (GAME.mode === 'dungeon' && DUN.theme === 'mine') return null;   // Stollen: alter Klang
+    if (this.target === 'boss') return 'boss';
+    if (GAME.mode === 'dungeon') return SONG_DEFS['dun_' + DUN.theme] ? 'dun_' + DUN.theme : 'dun_cave';
+    return SONG_DEFS['bio_' + this.bioKey] ? 'bio_' + this.bioKey : 'bio_ebene';
+  },
+  seqUpdate(dt, want) {
+    const c = AU.ctx, now = c.currentTime;
+    if (!this.bus) this.initBus();
+    this.ci += (((this.target === 'combat' || this.target === 'boss') ? 1 : 0) - this.ci) * Math.min(1, dt * 1.2);
+    if (want !== this.songId) {
+      if (!this.fading) { this.fading = true; this.fadeAt = now + 1.3; this.bus.gain.cancelScheduledValues(now); this.bus.gain.setTargetAtTime(0, now, .35); }
+      if (now >= this.fadeAt) {
+        this.fading = false; this.songId = want; this.song = want ? SONG_DEFS[want] : null;
+        if (this.song) { prepSong(this.song); this.step = 0; this.next = now + .2; this.bus.gain.cancelScheduledValues(now); this.bus.gain.setTargetAtTime(1, now, .7); }
+      }
+    }
+    if (!this.song) return;
+    const night = (typeof isNight === 'function' && GAME.mode !== 'dungeon' && isNight());
+    const sd = 60 / (this.song.bpm * (night ? .9 : 1)) / 2;
+    if (this.next < now - .5) this.next = now + .1;
+    let guard = 0;
+    while (this.next < now + .45 && guard++ < 24) { this.playStep(this.next, sd, night); this.next += sd; this.step++; }
+  },
+  playStep(t, sd, night) {
+    const S = this.song, bars = S.prog.length, b = Math.floor(this.step / 8) % bars, s = this.step % 8;
+    const chordR = S.prog[b], ci = this.ci;
+    const vol = night ? .85 : 1;
+    // Melodie
+    const tok = S.mel[b][s];
+    if (typeof tok === 'number') {
+      let len = 1; for (let k = s + 1; k < 8 && S.mel[b][k] === '-'; k++) len++;
+      const L = S.lead;
+      mtone(songFreq(S, tok, L.oct), t, len * sd * .94, L.type, L.gain * vol * (1 + ci * .15), { atk: L.atk || .025, filter: L.filter, q: .8, det: (b % 2) ? 3 : -3 });
+    }
+    // Pad: Akkord pro Takt
+    if (S.pad && s === 0) {
+      for (const [i, d] of [chordR, chordR + 2, chordR + 4].entries())
+        mtone(songFreq(S, d, 0), t, 8 * sd, S.pad.type, S.pad.gain * vol / (i ? 1.15 : 1), { atk: 1.1, rel: 1.6, filter: S.pad.filter || 1400, det: S.pad.det ? (i - 1) * S.pad.det : 0 });
+    }
+    // Bass
+    if (S.bass) {
+      const B = S.bass, f = songFreq(S, chordR, -1);
+      if (B.pat === 'whole' && s === 0) mtone(f, t, 8 * sd * .98, B.type, B.gain, { atk: .06, filter: B.filter || 500 });
+      else if (B.pat === 'half' && (s === 0 || s === 4)) mtone(f, t, 4 * sd * .95, B.type, B.gain, { atk: .03, filter: B.filter || 600 });
+      else if (B.pat === 'pulse' && s % 2 === 0) mtone(s === 4 ? songFreq(S, chordR + 4, -1) : f, t, sd * 1.7, B.type, B.gain * (s === 0 ? 1 : .8), { atk: .01, filter: B.filter || 500 });
+    }
+    // Arpeggio (Stück-eigen oder im Kampf zusätzlich)
+    const A = S.arp;
+    if (A && s % A.every === 0) {
+      const idx = Math.floor(s / A.every + b) % 3;
+      mtone(songFreq(S, chordR + idx * 2, A.oct), t, sd * 1.8, A.type, A.gain * vol, { atk: .01, rel: sd * 1.4, filter: 3200 });
+    } else if (!A && ci > .4 && s % 2 === 0) {
+      mtone(songFreq(S, chordR + [0, 2, 4, 2][(s / 2) % 4], 1), t, sd * 1.2, 'square', .02 * ci, { atk: .008, filter: 1800 });
+    }
+    // Schlagwerk
+    const style = S.perc || (ci > .35 ? 'drum' : null);
+    if (style) {
+      const k = style === 'soft' ? (S.perc ? 1 : ci) : Math.max(S.perc === 'drum' ? 1 : 0, ci);
+      if (style === 'soft') {
+        if (s === 0) mtone(78, t, .3, 'sine', .1 * k, { atk: .004, slide: 42, rel: .25 });
+        if (s === 4) mnoise(t, .09, 6500, 5200, .014 * k, 'highpass', .8);
+        if (ci > .35 && s === 4) mtone(70, t, .22, 'sine', .1 * ci, { atk: .004, slide: 40, rel: .18 });
+      } else {
+        if (s === 0 || s === 4 || (S === SONG_DEFS.boss && s === 3)) mtone(80, t, .22, 'sine', .12 * k, { atk: .003, slide: 42, rel: .18 });
+        if (s === 2 || s === 6) mnoise(t, .12, 2200, 1500, .05 * k, 'bandpass', 1.1);
+        if (s % 2 === 1) mnoise(t, .04, 7500, 6500, .011 * k, 'highpass', .8);
+      }
+    }
+  },
   start() {
     if (!AU.ready || this.started) return;
     this.started = true;
@@ -6238,6 +7349,12 @@ const music = {
     if (!AU.ready || !this.started) return;
     this.t += dt;
     if (this.combatHold > 0) { this.combatHold -= dt; if (this.combatHold <= 0 && this.target === 'combat') this.target = GAME.mode === 'dungeon' ? 'dungeon' : 'explore'; }
+    // Biom unter dem Spieler (alle 1,5 s), bestimmt das Stück in der Oberwelt
+    this.bioT -= dt;
+    if (this.bioT <= 0) { this.bioT = 1.5; try { if (GAME.mode !== 'dungeon' && GAME.player) this.bioKey = tileBiome(GAME.player.x, GAME.player.y).key; } catch (e) { } }
+    const want = this.wantedSong();
+    this.seqUpdate(dt, want);
+    if (want || this.fading) { this.droneG.gain.value += (0 - this.droneG.gain.value) * Math.min(1, dt * 2); return; }
     // Variante wählen: bei jedem Moduswechsel sofort, sonst gelegentlich mitten im
     // selben Modus (für Abwechslung in langen Sitzungen — siehe MUSIC_VARIANTS oben).
     const modeKey = this.target === 'combat' ? 'combat' : this.target === 'boss' ? 'boss' : this.target === 'dungeon' ? 'dungeon' : (this.target === 'dead' ? null : 'explore');
@@ -6352,8 +7469,8 @@ function autoQuality(dt) {
   GAME.qAccum = 0; GAME.qFrames = 0;
   GAME.qTimer = (GAME.qTimer || 0) + 1;
   if (GAME.qTimer < 2) return;      // erste Sekunden ignorieren (Aufwärmen)
-  if (fps < 38 && GAME.quality > 1) setQuality(GAME.quality - 1);
-  else if (fps > 57 && GAME.quality < 3) setQuality(GAME.quality + 1);
+  if (fps < 36 && GAME.quality > 1) { GAME.qNoUp = true; setQuality(GAME.quality - 1); }
+  else if (fps > 58 && GAME.quality < 3 && !GAME.qNoUp) setQuality(GAME.quality + 1);
 }
 
 function resizeCanvas() {
@@ -6375,9 +7492,16 @@ function camUpdate(dt, camObj, player) {
   camObj = camObj || cam; player = player || GAME.player;
   const p = player;
   const lead = 0.18;
-  const tx = p.x + Math.cos(p.aimAng) * lead * 2, ty = p.y + Math.sin(p.aimAng) * lead * 2;
-  camObj.x += (tx - camObj.x) * Math.min(1, dt * 6.5);
-  camObj.y += (ty - camObj.y) * Math.min(1, dt * 6.5);
+  // Vorhalt weich nachführen (springt sonst bei jedem Richtungswechsel des Ziels)
+  const wl = (camObj.lx === undefined);
+  const wantX = Math.cos(p.aimAng) * lead * 2, wantY = Math.sin(p.aimAng) * lead * 2;
+  if (wl) { camObj.lx = wantX; camObj.ly = wantY; }
+  const kl = 1 - Math.exp(-dt * 3.2);
+  camObj.lx += (wantX - camObj.lx) * kl; camObj.ly += (wantY - camObj.ly) * kl;
+  const tx = p.x + camObj.lx, ty = p.y + camObj.ly;
+  const kf = 1 - Math.exp(-dt * 8);
+  camObj.x += (tx - camObj.x) * kf;
+  camObj.y += (ty - camObj.y) * kf;
   camObj.zoom += (camObj.zoomT - camObj.zoom) * Math.min(1, dt * 6);
   if (camObj === cam && GAME.shake > 0) {
     GAME.shake = Math.max(0, GAME.shake - dt * 42);
@@ -6799,6 +7923,7 @@ function drawDepthLayer(dt, minX, maxX, minY, maxY) {
   // 15_main.js) — trotzdem dieselbe Zeichenroutine wie ein normales Requisit (t:0/drawProp),
   // da mkProp() sie in genau dieser Form angelegt hat.
   for (const b of GAME.dropBags) if (inView(b.x, b.y)) rlist.push({ d: b.x + b.y, t: 0, o: b });
+  if (GAME.mode === 'world' && GAME.base && GAME.base.wagons) for (const w0 of GAME.base.wagons) { const w = wagonRenderProxy(w0); if (inView(w.x, w.y)) rlist.push({ d: w.x + w.y - .03, t: 8, o: w }); }
   for (const e of GAME.enemies) if (inView(e.x, e.y)) rlist.push({ d: e.x + e.y, t: 1, o: e });
   for (const u of GAME.pickups) if (inView(u.x, u.y)) rlist.push({ d: u.x + u.y, t: 3, o: u });
   const p = GAME.player;
@@ -6820,6 +7945,7 @@ function drawDepthLayer(dt, minX, maxX, minY, maxY) {
       case 5: drawParticle(r.o); break;
       case 6: drawProj(r.o); break;
       case 7: drawBlade(r.o); break;
+      case 8: drawWagon(r.o); break;
     }
   }
 }
@@ -6939,6 +8065,12 @@ function drawNPC(n) {
   ctx.translate(pos.x, pos.y - bob);
   ctx.drawImage(s.c, -s.ax * z, -s.ay * z, s.w * z, s.h * z);
   ctx.restore();
+  // Abgabebereiter Auftrag: goldenes Fragezeichen, schon von weitem sichtbar
+  if (GAME.quests.some(q => q.done && q.giver && q.giver.key === n.key)) {
+    ctx.save(); ctx.font = `900 ${Math.round(20 * z)}px ${UIFONT}`; ctx.textAlign = 'center'; ctx.fillStyle = '#f0b840'; ctx.strokeStyle = '#2a1a06'; ctx.lineWidth = 3;
+    const yy = pos.y - s.h * z - 12 * z + Math.sin(gameTime * 3) * 3;
+    ctx.strokeText('?', pos.x, yy); ctx.fillText('?', pos.x, yy); ctx.restore();
+  }
   // Interaktionsmarker
   const d = dist(n.x, n.y, GAME.player.x, GAME.player.y);
   if (d < 9) {
@@ -6977,7 +8109,8 @@ function drawPlayer(p) {
   ctx.restore();
   ctx.save();
   ctx.globalAlpha = p.iframes > 0 ? .55 + Math.sin(gameTime * 40) * .2 : 1;
-  ctx.translate(pos.x, pos.y - (bob + (p.jumpZ || 0)));
+  ctx.translate(pos.x, pos.y - (bob + (p.jumpZ || 0) + (p.stepZ || 0) * z + (p.riding ? 9 * z : 0)));
+  if (p.riding) { const fl = (Math.cos(p.aimAng) - Math.sin(p.aimAng)) < 0 ? -1 : 1; ctx.translate((p.riding.seat ? -8 : 6) * z * fl, 0); }
   if (p.dead) ctx.rotate(1.3);
   const flipX = Math.cos(p.aimAng) < 0;
   if (p.attackAnim > 0) ctx.translate(Math.cos(p.aimAng) * 8 * z * p.attackAnim * 3, 0);
@@ -7087,7 +8220,7 @@ function drawPickup(u) {
       ctx.fillStyle = R.col; ctx.fillText(u.item.name.slice(0, 26), pos.x, pos.y - 30 * z);
     }
   } else if (u.mat) {
-    const col = u.mat === 'gold' ? '#c8a24a' : u.mat === 'seele' ? '#c06ad0' : '#a8a196';
+    const col = u.mat === 'gold' ? '#c8a24a' : u.mat === 'seele' ? '#c06ad0' : u.mat === 'fell' ? '#a07a4a' : u.mat === 'knochen' ? '#e0d8c0' : '#a8a196';
     ctx.save(); ctx.globalCompositeOperation = 'lighter'; ctx.globalAlpha = .38;
     const rr2 = 15 * z;
     ctx.drawImage(getLightBlob(parseInt(col.slice(1), 16)), pos.x - rr2, pos.y - 6 * z - rr2 * .7, rr2 * 2, rr2 * 1.4);
@@ -7403,6 +8536,14 @@ function drawMinimapFor(p, mmCx, mmCv) {
         }
       }
   }
+  // Auftraggeber
+  for (const q of GAME.quests) {
+    const gp = questGiverPos(q); if (!gp) continue;
+    let dx = (gp.x - p.x + R) * sc, dy = (gp.y - p.y + R) * sc;
+    const inside = dx > 6 && dy > 6 && dx < W - 6 && dy < H - 6;
+    if (!inside) { if (!q.done) continue; dx = clamp(dx, 12, W - 12); dy = clamp(dy, 12, H - 12); }
+    drawQuestMark(mmCx, dx, dy, q.done, .8);
+  }
   // Gegner
   for (const e of GAME.enemies) {
     if (e.dead) continue;
@@ -7469,6 +8610,7 @@ function flashDamage(a) { el.dmgFx.style.transition = 'none'; el.dmgFx.style.opa
 /* ---------- HUD --------------------------------------------------------------- */
 let hudCache = {};
 function updateHUD() {
+  if (typeof $ === 'function' && GAME.player && !$('pInventory').classList.contains('hidden') && GAME.player.mats) { const gt = $('invGoldTop'); if (gt) gt.innerHTML = `${iconHtml('coins', 24)}<span>${Math.round(GAME.player.mats.gold).toLocaleString('de-DE')}</span><small>Gold</small>`; }
   const p = GAME.player;
   if (!p || !GAME.started) return;
   updateVitalsFor(p);
@@ -7591,7 +8733,10 @@ function usePotion(kind, p) {
 function updateQuestTrack() {
   let h = '';
   for (const q of GAME.quests.slice(0, 4)) {
-    h += `<div class="q"><div class="qt">${q.done ? '✓ ' : ''}${q.title}</div><div class="qd">${q.obj.label} ${q.obj.need > 1 || q.obj.type === 'kill' ? `(${Math.min(q.obj.have, q.obj.need)}/${q.obj.need})` : ''}</div></div>`;
+    const gp = questGiverPos(q);
+    const pl = GAME.player;
+    const gl = gp && q.done ? `<div class="qd" style="color:#f3d79a">Abgabe: ${q.giver.camp ? 'am Lagerfeuer' : escHtml(gp.name)} ${dirArrow(gp.x - pl.x, gp.y - pl.y)} ${Math.round(dist(gp.x, gp.y, pl.x, pl.y))}</div>` : (gp && !q.done ? `<div class="qd" style="color:#8a7f6c">von ${q.giver.camp ? 'einem Aushang' : escHtml(gp.name)}</div>` : '');
+    h += `<div class="q"><div class="qt">${q.done ? '✓ ' : ''}${q.title}</div><div class="qd">${q.obj.label} ${q.obj.need > 1 || q.obj.type === 'kill' ? `(${Math.min(q.obj.have, q.obj.need)}/${q.obj.need})` : ''}</div>${gl}</div>`;
   }
   el.questTrack.innerHTML = h;
 }
@@ -7639,8 +8784,10 @@ function itemTipHTML(it, compareSlot) {
     h += `${STAT_NAMES[k] || k}: ${fmtSigned(it.stats[k])}${PCT[k] ? ' %' : ''}<br>`;
   }
   h += '</div>';
-  if (it.desc) h += `<div class="tsp">${it.desc}</div>`;
-  if (it.flavor) h += `<div class="tfl">„${it.flavor}“</div>`;
+  { const ws = weaponScaleInfo(it); if (ws) h += `<div class="tsc ${ws.cls}">${ws.txt}</div>`; }
+  if (it.desc && !it.campKit && !it.tool) h += `<div class="tsp">${it.desc}</div>`;
+  { const inf = itemInfo(it); if (inf) h += `<div class="tuse"><b>Nutzen</b>${inf.use}</div><div class="tori"><b>Herkunft</b>${inf.origin}</div>`; }
+  if (it.flavor && false) h += '';
   // Vergleich
   if (compareSlot) {
     const cur = GAME.player.equip[compareSlot];
@@ -7702,7 +8849,7 @@ function renderInventory(p, suf) {
     const it = p.equip[s.id];
     const R = it ? RARITY[it.rarity] : null;
     return `<div class="eqSlot ${it ? 'filled ' + R.cls : ''}" data-eq="${s.id}">
-      ${it ? `<img src="${iconOf(it)}" alt="">` : ''}<div class="lbl">${s.name}</div></div>`;
+      ${it ? `<img src="${iconOf(it)}" alt="">` : ''}${it && weaponScaleInfo(it) ? `<i class="wtag ${weaponScaleInfo(it).cls}">${weaponScaleInfo(it).tag}</i>` : ''}<div class="lbl">${s.name}</div></div>`;
   }).join('');
   eq.querySelectorAll('[data-eq]').forEach(d => {
     const slot = d.dataset.eq, it = p.equip[slot];
@@ -7740,19 +8887,23 @@ function renderInventory(p, suf) {
   const bag = g('bagGrid');
   bag.innerHTML = p.bag.map((it, i) => {
     const R = RARITY[it.rarity];
-    return `<div class="bagSlot filled ${R.cls}" data-bag="${i}"><img src="${iconOf(it)}" alt=""></div>`;
+    const wsi = weaponScaleInfo(it);
+    return `<div class="bagSlot filled ${R.cls}" data-bag="${i}"><img src="${iconOf(it)}" alt="">${wsi ? `<i class="wtag ${wsi.cls}">${wsi.tag}</i>` : ''}</div>`;
   }).join('') + Array.from({ length: Math.max(0, p.bagMax - p.bag.length) }, () => '<div class="bagSlot" data-bagempty="1"></div>').join('');
   bag.querySelectorAll('[data-bag]').forEach(d => {
     const i = +d.dataset.bag, it = p.bag[i];
     d.onclick = e => {
       const acts = [];
-      if (!it.bossSkull) acts.push({ label: 'Anlegen', cls: 'primary', fn: () => { equipFromBag(i, p); renderInventory(p); } });
+      if (it.campKit) acts.push({ label: 'Aufstellen', cls: 'primary', fn: () => placeCampKit(i, p) });
+      if (it.tool === 'roadHammer') acts.push({ label: p.roadMode ? 'Wegebau beenden' : 'Wegebau starten', cls: 'primary', fn: () => { toggleRoadMode(p); closePanels(); } });
+      if (!it.bossSkull && !it.campKit && !it.tool) acts.push({ label: 'Anlegen', cls: 'primary', fn: () => { equipFromBag(i, p); renderInventory(p); } });
       if (i > 0) acts.push({ label: 'Nach vorn', fn: () => { bagSwap(p, '', i, 0); } });
-      if (!it.bossSkull) acts.push({ label: 'Verwerfen', cls: 'danger', fn: () => dropBagItem(p, '', i) });
+      if (!it.bossSkull && !it.campKit && !it.tool) acts.push({ label: 'Verwerfen', cls: 'danger', fn: () => dropBagItem(p, '', i) });
       tapAction(e, itemTipHTML(it, targetSlotFor(it, p)), acts);
     };
   });
   g('invGold').innerHTML = `${iconHtml('coins', 20)} ${fmt(p.mats.gold)} Gold`;
+  g('invGoldTop').innerHTML = `${iconHtml('coins', 24)}<span>${Math.round(p.mats.gold).toLocaleString('de-DE')}</span><small>Gold</small>`;
   g('invMat').textContent = Object.keys(MATS).filter(k => k !== 'gold').map(k => `${MATS[k].name} ${p.mats[k] || 0}`).join(' · ');
 }
 /** Wirft Gegenstand i aus dem Beutel von Spieler p — gemeinsam genutzt von Maus
@@ -7767,6 +8918,7 @@ function dropBagItem(p, suf, i) {
   // verloren gehen — auch nicht versehentlich über den herrenlosen Beutel, der nach
   // 5 Minuten von selbst verschwindet (siehe addToDropBag/tickDropBags).
   if (it.bossSkull) { logMsg('Boss-Schädel lassen sich nicht wegwerfen.', 'lg-bad'); sfx.deny(); return; }
+  if (it.campKit || it.tool) { logMsg('Das ist zu wichtig zum Wegwerfen.', 'lg-bad'); sfx.deny(); return; }
   p.bag.splice(i, 1);
   addToDropBag(p, it);
   logMsg('Weggeworfen: ' + it.name, 'lg-dim'); sfx.click();
@@ -7838,6 +8990,15 @@ function openMap(byPlayer) {
   $('mapLegend').innerHTML = `<span><b>Ziehen</b> bewegen</span><span><b>Zwei Finger</b> zoomen</span><span><b>Tippen</b> markieren</span><span><b>Halten</b> löschen</span><span id="mapCoords"></span>`;
   drawMapCanvas();
 }
+/** Auftragssymbol: gold gefüllt mit "?" wenn abgabebereit, sonst graue Raute mit "!". */
+function drawQuestMark(x, px, py, done, k) {
+  x.save(); x.translate(px, py); x.scale(k, k);
+  x.fillStyle = 'rgba(0,0,0,.85)'; x.beginPath(); x.arc(0, 0, 10, 0, TAU); x.fill();
+  x.fillStyle = done ? '#f0b840' : '#6a6458'; x.beginPath(); x.arc(0, 0, 8, 0, TAU); x.fill();
+  x.fillStyle = done ? '#2a1a06' : '#d8d0bc'; x.font = `900 12px ${UIFONT_B}`; x.textAlign = 'center'; x.textBaseline = 'middle';
+  x.fillText(done ? '?' : '!', 0, 1);
+  x.restore();
+}
 function drawMapCanvas() {
   const c = $('mapCanvas'), x = c.getContext('2d');
   const d = mapState.dpr || 1;
@@ -7883,6 +9044,14 @@ function drawMapCanvas() {
       x.drawImage(poiMarker(poiMarkKind(poi.type)), px - 14, py - 14, 28, 28);
       if (sc >= 3.4) { x.font = `700 10px ${UIFONT_B}`; x.fillStyle = 'rgba(0,0,0,.8)'; x.fillText(poi.name || '', px + 1, py + 23); x.fillStyle = '#e6d6b0'; x.fillText(poi.name || '', px, py + 22); }
     }
+  }
+  // Auftraggeber (abgabebereit = goldenes Fragezeichen)
+  for (const q of GAME.quests) {
+    const gp = questGiverPos(q); if (!gp) continue;
+    const px = (gp.x - x0) * sc, py = (gp.y - y0) * sc;
+    if (px < -20 || py < -20 || px > W + 20 || py > H + 20) continue;
+    drawQuestMark(x, px, py - 10, q.done, 1);
+    if (sc >= 3) { x.font = `700 10px ${UIFONT_B}`; x.textAlign = 'center'; x.fillStyle = 'rgba(0,0,0,.85)'; x.fillText(gp.name, px + 1, py + 13); x.fillStyle = q.done ? '#ffe49a' : '#b8ad94'; x.fillText(gp.name, px, py + 12); }
   }
   // Markierungen
   for (const m of WORLD.state.marks) {
@@ -8024,70 +9193,80 @@ function openBaseAt(byPlayer) {
   if (byPlayer !== undefined) setPanelSide('pBase', byPlayer);
   else if (keptSide) $('pBase').classList.add(keptSide);
 }
+const CITY_NAMES = ['', 'Feuerstelle', 'Lager', 'Weiler', 'Siedlung', 'Dorf', 'Festung', 'Burgstadt', 'Zitadelle', 'Hauptstadt', 'Metropole'];
+function cityName(t) { return CITY_NAMES[Math.min(t, 10)] || 'Metropole'; }
+function pipsHtml(lv, max) { let h = '<span class="pips">'; for (let i = 0; i < max; i++) h += `<i class="${i < lv ? 'on' : ''}"></i>`; return h + '</span>'; }
 function openBasePanel(tab, byPlayer) {
   openBaseAt(byPlayer);
-  $('baseTitle').textContent = 'Das letzte Lagerfeuer';
-  const B = GAME.base;
-  const p = GAME.player;
+  const c = curCamp();
+  $('baseTitle').textContent = c.home ? 'Das letzte Lagerfeuer' : (c.name || 'Lager');
   if (NET.role === 'guest') return openGuestCamp();
-  let h = `<div class="secTitle">Rasten</div>
-    <div class="bldRow"><div class="bldIco">🔥</div><div class="bldMain"><div class="n">Am Feuer rasten</div>
+  const p = GAME.player;
+  const bld = c.buildings || {};
+  const tier = c.tier || 1;
+  const info = campfireTierInfo(tier), nextInfo = campfireTierInfo(tier + 1);
+  const cost = campfireUpgradeCost(tier);
+  const have = p.bag.reduce((n, it) => n + (it.bossSkull ? 1 : 0), 0);
+  const canUp = have >= cost;
+  const bossCount = Object.keys(WORLD.state.bosses || {}).length;
+  const nB = Object.values(bld).filter(v => v > 0).length, maxB = Object.keys(BASE_BUILDINGS).length;
+  const trophies = bossCount ? iconHtml('skull', 20).repeat(Math.min(bossCount, 12)) : '<span style="color:var(--ink3)">noch keine</span>';
+  let tb = '<div class="tierBar">'; for (let i = 1; i <= 10; i++) tb += `<i class="${i <= tier ? 'on' : ''}"></i>`; tb += '</div>';
+
+  let h = `<div class="campHero"><div class="em">${iconHtml('fire', 44) || '🔥'}</div><div class="tx">
+    <div class="nm">${info.name}</div><div class="ct">${cityName(tier)} · Stufe ${tier} · ${nB}/${maxB} Bauten</div>
+    <div class="st">${info.desc}<br><span style="color:#c79d58">Beutefund +${info.findBonus.toFixed(1)} %</span> · Trophäen ${trophies}</div>${tb}</div></div>`;
+
+  h += `<div class="secTitle">Rasten</div>
+    <div class="bldRow built"><div class="bldIco">🔥</div><div class="bldMain"><div class="n">Am Feuer rasten</div>
     <div class="d">Stellt Leben und Fokus her, sichert deinen Fortschritt und bringt den nächsten Tag.</div></div>
     <div><span class="btn primary" data-act="rest">Rasten</span></div></div>`;
 
-  {
-    // Lagerfeuer-Fortschritt: siehe CAMPFIRE_TIERS/campfireTierInfo/campfireUpgradeCost/
-    // upgradeCampfire in 10_meta.js. Bewusst als eigener Abschnitt direkt nach "Rasten",
-    // da es sich thematisch um das Lagerfeuer selbst dreht.
-    const tier = B.campfireTier || 1;
-    const info = campfireTierInfo(tier);
-    const nextInfo = campfireTierInfo(tier + 1);
-    const cost = campfireUpgradeCost(tier);
-    const have = p.bag.reduce((n, it) => n + (it.bossSkull ? 1 : 0), 0);
-    const canUp = have >= cost;
-    const bossCount = Object.keys(WORLD.state.bosses || {}).length;
-    const trophies = bossCount ? iconHtml('skull', 22).repeat(bossCount) : '<span style="color:var(--ink3)">noch keine</span>';
-    h += `<div class="secTitle" style="margin-top:14px">Lagerfeuer</div>
-      <div class="bldRow"><div class="bldIco">🔥</div>
-      <div class="bldMain"><div class="n">${info.name} <small>Stufe ${tier}</small></div>
-      <div class="d">${info.desc}<br>Nächste Stufe: <b>${nextInfo.name}</b> (Stufe ${tier + 1})</div>
-      <div class="d" style="margin-top:4px">${trophies} <small style="color:var(--ink3)">${bossCount} Boss${bossCount === 1 ? '' : 'e'} besiegt</small></div></div>
-      <div class="bldCost" style="white-space:normal;max-width:150px">Kosten: ${cost} Boss-Schädel<br><span class="${canUp ? '' : 'no'}">(${have}/${cost} vorhanden)</span><br>
-      ${canUp ? `<span class="btn primary" data-act="campfireUp">Verbessern</span>` : ''}
-      </div></div>`;
-    // Lagerfeuer-Auftrag: siehe offerCampfireQuest/acceptCampfireQuest in 10_meta.js —
-    // wird bei jedem Lagerfeuer-Upgrade neu vergeben, nutzt aber die normale
-    // Auftrags-Infrastruktur (Anzeige/Fortschritt im HUD-Questtracker, Abgabe bei
-    // jedem passenden NPC), sobald er hier angenommen wurde.
-    const cq = B.campfireQuest;
-    if (cq) {
-      h += `<div class="bldRow"><div class="bldIco">📜</div>
-        <div class="bldMain"><div class="n">${cq.title}</div>
-        <div class="d">${cq.desc}</div>
-        <div class="d" style="margin-top:4px">${cq.obj.label}${cq.obj.need > 1 ? ` (Ziel: ${cq.obj.need})` : ''} · Belohnung: ${cq.reward.gold} Gold, ${cq.reward.xp} EP${cq.reward.item ? ' + Gegenstand' : ''}</div></div>
-        <div><span class="btn primary" data-act="campfireQuestAccept">Auftrag annehmen</span></div></div>`;
-    }
+  h += `<div class="secTitle" style="margin-top:14px">Ausbau zur Stadt</div>
+    <div class="bldRow"><div class="bldIco">🔥</div>
+    <div class="bldMain"><div class="n">${nextInfo.name} <small>Stufe ${tier + 1}</small></div>
+    <div class="d">Mit jeder Stufe wächst das Lager: Feuerschalen, Banner, Türme, Tor, später Kirche und Obelisk. Wege und Plätze werden gepflastert.</div></div>
+    <div class="bldCost" style="white-space:normal;max-width:160px">Kosten: ${cost} Boss-Schädel<br><span class="${canUp ? '' : 'no'}">(${have}/${cost} vorhanden)</span><br>
+    ${canUp ? `<span class="btn primary" data-act="campfireUp">Verbessern</span>` : ''}</div></div>`;
+  const cq = c.quest;
+  if (cq) {
+    h += `<div class="bldRow"><div class="bldIco">📜</div>
+      <div class="bldMain"><div class="n">${cq.title}</div><div class="d">${cq.desc}</div>
+      <div class="d" style="margin-top:4px">${cq.obj.label}${cq.obj.need > 1 ? ` (Ziel: ${cq.obj.need})` : ''} · Belohnung: ${cq.reward.gold} Gold, ${cq.reward.xp} EP${cq.reward.item ? ' + Gegenstand' : ''}</div></div>
+      <div><span class="btn primary" data-act="campfireQuestAccept">Auftrag annehmen</span></div></div>`;
   }
+  const doneHere = GAME.quests.filter(q => q.done && q.giver && q.giver.camp);
+  for (const q of doneHere) h += `<div class="bldRow built"><div class="bldIco">📜</div><div class="bldMain"><div class="n">${q.title} <small>erledigt</small></div><div class="d">${q.outro || 'Das Lager hat auf dich gewartet.'}</div></div><div><span class="btn primary" data-act="campQuestDone" data-qid="${q.qid}">Abgeben</span></div></div>`;
 
   h += `<div class="secTitle" style="margin-top:14px">Weltstufe</div><div class="bldRow"><div class="bldIco">🌑</div>
     <div class="bldMain"><div class="n">Weltstufe ${romanize(WORLD.tier)} <small>${TIER_NAMES[WORLD.tier]}</small></div>
-    <div class="d">Höhere Stufen: stärkere Gegner, bessere Beute, neue Elitevarianten. Freigeschaltet durch besiegte Bosse (${Object.keys(WORLD.state.bosses || {}).length}).</div></div>
+    <div class="d">Höhere Stufen: stärkere Gegner, bessere Beute, neue Elitevarianten. Freigeschaltet durch besiegte Bosse (${bossCount}).</div></div>
     <div>${WORLD.tier < maxTierAllowed() ? `<span class="btn primary" data-act="tierUp">+</span>` : ''}</div></div>`;
 
-  h += `<div class="secTitle" style="margin-top:14px">Gebäude</div>`;
+  h += `<div class="secTitle" style="margin-top:14px">Gebäude</div><div class="bldGrid">`;
   for (const id in BASE_BUILDINGS) {
     const b = BASE_BUILDINGS[id];
-    const lv = B.buildings[id] || 0;
+    const lv = bld[id] || 0;
     const maxed = lv >= b.max;
-    const cost = maxed ? null : b.cost(lv + 1);
-    const costStr = cost ? Object.keys(cost).map(k => `<span class="${(p.mats[k] || 0) >= cost[k] ? '' : 'no'}">${cost[k]} ${MATS[k].name}</span>`).join(' · ') : 'Voll ausgebaut';
-    h += `<div class="bldRow"><div class="bldIco">${b.ico}</div>
-      <div class="bldMain"><div class="n">${b.name} ${lv ? `<small>Stufe ${lv}/${b.max}</small>` : '<small style="color:#6d675c">nicht gebaut</small>'}</div>
+    const cst = maxed ? null : b.cost(lv + 1);
+    const costStr = cst ? costStrHtml(cst, p) : 'Voll ausgebaut';
+    h += `<div class="bldRow ${lv ? 'built' : ''}"><div class="bldIco">${b.ico}</div>
+      <div class="bldMain"><div class="n">${b.name} ${pipsHtml(lv, b.max)}</div>
       <div class="d">${b.desc}</div></div>
       <div class="bldCost">${costStr}<br>
-      ${!maxed ? `<span class="btn ${cost && canAfford(cost) ? 'primary' : ''}" data-up="${id}">${lv ? 'Ausbauen' : 'Errichten'}</span>` : ''}
-      ${lv > 0 && ['schmiede', 'alchemie', 'bibliothek', 'haendler', 'lager', 'portal', 'training'].includes(id) ? `<span class="btn" data-use="${id}">Nutzen</span>` : ''}
+      ${!maxed ? `<span class="btn ${cst && canAfford(cst) ? 'primary' : ''}" data-up="${id}">${lv ? 'Ausbauen' : 'Errichten'}</span>` : ''}
+      ${lv > 0 && ['schmiede', 'alchemie', 'bibliothek', 'haendler', 'lager', 'portal', 'training', 'kutsche'].includes(id) ? `<span class="btn" data-use="${id}">Nutzen</span>` : ''}
       </div></div>`;
+  }
+  h += `</div>`;
+
+  const others = allCamps().filter(q => q.id !== c.id);
+  h += `<div class="secTitle" style="margin-top:14px">Lager verwalten</div>
+    <div class="bldRow"><div class="bldIco">📦</div><div class="bldMain"><div class="n">Lager abbauen</div>
+    <div class="d">Packt Feuer, Stufe und alle Bauten in ein Bündel. Du kannst es an jedem freien Ort an Land wieder aufstellen (mindestens 24 Felder Abstand zu anderen Lagern).</div></div>
+    <div><span class="btn danger" data-act="pack">Einpacken</span></div></div>`;
+  if (others.length) {
+    h += others.map(q => `<div class="bldRow"><div class="bldIco">🔥</div><div class="bldMain"><div class="n">${q.home ? 'Das letzte Lagerfeuer' : (q.name || 'Lager')} <small>Stufe ${q.tier || 1}</small></div><div class="d">${Math.round(q.x)}, ${Math.round(q.y)} · ${Math.round(dist(q.x, q.y, p.x, p.y))} Felder entfernt</div></div></div>`).join('');
   }
   setHTML($('baseBody'), h);
   $('baseBody').querySelectorAll('[data-up]').forEach(b => b.onclick = () => upgradeBuilding(b.dataset.up));
@@ -8098,23 +9277,29 @@ function openBasePanel(tab, byPlayer) {
     if (a === 'tierUp') { setTier(WORLD.tier + 1); openBasePanel(); }
     if (a === 'campfireUp') upgradeCampfire();
     if (a === 'campfireQuestAccept') acceptCampfireQuest();
+    if (a === 'campQuestDone') { const q = GAME.quests.find(x => x.qid === b.dataset.qid); if (q) { turnInQuest(q); } }
+    if (a === 'pack') {
+      openModal('Lager abbauen?', 'Das Lager wird zu einem Bündel im Beutel. Bauten und Stufe bleiben erhalten.', [
+        { label: 'Abbauen', cls: 'danger', fn: () => packCamp() }, { label: 'Abbrechen' }]);
+    }
   });
 }
 /** Gast am Lagerfeuer des Gastgebers: rasten heilt nur den eigenen Helden; Ausbauten,
     Weltstufe und Tageswechsel bleiben dem Besitzer der Welt vorbehalten. */
 function openGuestCamp() {
-  const p = GAME.player, B = GAME.base;
+  const p = GAME.player, c = campRef(ACTIVE_CAMP) || { tier: 1, buildings: {} }, bld = c.buildings || {};
   let h = `<div class="secTitle">Rasten</div>
-    <div class="bldRow"><div class="bldIco">🔥</div><div class="bldMain"><div class="n">Am Feuer rasten</div>
+    <div class="bldRow built"><div class="bldIco">🔥</div><div class="bldMain"><div class="n">Am Feuer rasten</div>
     <div class="d">Stellt Leben und Fokus her. Den nächsten Tag bestimmt der Gastgeber.</div></div>
     <div><span class="btn primary" data-act="rest">Rasten</span></div></div>
-    <div class="secTitle" style="margin-top:14px">Lager von ${escHtml(NET.peerName)}</div>`;
+    <div class="secTitle" style="margin-top:14px">Lager von ${escHtml(NET.peerName)} · Stufe ${c.tier || 1}</div><div class="bldGrid">`;
   for (const id in BASE_BUILDINGS) {
-    const b = BASE_BUILDINGS[id], lv = B.buildings[id] || 0;
-    if (!lv || !['schmiede', 'alchemie', 'bibliothek', 'haendler', 'lager', 'portal', 'training'].includes(id)) continue;
-    h += `<div class="bldRow"><div class="bldIco">${b.ico}</div><div class="bldMain"><div class="n">${b.name} <small>Stufe ${lv}</small></div><div class="d">${b.desc}</div></div>
+    const b = BASE_BUILDINGS[id], lv = bld[id] || 0;
+    if (!lv || !['schmiede', 'alchemie', 'bibliothek', 'haendler', 'lager', 'portal', 'training', 'kutsche'].includes(id)) continue;
+    h += `<div class="bldRow built"><div class="bldIco">${b.ico}</div><div class="bldMain"><div class="n">${b.name} ${pipsHtml(lv, b.max)}</div><div class="d">${b.desc}</div></div>
       <div class="bldCost"><span class="btn" data-use="${id}">Nutzen</span></div></div>`;
   }
+  h += '</div>';
   setHTML($('baseBody'), h);
   $('baseBody').querySelectorAll('[data-use]').forEach(b => b.onclick = () => useBuilding(b.dataset.use));
   $('baseBody').querySelectorAll('[data-act]').forEach(b => b.onclick = () => {
@@ -8141,7 +9326,7 @@ function useBuilding(id, byPlayer) {
   // interagierenden Spielers positioniert ist — nötig, weil Gebäude auch direkt im
   // Lager angetippt werden können, ohne vorher den Lagerfeuer-Hub geöffnet zu haben.
   openBaseAt(byPlayer);
-  const lv = GAME.base.buildings[id] || 0;
+  const lv = curBld()[id] || 0;
   if (id === 'schmiede') openSmithy();
   else if (id === 'alchemie') openAlchemy();
   else if (id === 'bibliothek') openLibrary();
@@ -8149,13 +9334,14 @@ function useBuilding(id, byPlayer) {
   else if (id === 'lager') openStash();
   else if (id === 'portal') openPortal();
   else if (id === 'training') openTraining();
+  else if (id === 'kutsche') openWorkshop();
 }
 
 function openSmithy() {
   const p = GAME.player;
-  const lv = GAME.base.buildings.schmiede;
+  const lv = curBld().schmiede;
   // Boss-Schädel sind kein Ausrüstungsgegenstand und lassen sich hier bewusst nicht aufwerten.
-  const items = [...Object.values(p.equip).filter(Boolean), ...p.bag].filter(it => it && !it.bossSkull && (it.upg || 0) < lv * 3);
+  const items = [...Object.values(p.equip).filter(Boolean), ...p.bag].filter(it => it && !it.bossSkull && !it.campKit && !it.tool && (it.upg || 0) < lv * 3);
   let h = `<div class="secTitle">Schmiede · Aufwertung (max. +${lv * 3})</div>`;
   if (!items.length) h += '<div class="bldRow"><div class="bldMain"><div class="d">Nichts, was sich hier noch verbessern ließe.</div></div></div>';
   for (const it of items.slice(0, 14)) {
@@ -8187,7 +9373,7 @@ function openSmithy() {
 }
 function openAlchemy() {
   const p = GAME.player;
-  const lv = GAME.base.buildings.alchemie;
+  const lv = curBld().alchemie;
   const recipes = [
     { k: 'heiltrank', cost: { gold: 25, aschestaub: 1 }, n: lv },
     { k: 'fokustrank', cost: { gold: 22, aschestaub: 1 }, n: lv },
@@ -8252,7 +9438,7 @@ function openShop(lv, fromNpc, byPlayer) {
   for (const k in CONSUM) h += `<div class="shopItem" data-buyc="${k}"><div class="ic"><img src="${ICONS[CONSUM[k].ico]}" width="22" height="22" style="image-rendering:pixelated"></div><div class="nm">${CONSUM[k].name}</div><div class="pr">${CONSUM[k].value}</div></div>`;
   h += `</div><div class="secTitle" style="margin-top:14px">Verkaufen (Beutel)</div><div id="shopGrid3" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px">`;
   p.bag.forEach((it, i) => {
-    if (it.bossSkull) return; // Boss-Schädel sind Fortschritts-Items, nicht verkäuflich
+    if (it.bossSkull || it.campKit || it.tool) return; // Fortschritts-Items, nicht verkäuflich
     h += `<div class="shopItem" data-sell="${i}"><div class="ic"><img src="${iconOf(it)}" width="22" height="22" style="image-rendering:pixelated"></div>
       <div class="nm" style="color:${RARITY[it.rarity].col}">${it.name}</div><div class="pr">+${Math.round(it.value * .42)}</div></div>`;
   });
@@ -8293,7 +9479,7 @@ function openShop(lv, fromNpc, byPlayer) {
 }
 function openStash() {
   const p = GAME.player;
-  const max = 20 + (GAME.base.buildings.lager || 1) * 20;
+  const max = 20 + (bestBld('lager') || 1) * 20;
   let h = `<div class="secTitle">Lager (${p.stash.length}/${max}) · hier ist alles sicher</div><div id="shopGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px">`;
   p.stash.forEach((it, i) => h += `<div class="shopItem" data-take="${i}"><div class="ic"><img src="${iconOf(it)}" width="22" height="22" style="image-rendering:pixelated"></div><div class="nm" style="color:${RARITY[it.rarity].col}">${it.name}</div><div class="pr">↓</div></div>`);
   h += `</div><div class="secTitle" style="margin-top:14px">Beutel</div><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px">`;
@@ -8351,8 +9537,10 @@ function openPortal() {
   const p = GAME.player;
   const ports = (WORLD.state.portals || []);
   let h = `<div class="secTitle">Portalstein</div>`;
-  h += `<div class="bldRow"><div class="bldIco">🔥</div><div class="bldMain"><div class="n">Lagerfeuer</div><div class="d">Ursprung der Welt (0, 0)</div></div>
-    <div><span class="btn primary" data-tp="0,0">Reisen</span></div></div>`;
+  for (const c of allCamps()) {
+    h += `<div class="bldRow"><div class="bldIco">🔥</div><div class="bldMain"><div class="n">${c.home ? 'Das letzte Lagerfeuer' : (c.name || 'Lager')} <small>Stufe ${c.tier || 1}</small></div><div class="d">${Math.round(c.x)}, ${Math.round(c.y)} · ${Math.round(dist(c.x, c.y, p.x, p.y))} Felder entfernt</div></div>
+      <div><span class="btn primary" data-tp="${c.x},${c.y}">Reisen</span></div></div>`;
+  }
   for (const t of ports) {
     h += `<div class="bldRow"><div class="bldIco">🌀</div><div class="bldMain"><div class="n">${t.name}</div><div class="d">${Math.round(t.x)}, ${Math.round(t.y)} · ${Math.round(Math.hypot(t.x, t.y))} vom Ursprung</div></div>
       <div><span class="btn primary" data-tp="${t.x},${t.y}">Reisen</span></div></div>`;
@@ -8362,7 +9550,7 @@ function openPortal() {
   setHTML($('baseBody'), h + `<div style="margin-top:14px"><span class="btn" data-back="1">Zurück</span></div>`);
   $('baseBody').querySelectorAll('[data-tp]').forEach(b => b.onclick = () => {
     const [x, y] = b.dataset.tp.split(',').map(Number);
-    const s = findFreeSpot(x, y + 1.5, 6);
+    const s = safeSpawn(x, y + 2.4, 14);
     p.x = s.x; p.y = s.y; cam.x = p.x; cam.y = p.y;
     closePanels(); burstParticles(p.x, p.y, 30, '#b07fd6', 4); sfx.doorOpen();
     logMsg('Die Welt zieht sich kurz zusammen.', 'lg-dim');
@@ -8408,8 +9596,10 @@ function respawn() {
   $('deathScreen').classList.add('hidden');
   GAME.deathShown = false;
   if (NET.role === 'guest') { guestRespawn(); return; }
+  const ref = GAME.mode === 'dungeon' ? { x: DUN.ret.x, y: DUN.ret.y } : { x: p.x, y: p.y };
   if (GAME.mode === 'dungeon') leaveDungeon();
-  const s = findFreeSpot(0, 2, 8);
+  const rp = respawnPoint(ref.x, ref.y);
+  const s = safeSpawn(rp.x, rp.y + 2.4, 30);
   p.x = s.x; p.y = s.y;
   cam.x = p.x; cam.y = p.y;
   p.dead = false; p.hp = p.maxHp; p.fp = p.maxFp;
@@ -8623,9 +9813,10 @@ function loadGame(slot) {
     WORLD.state.marks = WORLD.state.marks || [];
     WORLD.chunks.clear();
     GAME.base = d.base || { buildings: {} };
-    GAME.base.buildings = GAME.base.buildings || {};
-    GAME.base.campfireTier = GAME.base.campfireTier || 1; // ältere Spielstände kannten dieses Feld noch nicht
-    GAME.base.campfireQuest = GAME.base.campfireQuest || null; // dito — kein wartender Lagerfeuer-Auftrag in alten Spielständen
+    baseEnsure();
+    GAME.base.campfireQuest = GAME.base.campfireQuest || null;
+    if (GAME.base.homeX == null && !GAME.base.homePacked) pickLandSpot(true);
+    GAME._campSig = null;
     GAME.stats = d.stats || {};
     GAME.quests = d.quests || []; GAME.questSeq = d.questSeq || 1;
 
@@ -8640,6 +9831,7 @@ function loadGame(slot) {
       bagMax: s.bagMax || 30, playTime: s.playTime || 0,
     });
     GAME.player = p;
+    migrateItemNames(p);
     applyBaseEffects();
     recalcPlayer(p);
     p.hp = clamp(s.hp || p.maxHp, 1, p.maxHp);
@@ -8734,7 +9926,9 @@ function updatePlayer(dt) {
   if (p.actionLock > 0) spd *= .45;
   if (stun) spd = 0;
 
-  if (p.leaping) {
+  if (p.riding) {
+    rideStep(p, dt, mx, my, moveMag);
+  } else if (p.leaping) {
     p.leaping.t += dt;
     const k = clamp(p.leaping.t / p.leaping.dur, 0, 1);
     p.x = lerp(p.leaping.sx, p.leaping.tx, k);
@@ -8763,9 +9957,11 @@ function updatePlayer(dt) {
     p.moving = true;
     p.walkPhase = (p.walkPhase || 0) + dt * (3.6 + spd * .8);
   } else { p.bob *= .8; p.moving = false; }
+  if (p.roadMode && !p.riding && (mx || my) && GAME.mode === 'world') roadStep(p, mx, my);
+  { const lt = (!p.riding && (mx || my || p.dashing)) ? walkLiftAt(p.x, p.y) : 0; p.stepZ = (p.stepZ || 0) + (lt - (p.stepZ || 0)) * Math.min(1, dt * 14); if (p.stepZ < .02 && !lt) p.stepZ = 0; }
 
   // Angreifen
-  if (CTL.attackHeld && !panelBlock && p.attackCd <= 0 && p.actionLock <= 0 && !stun && !p.dashing) {
+  if (CTL.attackHeld && !panelBlock && p.attackCd <= 0 && p.actionLock <= 0 && !stun && !p.dashing && !p.riding) {
     basicAttack(p, p.aimAng, p.aimX, p.aimY);
     p.attackCd = Math.max(.17, 1 / Math.max(.25, p.atkSpeed));
     p.attackAnim = .22;
@@ -8785,10 +9981,13 @@ function updatePlayer(dt) {
   // HUD nicht jeden Frame neu schreiben — DOM-Arbeit ist teuer.
   p.hudT = (p.hudT || 0) - dt;
   if (p.hudT <= 0) { p.hudT = .1; updateHUD(); updateSkillbar(); }
+  p.qtT = (p.qtT || 0) - dt;
+  if (p.qtT <= 0) { p.qtT = 1.2; if (GAME.quests.some(q => q.done)) updateQuestTrack(); }
 }
 
 function doDash(p, mv) {
   p = p || GAME.player;
+  if (p.riding) return;
   if (p.dead || p.dashing || p.leaping || p.dashCharges <= 0 || p.st.stun > 0) { if (p.dashCharges <= 0) sfx.deny(); return; }
   const { ix, iy } = mv || moveInputVec();
   let ang = p.aimAng;
@@ -8850,8 +10049,19 @@ function manageSpawns(dt) {
 /** Kamera eines Spielers — für Aktionen (z.B. Portal), die die Sicht zentrieren. */
 function camFor(p) { return cam; }
 let curInter = null; // Rückwärtskompatibel: entspricht immer GAME.player.interTarget
+/** Gefährten per Knopfdruck wiederbeleben: der Gefallene steht mit 60 % Leben neben dir auf. */
+function reviveMate(p) {
+  const m = GAME.player2;
+  if (!m || !m.dead || p.dead) return;
+  netEv({ k: 'revive', x: r2(p.x), y: r2(p.y) });
+  m.dead = false; m.hp = Math.max(1, m.maxHp * .6);
+  burstParticles(m.x, m.y, 26, '#a8f0b8', 3.4); ringFx(m.x, m.y, 3.2, '#8fe0a0'); sfx.buff();
+  logMsg('Du holst deinen Gefährten zurück auf die Beine.', 'lg-good');
+  toast('WIEDERBELEBT', true);
+}
 function findInteractableFor(p) {
   const CS = CFG.CS;
+  if (p.riding) return { kind: 'inter', o: { type: 'unride', label: 'Absteigen', x: p.x, y: p.y } };
   let best = null, bd = 2.6;
   const pcx = Math.floor(p.x / CS), pcy = Math.floor(p.y / CS);
   for (let cy = pcy - 1; cy <= pcy + 1; cy++) for (let cx = pcx - 1; cx <= pcx + 1; cx++) {
@@ -8865,9 +10075,18 @@ function findInteractableFor(p) {
       if (d < bd) { bd = d; best = { kind: 'npc', o: n, ch }; }
     }
   }
+  // Niedergestreckter Mitspieler: mit Knopfdruck wiederbeleben
+  if (GAME.mp && GAME.player2 && !p.dead && !p.remote) {
+    const m = GAME.player2;
+    if (m.dead) { const d = dist(m.x, m.y, p.x, p.y); if (d < 2.8 && d <= bd + .4) { bd = d; best = { kind: 'inter', o: { type: 'revive', label: 'Gefährten wiederbeleben', x: m.x, y: m.y } }; } }
+  }
   for (const n of GAME.tempNpcs) {
     const d = dist(n.x, n.y, p.x, p.y);
     if (d < bd) { bd = d; best = { kind: 'npc', o: n }; }
+  }
+  if (GAME.mode === 'world' && GAME.base && GAME.base.wagons && !p.remote) for (const w of GAME.base.wagons) {
+    const d = dist(w.x, w.y, p.x, p.y);
+    if (d < Math.min(bd, 2.9)) { bd = d; const dr = GAME.player2 && GAME.player2.riding && GAME.player2.riding.id === w.id; best = { kind: 'inter', o: { type: 'wagon', id: w.id, label: dr ? 'Mitfahren' : 'Kutsche besteigen', x: w.x, y: w.y } }; }
   }
   // Herrenlose Beutel: global, nicht an Chunks gebunden (siehe GAME.dropBags weiter unten) —
   // dadurch immer erreichbar, auch wenn ihr Chunk zwischenzeitlich neu geladen/geleert wurde.
@@ -8949,6 +10168,7 @@ function doInteract(p) {
   const inter = p.interTarget;
   if (!inter) return;
   if (inter.kind === 'npc') { talkTo(inter.o, p); return; }
+  if (inter.o && inter.o.type === 'revive') { reviveMate(p); return; }
   if (NET.role === 'guest' && guestInteract(inter)) { updateHUD(); return; }
   const it = inter.o, ch = inter.ch;
   switch (it.type) {
@@ -8978,8 +10198,10 @@ function doInteract(p) {
     }
     case 'dunExit': leaveDungeon(); break;
     case 'shrine': useShrine(it.id, p); break;
-    case 'camp': openBasePanel(undefined, p); break;
-    case 'building': useBuilding(it.id, p); break;
+    case 'wagon': boardWagon(p, it.id); break;
+    case 'unride': dismount(p); break;
+    case 'camp': { const cc = claimCamp(it); ACTIVE_CAMP = cc ? cc.id : (it.id || 'home'); openBasePanel(undefined, p); break; }
+    case 'building': ACTIVE_CAMP = it.camp || 'home'; useBuilding(it.id, p); break;
     case 'dropbag': openDropBag(it, p); break;
     case 'portal': {
       WORLD.state.portals = WORLD.state.portals || [];
@@ -8989,7 +10211,8 @@ function doInteract(p) {
         toast('PORTAL AKTIV', true); sfx.buff();
         codexDiscover('place', 'Aktives Portal', 'Zwei Orte, die sich nicht kennen, teilen jetzt eine Tür.');
       } else {
-        const s = findFreeSpot(0, 2, 8);
+        const rp = respawnPoint(p.x, p.y);
+        const s = safeSpawn(rp.x, rp.y + 2.4, 20);
         const pc = camFor(p);
         p.x = s.x; p.y = s.y; pc.x = p.x; pc.y = p.y;
         burstParticles(p.x, p.y, 30, '#b07fd6', 4); sfx.doorOpen();
@@ -9023,17 +10246,22 @@ function talkTo(n, p) {
   const opts = [];
 
   if (n.role === 'haendler') {
-    opts.push({ label: 'Waren ansehen', keep: true, fn: () => openShop(Math.max(1, GAME.base.buildings.haendler || 1), true, p) });
+    opts.push({ label: 'Waren ansehen', keep: true, fn: () => openShop(Math.max(1, bestBld('haendler') || 1), true, p) });
   }
-  if (n.role === 'schmied') opts.push({ label: 'Etwas schmieden lassen', keep: true, fn: () => { if (GAME.base.buildings.schmiede) openSmithy(); else { openPanel('pBase'); $('baseTitle').textContent = 'Schmied'; $('baseBody').innerHTML = '<div class="bldRow"><div class="bldMain"><div class="d">„Ohne Amboss geht nichts. Bau dir einen am Lagerfeuer.“</div></div></div><div style="margin-top:12px"><span class="btn" data-back="0">Zurück</span></div>'; bindBack(); } } });
+  if (n.role === 'schmied') opts.push({ label: 'Etwas schmieden lassen', keep: true, fn: () => { if (bestBld('schmiede')) { ACTIVE_CAMP = (allCamps().find(c => (c.buildings.schmiede || 0) > 0) || curCamp()).id; openSmithy(); } else { openPanel('pBase'); $('baseTitle').textContent = 'Schmied'; $('baseBody').innerHTML = '<div class="bldRow"><div class="bldMain"><div class="d">„Ohne Amboss geht nichts. Bau dir einen am Lagerfeuer.“</div></div></div><div style="margin-top:12px"><span class="btn" data-back="0">Zurück</span></div>'; bindBack(); } } });
 
-  // Aufträge
-  const ready = GAME.quests.find(q => q.done);
-  if (ready) opts.push({ label: `Auftrag abgeben: ${ready.title}`, hint: `+${ready.reward.gold} Gold`, fn: () => completeQuest(ready) });
-  else if (GAME.quests.length < 5 && ['haendler', 'dorf', 'wache', 'schmied', 'einsiedler', 'gelehrter', 'frostwaechter', 'sumpfling'].includes(n.role)) {
-    if (!n.quest || n.questDay !== WORLD.day) { n.quest = newQuest(Math.max(1, p.level)); n.questDay = WORLD.day; n.quest.giverRole = n.role; }
-    const q = n.quest;
-    opts.push({ label: `Nach Arbeit fragen`, hint: q.title, fn: () => { if (giveQuest(q)) { n.quest = null; } } });
+  // Aufträge: Abgabe nur beim Auftraggeber, Geschichten laufen über mehrere Abschnitte
+  const ready = GAME.quests.find(q => q.done && questGivenBy(q, n));
+  if (ready) opts.push({ label: `Auftrag abgeben: ${ready.title}`, hint: `+${ready.reward.gold} Gold`, fn: () => turnInQuest(ready, n), keep: true });
+  const canGive = ['haendler', 'dorf', 'wache', 'schmied', 'einsiedler', 'gelehrter', 'frostwaechter', 'sumpfling'].includes(n.role) && !n.dungeon && !n.temp && !n.encounter;
+  if (canGive && !ready) {
+    const off = npcQuestOffer(n, p);
+    if (off.kind === 'active' && off.q) {
+      opts.push({ label: 'Nach dem Auftrag fragen', hint: off.q.title, keep: true, fn: () => showDialog(npcName(n), off.q.desc, [{ label: 'Verstanden' }]) });
+    } else if (off.kind === 'offer' && GAME.quests.length < 5) {
+      opts.push({ label: 'Nach Arbeit fragen', hint: off.q.title, keep: true, fn: () => showDialog(npcName(n), off.q.desc, [
+        { label: 'Annehmen', hint: off.q.obj.label, fn: () => { giveQuest(off.q); } }, { label: 'Später' }]) });
+    }
   }
 
   if (n.role === 'fremder') {
@@ -9079,12 +10307,15 @@ function talkTo(n, p) {
 }
 
 /* ---------- Spielschleife ------------------------------------------------------------- */
-let lastT = 0;
+let lastT = 0, loopDt = 0;
 function loop(ts) {
   requestAnimationFrame(loop);
   const now = ts / 1000;
-  const dt = Math.min(0.05, now - lastT || 0.016);
+  const rawDt = Math.min(0.05, now - lastT || 0.016);
   lastT = now;
+  // Zeitschritt glätten: schwankende Frame-Zeiten (typisch am Handy) wirken sonst wie Ruckeln
+  loopDt = loopDt ? loopDt + (rawDt - loopDt) * 0.4 : rawDt;
+  const dt = loopDt;
   if (!GAME.started) { gameTime += dt; drawTitleBackdrop(dt); return; }
   // Im Online-Koop läuft die Welt immer weiter (kein Pausieren für beide), solange
   // die Seite sichtbar ist; im Einzelspiel pausieren offene Menüs wie gewohnt.
@@ -9149,7 +10380,9 @@ function startGame(seed, loaded) {
     WORLD.state = { poi: {}, chests: {}, explored: {}, marks: [], bosses: {}, npc: {}, events: {}, rep: {} };
     WORLD.time = 0.30; WORLD.day = 1; WORLD.tier = 1;
     WORLD.chunks.clear();
-    GAME.base = { buildings: {}, campfireTier: 1, campfireQuest: null };
+    GAME.base = { buildings: {}, campfireTier: 1, campfireQuest: null, camps: [], roads: {}, wagons: [], removedWild: {} };
+    pickLandSpot(true);
+    GAME._campSig = null;
     GAME.stats = {};
     GAME.quests = [];
     GAME.player = makePlayer();
@@ -9160,8 +10393,12 @@ function startGame(seed, loaded) {
     applyBaseEffects();
     recalcPlayer(p);
     p.hp = p.maxHp; p.fp = p.maxFp;
-    const s = findFreeSpot(0, 3, 10);
+    const hs = homeSpot();
+    const s = safeSpawn(hs.x, hs.y + 3, 30);
     p.x = s.x; p.y = s.y;
+  } else {
+    const s = safeSpawn(GAME.player.x, GAME.player.y, 30);
+    GAME.player.x = s.x; GAME.player.y = s.y;
   }
   enterWorldView();
   if (!loaded) {
@@ -9896,7 +11133,7 @@ function poiMarkKind(type) {
     shrine: 'shrine', steinkreis: 'shrine', sumpfschrein: 'shrine', cultSite: 'hostile',
     banditCamp: 'hostile', goblinCamp: 'hostile', battlefield: 'hostile',
     graveyard: 'ruin', ruin: 'ruin', frostruine: 'ruin', deadCity: 'ruin', metropole: 'ruin',
-    cave: 'dungeon', mine: 'dungeon', dragonHoard: 'dungeon', portal: 'portal',
+    cave: 'dungeon', mine: 'dungeon', dragonHoard: 'dungeon', portal: 'portal', wildcamp: 'safe',
   };
   return M[type] || 'dot';
 }
@@ -11338,6 +12575,7 @@ function heroNetState(p) {
     hp: Math.round(p.hp), mhp: Math.round(p.maxHp), lv: p.level, o: (p.outfit || 'base').replace(/2$/, ''),
     w: p.equip.weapon ? p.equip.weapon.ico : 'sword', fl: p.flash > 0 ? 1 : 0, ifr: p.iframes > 0 ? 1 : 0,
     sh: p.st && p.st.shield > 0 ? 1 : 0, ss: p.soulStacks || 0, nm: NET.myName,
+    rw: p.riding ? p.riding.id : 0, rs: p.riding ? p.riding.seat : 0,
   };
 }
 function applyHeroState(p, s) {
@@ -11356,6 +12594,7 @@ function applyHeroState(p, s) {
   p.iframes = s.ifr ? .2 : 0;
   p.st = p.st || {}; p.st.shield = s.sh ? 1 : 0;
   p.soulStacks = s.ss || 0;
+  p.riding = s.rw ? { id: s.rw, seat: s.rs || 0 } : null;
   if (s.nm) p.netName = String(s.nm).slice(0, 16);
 }
 function updateRemotePlayer(p, dt) {
@@ -11374,7 +12613,7 @@ function hostOnConnected() {
   NET.active = true;
   GAME.mp = true;
   GAME.player2 = makeRemoteHero(NET.peerName);
-  const p = GAME.player, s = findFreeSpot(p.x + 1.2, p.y + .6, 4);
+  const p = GAME.player, s = safeSpawn(p.x + 1.2, p.y + .6, 8);
   GAME.player2.x = GAME.player2.netTX = s.x; GAME.player2.y = GAME.player2.netTY = s.y;
   const st = WORLD.state;
   netSend({
@@ -11443,6 +12682,7 @@ function loadCoopHero() {
     p.bag.push(genItem(1, { base: 'wams', rarity: 0, noUnique: true }));
     p.mats.gold = 30; GAME.quests = []; GAME.stats = {};
   }
+  migrateItemNames(p);
   let mx = 1;
   for (const it of [...p.bag, ...p.stash, ...Object.values(p.equip)]) if (it && it.uid > mx) mx = it.uid;
   itemUID = Math.max(itemUID, mx + 1);
@@ -11480,7 +12720,7 @@ function guestStart(w) {
   WORLD.state = Object.assign({ poi: {}, chests: {}, explored: {}, marks: [], bosses: {}, npc: {}, events: {}, rep: {} }, w.state || {});
   WORLD.state.explored = {}; WORLD.state.marks = [];
   WORLD.chunks.clear();
-  GAME.base = w.base || { buildings: {} }; GAME.base.buildings = GAME.base.buildings || {};
+  GAME.base = w.base || { buildings: {} }; baseEnsure(); GAME._campSig = null;
   applyBaseEffects(); recalcPlayer(me);
   me.hp = Math.max(1, Math.min(me.hp || me.maxHp, me.maxHp)); me.fp = me.maxFp;
   me.dead = false; me.downT = null;
@@ -11587,8 +12827,8 @@ function applyMeta(m) {
   if (m.tier !== WORLD.tier) { WORLD.tier = m.tier; WORLD.chunks.clear(); toast('WELTSTUFE ' + romanize(m.tier), true); }
   GAME.darkEvent = m.dark || 0;
   const baseChanged = JSON.stringify(m.base) !== JSON.stringify(GAME.base);
-  GAME.base = m.base || GAME.base;
-  if (baseChanged) { applyBaseEffects(); recalcPlayer(GAME.player); }
+  GAME.base = m.base || GAME.base; baseEnsure();
+  if (baseChanged) { applyBaseEffects(); recalcPlayer(GAME.player); syncCampChunks(); }
   WORLD.state.bosses = m.bosses || WORLD.state.bosses;
   WORLD.state.portals = m.portals || WORLD.state.portals;
 }
@@ -11678,6 +12918,7 @@ function applyEvent(ev) {
     case 'grant': if (me) collectPickup(ev.u, me); break;
     case 'xp': if (me) gainXP(me, ev.n); break;
     case 'heal': if (me) healPlayer(ev.v, me); break;
+    case 'revive': if (me && me.dead && me.downT != null) { revivePlayer(me, .6, ev.x, ev.y); logMsg('Dein Gefährte hat dich wiederbelebt.', 'lg-good'); } break;
     case 'kill': {
       if (!me) break;
       gainXP(me, ev.xp);
@@ -11819,7 +13060,10 @@ function guestRespawn() {
   $('deathScreen').classList.add('hidden');
   GAME.deathShown = false;
   const h = GAME.player2;
-  const s = h && !h.dead ? findFreeSpot(h.x, h.y, 4) : findFreeSpot(0, 2, 8);
+  let s;
+  if (h && !h.dead) s = safeSpawn(h.x, h.y + .8, 30);
+  else if (GAME.mode === 'dungeon' && DUN.entry) s = safeSpawn(DUN.entry.x + .5, DUN.entry.y + 1.2, 30);
+  else { const rp = respawnPoint(p.x, p.y); s = safeSpawn(rp.x, rp.y + 2.4, 30); }
   p.x = s.x; p.y = s.y; cam.x = p.x; cam.y = p.y;
   p.dead = false; p.hp = p.maxHp; p.fp = p.maxFp; p.stList = []; recomputeStatus(p); p.soulStacks = 0; p.downT = null;
   music.setMode('explore'); updateHUD(); saveGuestHero();
