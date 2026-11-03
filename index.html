@@ -501,7 +501,7 @@ img.gi{vertical-align:middle;pointer-events:none;filter:drop-shadow(0 2px 2px rg
       <div class="tbtn" id="btnCoop"><span>Koop im WLAN</span></div>
       <div class="tbtn" id="btnSettings"><span>Einstellungen</span></div>
     </div>
-    <div id="titleFoot">MOBILE · V19.0</div>
+    <div id="titleFoot">MOBILE · V19.1</div>
   </div>
 
   <div class="screen narrow hidden" id="slotScreen">
@@ -1592,18 +1592,70 @@ function buildExtraSprites() {
     P.r(cx - 1, base - 10, 3, 1, '#c8862a'); P.r(cx + 3, base - 12, 1, 1, '#ffcf6a');
     reg('s_wagonShop', P, cx, base, { light: { r: 4.6, c: 0xe0a24c, i: 0.6 } });
   }
-  { // Kutsche (Seitenansicht, nach rechts blickend)
-    const aw = 40, ah = 28, P = painter(aw, ah, PX), cx = aw / 2, base = ah - 2;
-    P.r(cx - 13, base - 11, 26, 6, '#5a3e26'); P.r(cx - 13, base - 12, 26, 1, '#7a5636'); P.r(cx - 13, base - 6, 26, 1, '#2e2016');
-    for (let i = -11; i <= 11; i++) { const h = Math.round(Math.sqrt(121 - i * i) * .85); P.r(cx + i, base - 12 - h, 1, h, (i % 4 === 0) ? '#a89c7a' : '#cabf9c'); }
-    P.r(cx - 11, base - 12, 22, 1, '#8a7c5a');
-    P.r(cx + 3, base - 19, 6, 7, '#1e1710'); P.r(cx - 6, base - 19, 6, 7, '#241a12');
-    P.r(cx + 8, base - 22, 3, 2, '#c8862a');
-    P.e(cx - 8, base - 3, 5.4, 5.4, '#1c140e'); P.e(cx - 8, base - 3, 3.8, 3.8, '#8a6a3a'); P.e(cx - 8, base - 3, 1.3, 1.3, '#2a1e14');
-    P.e(cx + 9, base - 3, 5.4, 5.4, '#1c140e'); P.e(cx + 9, base - 3, 3.8, 3.8, '#8a6a3a'); P.e(cx + 9, base - 3, 1.3, 1.3, '#2a1e14');
-    P.line(cx + 13, base - 7, cx + 19, base - 5, 1, '#3a2c1e');
-    P.r(cx - 13, base - 15, 1, 1, '#ffcf6a');
-    reg('v_wagon', P, cx, base - 1);
+  { // Geisterkutsche, Rückebene (Innenraum), Fahrgäste werden dazwischen gezeichnet
+    const aw = 68, ah = 64, P = painter(aw, ah, PX), cx = 30, base = ah - 2;
+    P.r(cx - 22, base - 46, 38, 30, '#17121f');
+    P.r(cx - 22, base - 46, 38, 2, '#241c30');
+    for (let i = 0; i < 7; i++) P.r(cx - 20 + i * 5.6, base - 44, 1, 26, '#1f1829');
+    P.r(cx - 20, base - 28, 34, 3, '#7a2e50'); P.r(cx - 20, base - 28, 34, 1, '#a04a70');
+    P.r(cx - 26, base - 15, 50, 3, '#120e18');
+    reg('v_cart_back', P, cx, base - 1);
+  }
+  { // Vorderebene: Seitenwand, Dach, Pfosten, Räder, Deichsel, Laterne
+    const aw = 68, ah = 64, P = painter(aw, ah, PX), cx = 30, base = ah - 2;
+    const wood = '#2f2540', wood2 = '#3c2f52', silver = '#aab4cc', silver2 = '#d8e0f0', glow = '#9fe4ff';
+    // Seitenwand (verdeckt die Beine der Insassen)
+    P.r(cx - 24, base - 28, 44, 13, wood);
+    P.r(cx - 24, base - 29, 44, 2, silver); P.r(cx - 24, base - 15, 44, 2, silver);
+    for (let i = 0; i < 4; i++) {
+      P.r(cx - 20 + i * 10, base - 25, 6, 7, wood2); P.r(cx - 20 + i * 10, base - 25, 6, 1, '#6a5a8a');
+      P.e(cx - 17 + i * 10, base - 21.5, 1.3, 1.3, glow);
+    }
+    P.r(cx + 15, base - 23, 9, 7, wood);   // Fußbrett vorn
+    P.r(cx + 15, base - 24, 9, 1, silver);
+    // Pfosten
+    P.r(cx - 25, base - 50, 2, 22, '#8a92aa'); P.r(cx + 17, base - 50, 2, 22, '#8a92aa');
+    // Dach, gewölbt
+    for (let r = 0; r < 7; r++) P.r(cx - 28 + r * 1.5, base - 50 - r, 58 - r * 3, 1, r % 2 ? '#3a2d48' : '#2a2034');
+    P.r(cx - 28, base - 50, 58, 1, silver);
+    P.cone(cx - 27, base - 58, 2, 8, silver); P.cone(cx + 28, base - 58, 2, 8, silver); P.cone(cx + 1, base - 61, 2.4, 9, silver2);
+    // Laterne vorn
+    P.r(cx + 22, base - 49, 1, 5, '#8a92aa'); P.r(cx + 20.5, base - 44, 4, 5, glow); P.r(cx + 20.5, base - 44, 4, 1, silver2);
+    // Räder
+    for (const wx of [cx - 16, cx + 12]) {
+      const wy = base - 8;
+      P.e(wx, wy, 9, 9, '#14101c'); P.e(wx, wy, 8, 8, silver); P.e(wx, wy, 6.8, 6.8, '#1c1626');
+      for (let k = 0; k < 8; k++) { const an = k / 8 * Math.PI * 2; P.line(wx, wy, wx + Math.cos(an) * 6.6, wy + Math.sin(an) * 6.6, 1, '#8a92aa'); }
+      P.e(wx, wy, 2.2, 2.2, silver2); P.e(wx, wy, 1, 1, glow);
+    }
+    // Deichsel mit Kette
+    P.line(cx + 22, base - 14, cx + 35, base - 15, 2, '#8a92aa');
+    for (let k = 0; k < 4; k++) P.e(cx + 25 + k * 2.6, base - 12.6 + k * -.2, 1, .8, silver2);
+    reg('v_cart_front', P, cx, base - 1);
+  }
+  // Geisterpferd in zwei Galopp-Bildern (blasse, leuchtende Gestalt mit wehender Mähne)
+  for (let fr = 0; fr < 2; fr++) {
+    const aw = 38, ah = 34, P = painter(aw, ah, PX), cx = 17, base = ah - 1;
+    const body = '#bfe4ff', core = '#e8f8ff', edge = '#6fa8dc', mist = '#8fcfff';
+    const ex = fr ? 1.5 : 4.5;     // Beinausschlag
+    // hintere Beine
+    P.line(cx - 7, base - 14, cx - 7 - ex, base - 5, 2.2, edge); P.line(cx - 7 - ex, base - 5, cx - 8 - ex * 1.4, base - 0.5, 1.6, mist);
+    P.line(cx - 4, base - 14, cx - 4 + ex * .6, base - 5, 2.2, edge); P.line(cx - 4 + ex * .6, base - 5, cx - 3 + ex, base - 0.5, 1.6, mist);
+    // Körper
+    P.e(cx - 1, base - 16, 10, 5.4, edge); P.e(cx - 1, base - 16.6, 9.4, 4.8, body); P.e(cx - 1.4, base - 17.4, 6.6, 2.6, core);
+    // Hals + Kopf
+    P.line(cx + 6, base - 18, cx + 11, base - 25, t => 5 - t * 1.6, body);
+    P.line(cx + 6.4, base - 19, cx + 10.6, base - 25, 2, core);
+    P.e(cx + 13, base - 25.5, 3.8, 2.4, body); P.e(cx + 15.6, base - 24.6, 2, 1.5, core);
+    P.r(cx + 15, base - 26.4, 1.4, 1.4, '#ffffff'); P.r(cx + 15.4, base - 26.2, .8, .8, '#58b8ff');
+    P.cone(cx + 11.4, base - 31, 1.2, 3, body);
+    // vordere Beine
+    P.line(cx + 5, base - 14, cx + 5 + ex, base - 5, 2.2, edge); P.line(cx + 5 + ex, base - 5, cx + 6 + ex * 1.5, base - 0.5, 1.6, mist);
+    P.line(cx + 2, base - 14, cx + 2 - ex * .5, base - 5, 2.2, edge); P.line(cx + 2 - ex * .5, base - 5, cx + 2.6 - ex * .9, base - 0.5, 1.6, mist);
+    // Mähne und Schweif als Geisterflammen
+    for (let k = 0; k < 4; k++) P.line(cx + 5 - k * 1.2, base - 20 - k * 1.4, cx + 1 - k * 2.4 - fr, base - 22 - k * 1.2 + (k % 2) * 2, t => 1.9 - t * 1.4, k % 2 ? mist : body);
+    for (let k = 0; k < 4; k++) P.line(cx - 9, base - 17 + k, cx - 15 - k * 1.6 - fr * 2, base - 15 + k * 2.4, t => 2 - t * 1.6, k % 2 ? mist : body);
+    reg('v_ghorse' + fr, P, cx, base - 1);
   }
 }
 
@@ -1828,99 +1880,82 @@ function buildAllHeroFrames() {
   }
 }
 function buildHeroFrame(key, pose, pal) {
-  const aw = 22, ah = 32;
+  // Kleiner, schiefer Magier. Hauptfarbe unterscheidet die Spieler: Spieler 1 petrol, Spieler 2 rot.
+  const p2 = /^hero_[a-z]+2_/.test(key);
+  const C = p2 ? { robe: '#a0402e', lit: '#cf6a50', dk: '#5e2016', hat: '#7e2c20', hatLit: '#b4503c', trim: '#f0cc6a' }
+               : { robe: '#2a7488', lit: '#45a0b6', dk: '#163e4c', hat: '#1f566a', hatLit: '#3a88a0', trim: '#f0cc6a' };
+  const aw = 26, ah = 40;
   const P = painter(aw, ah, PX);
   const cx = aw / 2, base = ah - 1;
-  const rng = mulberry32(pal.seed || 1);
-  const lean = (pose.lean || 0) * .42, sway = pose.sway || 0, bob = pose.bob || 0;
-  const shoulderY = base - 17 + bob, hipY = base - 8;
-  const legW = 3;
+  const lean = (pose.lean || 0) * .42 + 1.0, sway = pose.sway || 0, bob = pose.bob || 0;
+  const shY = base - 14 + bob, hemY = base - 3;
   const legFX = cx + 2 + (pose.legF || 0), legBX = cx - 2 + (pose.legB || 0);
-
-  // Schalende (hinter allem) — bewusst über die Rumpfsilhouette hinaus, damit
-  // sie hinter Schulter/Hüfte sichtbar hervorweht statt vom Körper verdeckt zu sein.
-  if (!pal.robe) {
-    const tx = cx - 6.5 + sway, ty = hipY + 9 + Math.abs(sway) * .4;
-    P.line(cx - 4.5, shoulderY + 1, tx, ty, t => 2.4 - t * 1.2, pal.scarfDk);
-    P.line(cx - 3.6, shoulderY + 1, tx + 1, ty - 1, t => 1.7 - t, pal.scarf);
-  }
-
-  // Hinteres Bein
-  P.r(legBX - legW / 2, hipY, legW, 5, pal.pants);
-  P.r(legBX - legW / 2, base - 3, legW, 3, pal.boot);
-  P.r(legBX - legW / 2, base - 3, legW, 1, pal.cuff);
-
-  // Hinterer Arm
+  // Spitze Stiefel unter dem Saum
+  P.r(legBX - 1.6, base - 3, 3.2, 3, '#2a1c14');
+  P.r(legFX - 1.6, base - 3, 3.6, 3, '#3a281c'); P.r(legFX + 1.8, base - 2, 1.8, 1.4, '#3a281c');
+  // hinterer Ärmel
   const armBX = cx - 5 + (pose.armB || 0);
-  P.r(armBX - 1, shoulderY, 2, 7, pal.armor ? pal.plate : pal.shirtDk);
-
-  // Rumpf / Robensaum
+  P.r(armBX - 1.6, shY + 1, 3.2, 7, C.dk);
+  // Robe: weitet sich nach unten, oben schief
+  const rows = hemY - shY;
+  for (let i = 0; i < rows; i++) {
+    const t = i / rows, w = 8.4 + t * 6.4, off = lean * (1 - t) + sway * t * .6;
+    P.r(cx - w / 2 + off, shY + i, w, 1, i % 4 === 0 ? C.lit : C.robe);
+    P.r(cx - w / 2 + off, shY + i, 1, 1, C.dk); P.r(cx + w / 2 + off - 1, shY + i, 1, 1, C.dk);
+  }
+  P.r(cx - 7.4 + sway * .6, hemY - 1, 14.8, 1, pal.robe ? C.trim : C.dk);
   if (pal.robe) {
-    for (let i = 0; i < base - hipY; i++) {
-      const w = 4.6 + i * .6;
-      P.r(cx - w / 2 + lean, hipY + i, w, 1, i % 3 === 0 ? pal.robeLit : pal.robeCol);
-    }
+    P.r(cx - .6 + lean * .6, shY + 1, 1.2, rows - 1, C.trim);
+    for (const [sx2, sy2] of [[-4, 6], [3.4, 9], [-3, 12], [4.2, 4]]) P.r(cx + sx2 + lean * .4, shY + sy2, 1.2, 1.2, C.trim);
   }
-  P.r(cx - 4 + lean, shoulderY, 8, 9, pal.armor ? pal.plate : pal.shirt);
-  P.r(cx - 4 + lean, shoulderY, 8, 1, pal.armor ? pal.plateLit : pal.shirtLit);
-  P.line(cx - 3 + lean, shoulderY + 2, cx + 2.6 + lean, hipY - .6, 1, pal.strap);
-  P.line(cx + 3 + lean, shoulderY + 2, cx - 2.6 + lean, hipY - .6, 1, pal.strap);
-  P.r(cx - .8 + lean, hipY - 1.6, 1.6, 1.6, pal.buckle);
+  // Gürtel und Schnalle
+  P.r(cx - 4.4 + lean * .6, shY + 6, 8.8, 1.4, '#4a3018'); P.r(cx - .8 + lean * .6, shY + 5.8, 1.8, 1.8, C.trim);
   if (pal.armor) {
-    P.e(cx - 5 + lean, shoulderY + 1, 2.2, 1.8, pal.pauldron);
-    P.e(cx + 5 + lean, shoulderY + 1, 2.2, 1.8, pal.pauldron);
+    P.e(cx - 5 + lean, shY + .8, 2.6, 2, pal.plate); P.e(cx + 5 + lean, shY + .8, 2.6, 2, pal.plate);
+    P.r(cx - 3.2 + lean, shY + 1.2, 6.4, 3.6, pal.plate); P.r(cx - 3.2 + lean, shY + 1.2, 6.4, 1, pal.plateLit);
   }
-
-  // Schalkragen vorn — kompakter Knoten am Hals, helleres Türkis als das Hemd
-  if (!pal.robe) {
-    P.e(cx + lean, shoulderY + .3, 2.2, 1.3, pal.scarfLit);
-    P.r(cx - 1 + lean, shoulderY + .7, 2, 1, pal.scarf);
-  }
-
-  // Vorderes Bein
-  P.r(legFX - legW / 2, hipY, legW, 5, pal.robe ? pal.robeCol : pal.pants);
-  P.r(legFX - legW / 2, base - 3, legW, 3, pal.boot);
-  P.r(legFX - legW / 2, base - 3, legW, 1, pal.cuff);
-
-  // Kopf
-  const headR = 5, headX = cx + lean, headY = shoulderY - headR - 1;
-  P.e(headX, headY, headR, headR, pal.skin);
-
-  if (pal.hood) {
-    // Dunkler Saum zuerst (Kontur), dann die Kapuze selbst, dann eine Spitze
-    // oben (Kapuzenzipfel) - sonst wirkt es aus der Distanz nur wie ein
-    // verschwommener grüner Kreis statt einer erkennbaren Kapuze.
-    P.e(headX, headY - .6, headR + 2.1, headR + 1.7, pal.hoodOutline || '#0d2420');
-    P.e(headX, headY - .6, headR + 1.3, headR + .95, pal.hoodCol);
-    for (let i = 0; i < 4; i++) P.r(headX - 1.4 + i * .35, headY - headR - 1.6 + i * .8, 2.8 - i * .7, 1, i % 2 ? pal.hoodCol : pal.hoodOutline || '#0d2420');
-    P.r(headX - headR - .6, headY - .3, headR * 2 + 1.2, .8, pal.hoodLit);
-    P.e(headX, headY + .8, headR * .68, headR * .56, '#12100e');
-    P.e(headX, headY + 1.1, headR * .58, headR * .46, pal.skin);
+  P.r(cx - 3.5 + lean, shY - .6, 7, 2, C.dk);
+  // Kopf (groß, leicht schief)
+  const headR = 5.2, headX = cx + lean * 1.15, headY = shY - headR - .4;
+  const bend = -5.5;
+  if (pal.hood) {   // Kapuze statt Hut
+    P.e(headX, headY - .8, headR + 1.9, headR + 1.5, C.dk);
+    P.e(headX, headY - .8, headR + 1.2, headR + .9, C.hat);
+    for (let k = 0; k < 9; k++) { const t = k / 9, hw = (headR + 1) * (1 - t) + .6, ccx = headX + bend * .7 * t * t; P.r(ccx - hw, headY - headR - 1 - k, hw * 2, 1, k % 3 === 0 ? C.hatLit : C.hat); }
+    P.line(headX + bend * .7, headY - headR - 10, headX + bend * .7 - 3, headY - headR - 7.2, t => 1.5 - t, C.hat);
+    P.e(headX, headY + .8, headR * .8, headR * .72, '#12100e');
+    P.e(headX, headY + 1.1, headR * .7, headR * .62, pal.skin);
   } else {
-    // Haarschopf zuerst als geschlossene Masse, Gesicht danach frei rasieren —
-    // so setzen die Zacken sichtbar AUF dem Haar auf statt lose in der Luft.
-    P.e(headX, headY - headR * .18, headR * 1.05, headR * .92, pal.hair);
-    P.e(headX, headY - headR * .02, headR * .95, headR * .66, pal.skin);
-    for (let i = 0; i < 5; i++) {
-      const a = -Math.PI * .92 + i * (Math.PI * .8 / 4) + (rng() - .5) * .14;
-      const len = 2 + rng() * 1.6;
-      const sx0 = headX + Math.cos(a) * headR * .95, sy0 = headY - headR * .18 + Math.sin(a) * headR * .8;
-      P.line(sx0, sy0, sx0 + Math.cos(a) * len, sy0 + Math.sin(a) * len - .6, t => 1.6 - t * .8, i % 2 ? pal.hairDk : pal.hair);
-    }
-    // Stirnband
-    P.r(headX - headR - .4, headY - .4, headR * 2 + .8, 1.6, pal.band);
-    P.r(headX - headR - .4, headY - .4, headR * 2 + .8, .6, pal.bandLit);
-    P.r(headX - 1, headY - .4, 2, 1.6, pal.bandTrim);
+    P.e(headX, headY, headR, headR * .95, pal.skin);
   }
-  P.r(headX - 2, headY + 1, 1, 1, pal.eyes);
-  P.r(headX + 1, headY + 1, 1, 1, pal.eyes);
-  P.r(headX - .5, headY + 2.6, 1, .5, pal.skinSh);
-
-  // Vorderer Arm (vorn, hält die Waffe)
-  const armFX = cx + 5 + (pose.armF || 0);
-  P.r(armFX - 1, shoulderY + ((pose.armF || 0) > 0 ? -.6 : 0), 2, 7, pal.armor ? pal.plate : pal.shirt);
-  P.r(armFX - 1.4, shoulderY + 5, 2.4, 2.2, pal.skin);
-
+  // Gesicht
+  P.e(headX + 2.4, headY + 1.2, 1.5, 1.1, pal.skinSh);
+  P.r(headX - 2.2, headY - .4, 1.1, 1.3, pal.eyes); P.r(headX + 1.1, headY - .4, 1.1, 1.3, pal.eyes);
+  P.r(headX - 2.8, headY - 2, 2.4, .8, '#e8e4da'); P.r(headX + .6, headY - 2, 2.4, .8, '#e8e4da');
+  // Bart
+  for (let i = 0; i < 7; i++) { const w = 6.6 - i * .85; P.r(headX - w / 2 + i * .15, headY + 3.4 + i, w, 1, i % 2 ? '#d6d2c8' : '#eeeae0'); }
+  if (!pal.hood) {
+    // Krempe, Band, geknickte Spitze
+    const brimY = headY - 2.3;
+    P.e(headX - .6, brimY, headR + 4.6, 1.9, C.hat);
+    P.e(headX - .8, brimY - .5, headR + 3.6, 1.2, C.hatLit);
+    P.r(headX - headR - 1, brimY - 1.6, headR * 2 + 2, 1.4, C.dk);
+    P.r(headX - .8, brimY - 1.8, 1.8, 1.6, C.trim);
+    const H = 13;
+    for (let k = 0; k < H; k++) {
+      const t = k / H, hw = (headR + .3) * (1 - t) + .6, ccx = headX - .4 + bend * t * t;
+      P.r(ccx - hw, brimY - 1.6 - k, hw * 2, 1, k % 3 === 0 ? C.hatLit : C.hat);
+      P.r(ccx + hw - 1.3, brimY - 1.6 - k, 1.3, 1, C.dk);
+    }
+    const tx = headX - .4 + bend, ty = brimY - 1.6 - H;
+    P.line(tx, ty, tx - 3.6, ty + 3.4, t => 1.7 - t * 1.2, C.hat);
+    P.r(headX + 1.2, brimY - 6, 1.3, 1.3, C.trim); P.r(headX - 2, brimY - 9, 1, 1, C.trim);
+  }
+  // vorderer Ärmel mit Hand
+  const armFX = cx + 5 + (pose.armF || 0) + lean * .3;
+  P.r(armFX - 1.8, shY + 0.6 + ((pose.armF || 0) > 0 ? -.6 : 0), 3.6, 6.4, C.robe);
+  P.r(armFX - 2, shY + 5.8, 4, 1.2, C.trim);
+  P.r(armFX - 1.2, shY + 7, 2.4, 2.2, pal.skin);
   return reg(key, P, cx, base, {});
 }
 
@@ -3395,10 +3430,27 @@ function isRoadTile(tx, ty) {
   const a = baseEnsure().roads[cx + ',' + cy];
   return !!a && a.indexOf((ty - cy * CS) * CS + (tx - cx * CS)) >= 0;
 }
+const CLEARABLE = { tree: 1, rock: 1, small: 1 };
+/** Entfernt Bäume, Felsen und Büsche rund um ein Wegfeld (keine Bauwerke, keine Truhen). */
+function clearAroundTile(tx, ty) {
+  const CS = CFG.CS, cxw = tx + .5, cyw = ty + .5, R = 1.25;
+  for (let cy = Math.floor((cyw - R) / CS); cy <= Math.floor((cyw + R) / CS); cy++) for (let cx = Math.floor((cxw - R) / CS); cx <= Math.floor((cxw + R) / CS); cx++) {
+    const ch = getChunk(cx, cy);
+    const before = ch.props.length;
+    ch.props = ch.props.filter(q => !(CLEARABLE[q.kind] && !q.noClear && dist2(q.x, q.y, cxw, cyw) < R * R));
+    if (ch.props.length !== before) { ch.solidProps = null; ch.liftProps = null; rebuildSolids(ch); }
+  }
+}
 function applyRoadsToChunk(ch) {
   const a = baseEnsure().roads[ch.cx + ',' + ch.cy];
   if (!a) return;
-  for (const i of a) { ch.col[i] = mixC(ch.col[i], 0x8e826c, .82); ch.flg[i] |= F_PATH; }
+  const CS = CFG.CS, set = [];
+  for (const i of a) { ch.col[i] = mixC(ch.col[i], 0x8e826c, .82); ch.flg[i] |= F_PATH; set.push([ch.ox + (i % CS) + .5, ch.oy + Math.floor(i / CS) + .5]); }
+  ch.props = ch.props.filter(q => {
+    if (!CLEARABLE[q.kind] || q.noClear) return true;
+    for (const [x, y] of set) if (dist2(q.x, q.y, x, y) < 1.25 * 1.25) return false;
+    return true;
+  });
 }
 function paveTile(tx, ty) {
   if (GAME.mode !== 'world' || isRoadTile(tx, ty)) return 0;
@@ -3411,6 +3463,7 @@ function paveTile(tx, ty) {
   const B = baseEnsure(), k = cx + ',' + cy;
   (B.roads[k] = B.roads[k] || []).push(i);
   ch.col[i] = mixC(ch.col[i], 0x8e826c, .82); ch.flg[i] |= F_PATH;
+  clearAroundTile(tx, ty);
   return cost;
 }
 function roadChipUpdate() {
@@ -3520,20 +3573,65 @@ function wagonRenderProxy(w) {
   if (g && g.riding && g.riding.id === w.id && g.riding.seat === 0) return { id: w.id, x: g.x, y: g.y, face: g.aimAng };
   return w;
 }
+const WG_ST = {};
 function drawWagon(w) {
-  const s = SPR.v_wagon; if (!s) return;
-  const z = cam.zoom;
-  shadowAt(w.x, w.y, 24, .42);
+  const sb = SPR.v_cart_back, sf = SPR.v_cart_front;
+  if (!sb || !sf) return;
+  const z = cam.zoom, PXZ = PX * z;
+  const f = w.face || 0, flip = (Math.cos(f) - Math.sin(f)) < 0, fl = flip ? -1 : 1;
+  // Geschwindigkeit aus der Positionsänderung (funktioniert auch für Mitspieler)
+  const st = WG_ST[w.id] || (WG_ST[w.id] = { x: w.x, y: w.y, t: gameTime, spd: 0, ph: 0 });
+  const dtt = gameTime - st.t;
+  if (dtt > 0) { st.spd += (Math.hypot(w.x - st.x, w.y - st.y) / dtt - st.spd) * Math.min(1, dtt * 8); st.x = w.x; st.y = w.y; st.t = gameTime; }
+  else if (dtt < -1) { st.x = w.x; st.y = w.y; st.t = gameTime; }
+  const spd = Math.min(14, st.spd);
+  st.ph += (dtt > 0 && dtt < .2 ? dtt : 0) * (spd > .4 ? 5 + spd * 1.3 : 0);
+  const bobY = spd > .4 ? Math.sin(st.ph * 2) * 1.1 * z : 0;
+  shadowAt(w.x, w.y, 34, .45);
   const pos = w2s(w.x, w.y, heightPx(w.x, w.y));
-  const flip = (Math.cos(w.face || 0) - Math.sin(w.face || 0)) < 0;
-  ctx.save();
-  ctx.translate(pos.x, pos.y);
-  if (flip) ctx.scale(-1, 1);
-  ctx.globalAlpha = .5;
-  for (const [ox, oy] of [[-1.6, 0], [1.6, 0], [0, -1.6]]) ctx.drawImage(s.c, -s.ax * z + ox * z, -s.ay * z + oy * z, s.w * z, s.h * z);
-  ctx.globalAlpha = 1;
-  ctx.drawImage(s.c, -s.ax * z, -s.ay * z, s.w * z, s.h * z);
+  const px = pos.x, py = pos.y - bobY;
+  // Insassen
+  const riders = [];
+  for (const q of [GAME.player, GAME.player2]) if (q && q.riding && q.riding.id === w.id) riders.push(q);
+  const drawSpr = (s, ox, oy, alpha, add) => {
+    ctx.save(); ctx.translate(px, py); if (flip) ctx.scale(-1, 1);
+    if (add) ctx.globalCompositeOperation = 'lighter';
+    ctx.globalAlpha = alpha;
+    ctx.drawImage(s.c, -s.ax * z + ox * PXZ, -s.ay * z + oy * PXZ, s.w * z, s.h * z);
+    ctx.restore();
+  };
+  // Geisterpferde (zwei nebeneinander, leicht versetzt)
+  const fr = Math.floor(st.ph) % 2;
+  const flick = .72 + Math.sin(gameTime * 7) * .08;
+  const horse = [[40, 0], [47, 2.6]];
+  for (const [hx, hy] of horse) {
+    const hs = SPR['v_ghorse' + ((fr + (hx > 40 ? 1 : 0)) % 2)];
+    if (!hs) continue;
+    const hb = spd > .4 ? Math.sin(st.ph * 2 + hx) * 1.4 : 0;
+    drawSpr(hs, hx, hy - hb, flick * .9, false);
+    drawSpr(hs, hx - .5, hy - hb - .5, .28, true);
+  }
+  // Zügel / Geisterkette
+  ctx.save(); ctx.strokeStyle = 'rgba(160,225,255,.55)'; ctx.lineWidth = 1.2 * z;
+  ctx.beginPath(); ctx.moveTo(px + fl * 35 * PXZ, py - 14 * PXZ); ctx.lineTo(px + fl * 44 * PXZ, py - 17 * PXZ); ctx.stroke(); ctx.restore();
+  // Karosserie hinten
+  drawSpr(sb, 0, 0, 1, false);
+  // Insassen innen: Fahrer vorn rechts, Beifahrer links
+  for (const q of riders) {
+    const seat = q.riding.seat ? -10 : 7;
+    drawPlayer(q, { pos: { x: px + fl * seat * PXZ, y: py - 16 * PXZ }, k: .72, flip });
+  }
+  // Karosserie vorn (Wand, Dach, Räder)
+  drawSpr(sf, 0, 0, 1, false);
+  // Laternen-Glimmen und Geisternebel
+  ctx.save(); ctx.globalCompositeOperation = 'lighter';
+  const lg = getLightBlob(0x8fdfff), rr = 24 * z;
+  ctx.globalAlpha = .38 + Math.sin(gameTime * 5) * .06;
+  ctx.drawImage(lg, px + fl * 22 * PXZ - rr, py - 42 * PXZ - rr * .6, rr * 2, rr * 1.2);
+  ctx.globalAlpha = .16; const r3 = 44 * z;
+  ctx.drawImage(lg, px + fl * 44 * PXZ - r3, py - 14 * PXZ - r3 * .6, r3 * 2, r3 * 1.2);
   ctx.restore();
+  if (spd > 2 && Math.random() < .5) addParticle(w.x - Math.cos(f) * 1.2 + rnd(-.3, .3), w.y - Math.sin(f) * 1.2 + rnd(-.3, .3), rnd(-.2, .2), rnd(-.2, .2), .7, '#8fd8ff', 3, 0);
 }
 
 /* ---------- Werkstatt-Oberfläche ---------- */
@@ -3554,7 +3652,7 @@ function openWorkshop() {
     <div class="d">Zwei Sitze, wie ein Auto zu fahren. Auf gepflasterten Wegen deutlich schneller, überfährt kleine Gegner. Du kannst höchstens ${WAGON_MAX} besitzen.</div></div>
     <div class="bldCost">${costStrHtml(costW, p)}<br>${n < WAGON_MAX ? `<span class="btn ${canAfford(costW) ? 'primary' : ''}" data-wk="build">Bauen</span>` : '<span style="color:#8a7f6c">Maximal erreicht</span>'}</div></div>`;
   h += `<div class="bldRow"><div class="bldIco">⚒️</div><div class="bldMain"><div class="n">Wegebauhammer ${hasH ? '<small>im Beutel</small>' : ''}</div>
-    <div class="d">Mit dem Hammer pflasterst du Wege für die Kutschen. Im Beutel antippen startet den Wegebau; jedes Feld kostet ${roadCost()} Gold.</div></div>
+    <div class="d">Mit dem Hammer pflasterst du Wege für die Kutschen und räumst dabei Bäume, Steine und Büsche aus dem Weg. Im Beutel antippen startet den Wegebau; jedes Feld kostet ${roadCost()} Gold.</div></div>
     <div class="bldCost">${hasH ? '' : costStrHtml(costH, p) + '<br>'}${hasH ? '<span style="color:#8a7f6c">Schon dabei</span>' : `<span class="btn ${canAfford(costH) ? 'primary' : ''}" data-wk="hammer">Schmieden</span>`}</div></div>`;
   if (n) {
     h += `<div class="secTitle" style="margin-top:12px">Deine Kutschen</div>`;
@@ -6626,8 +6724,8 @@ const BASE_BUILDINGS = {
   },
   kutsche: {
     name: 'Kutschenwerkstatt', ico: '📦', max: 2,
-    desc: 'Das günstigste Bauwerk. Baut Kutschen (max. 3, je 2 Sitze) und den Wegebauhammer. Stufe 2: schnellere Kutschen, billigere Wege.',
-    cost: lv => lv === 1 ? ({ gold: 90, fell: 3 }) : ({ gold: 340, eisen: 14, fell: 8 }),
+    desc: 'Baut Kutschen (max. 3, je 2 Sitze) und den Wegebauhammer. Stufe 2: schnellere Kutschen, billigere Wege.',
+    cost: lv => ({ gold: 300 * lv * lv, eisen: 16 * lv, fell: 6 * lv, aschestaub: 6 * lv }),
   },
   kartograf: {
     name: 'Kartograf', ico: '🗺️', max: 2,
@@ -8092,27 +8190,29 @@ function heroFrameKey(p) {
   if (p.moving) return `hero_${outfit}_walk${Math.floor((p.walkPhase || 0) * 1.7) % 4}`;
   return `hero_${outfit}_idle${Math.sin(gameTime * 1.3) > 0 ? 0 : 1}`;
 }
-function drawPlayer(p) {
+function drawPlayer(p, inW) {
+  if (p.riding && !inW) return;   // sitzt in der Kutsche und wird von drawWagon gezeichnet
   if (p.dead && GAME.deathShown) return;
   const s = SPR[heroFrameKey(p)] || SPR.hero_base_idle0;
-  const z = cam.zoom;
-  const hgt = heightPx(p.x, p.y);
-  shadowAt(p.x, p.y, 12, .34);
-  const pos = w2s(p.x, p.y, hgt);
-  const bob = (p.bob || 0) * 9;
+  const z = inW ? cam.zoom * inW.k : cam.zoom;
+  const hgt = inW ? 0 : heightPx(p.x, p.y);
+  if (!inW) shadowAt(p.x, p.y, 12, .34);
+  const pos = inW ? inW.pos : w2s(p.x, p.y, hgt);
+  const bob = inW ? 0 : (p.bob || 0) * 9;
   // Sanfter Standring, damit der Wanderer im dunklen Wald auffindbar bleibt
-  ctx.save();
-  ctx.globalCompositeOperation = 'lighter';
-  ctx.globalAlpha = .17 + Math.sin(gameTime * 1.6) * .03;
-  const rr0 = 34 * z;
-  ctx.drawImage(getLightBlob(0xffd8a0), pos.x - rr0, pos.y - rr0 * .62, rr0 * 2, rr0 * 1.24);
-  ctx.restore();
+  if (!inW) {
+    ctx.save();
+    ctx.globalCompositeOperation = 'lighter';
+    ctx.globalAlpha = .17 + Math.sin(gameTime * 1.6) * .03;
+    const rr0 = 34 * z;
+    ctx.drawImage(getLightBlob(0xffd8a0), pos.x - rr0, pos.y - rr0 * .62, rr0 * 2, rr0 * 1.24);
+    ctx.restore();
+  }
   ctx.save();
   ctx.globalAlpha = p.iframes > 0 ? .55 + Math.sin(gameTime * 40) * .2 : 1;
-  ctx.translate(pos.x, pos.y - (bob + (p.jumpZ || 0) + (p.stepZ || 0) * z + (p.riding ? 9 * z : 0)));
-  if (p.riding) { const fl = (Math.cos(p.aimAng) - Math.sin(p.aimAng)) < 0 ? -1 : 1; ctx.translate((p.riding.seat ? -8 : 6) * z * fl, 0); }
+  ctx.translate(pos.x, pos.y - (inW ? 0 : (bob + (p.jumpZ || 0) + (p.stepZ || 0) * z)));
   if (p.dead) ctx.rotate(1.3);
-  const flipX = Math.cos(p.aimAng) < 0;
+  const flipX = inW ? inW.flip : Math.cos(p.aimAng) < 0;
   if (p.attackAnim > 0) ctx.translate(Math.cos(p.aimAng) * 8 * z * p.attackAnim * 3, 0);
   if (flipX) ctx.scale(-1, 1);
   // dunkler Umriss für Lesbarkeit vor hellem wie dunklem Grund
@@ -8123,6 +8223,7 @@ function drawPlayer(p) {
   ctx.drawImage(s.c, -s.ax * z, -s.ay * z, s.w * z, s.h * z);
   if (p.flash > 0) { ctx.globalCompositeOperation = 'lighter'; ctx.globalAlpha = p.flash * 3; ctx.drawImage(s.c, -s.ax * z, -s.ay * z, s.w * z, s.h * z); }
   ctx.restore();
+  if (inW) return;
 
   // Waffe andeuten
   const wep = p.equip.weapon;
@@ -8131,7 +8232,7 @@ function drawPlayer(p) {
     if (im) {
       if (im.complete) {
         ctx.save();
-        ctx.translate(pos.x + Math.cos(p.aimAng) * 13 * z, pos.y - 30 * z + Math.sin(p.aimAng) * 5 * z - bob);
+        ctx.translate(pos.x + Math.cos(p.aimAng) * 13 * z, pos.y - 25 * z + Math.sin(p.aimAng) * 5 * z - bob);
         ctx.rotate(p.aimAng + (p.attackAnim > 0 ? -1.1 + p.attackAnim * 4 : .3));
         ctx.drawImage(im, -8 * z, -8 * z, 17 * z, 17 * z);
         ctx.restore();
@@ -8804,7 +8905,7 @@ function itemTipHTML(it, compareSlot) {
 function openPanel(id) {
   document.querySelectorAll('#panels .panel').forEach(p => {
     if (p.id === id) return;
-    if (p.id !== 'pDialog' || id === 'pDialog') p.classList.add('hidden');
+    p.classList.add('hidden');
   });
   $(id).classList.remove('hidden');
   // Einzelspiel: Menüs halten die Welt an. Im Online-Koop läuft sie für beide weiter.
